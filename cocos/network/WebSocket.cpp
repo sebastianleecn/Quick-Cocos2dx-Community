@@ -30,6 +30,7 @@
 #include "WebSocket.h"
 #include "base/CCDirector.h"
 #include "base/CCScheduler.h"
+#include "CCFileUtils.h"
 
 #include <thread>
 #include <mutex>
@@ -267,6 +268,7 @@ bool WebSocket::init(const Delegate& delegate,
     {
         host.erase(0,6);
         useSSL = true;
+        port = 443;// wss default port
     }
     
     pos = host.find(":");
@@ -286,6 +288,10 @@ bool WebSocket::init(const Delegate& delegate,
     _host = host;
     _port = port;
     _path = path;
+    /* 1 = take care about cert verification,
+     * 2 = allow anything
+     * Quick use user specify CA to solve SSL authentication, so here set to 1.
+     */
     _SSLConnection = useSSL ? 1 : 0;
     
     CCLOG("[WebSocket::init] _host: %s, _port: %d, _path: %s", _host.c_str(), _port, _path.c_str());
@@ -389,6 +395,10 @@ WebSocket::State WebSocket::getReadyState()
 
 int WebSocket::onSubThreadLoop()
 {
+    if (!_wsContext) {
+        return 1;//exit the loop.
+    }
+    
     if (_readyState == State::CLOSED || _readyState == State::CLOSING)
     {
         libwebsocket_context_destroy(_wsContext);
@@ -429,6 +439,14 @@ void WebSocket::onSubThreadStarted()
 	info.gid = -1;
 	info.uid = -1;
     info.user = (void*)this;
+    
+    // specify CA for connection.
+    std::string caPath = std::string("wssca.pem");
+    std::string caFullPath = FileUtils::getInstance()->fullPathForFilename(caPath);
+    info.ssl_ca_filepath = caFullPath.c_str();
+    if (0 == _SSLConnection) {
+        info.ssl_ca_filepath = NULL;
+    }
     
 	_wsContext = libwebsocket_create_context(&info);
     
