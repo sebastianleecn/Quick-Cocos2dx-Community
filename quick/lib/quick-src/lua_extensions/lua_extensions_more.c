@@ -26,6 +26,11 @@ extern "C" {
 // protoc-gen-lua
 #include "protobuf/pb.h"
 
+#if CC_USE_SPROTO
+LUALIB_API int luaopen_lpeg (lua_State *L);
+LUALIB_API int luaopen_sproto_core(lua_State *L);
+#endif
+
 static luaL_Reg luax_exts[] = {
     {"cjson", luaopen_cjson_safe},
     {"zlib", luaopen_zlib},
@@ -36,6 +41,13 @@ static luaL_Reg luax_exts[] = {
 #endif
 #if CC_USE_UNQLITE
 	{"unqlite", luaopen_lunqlite},
+#endif
+#if CC_USE_PROTOBUF
+    {"pb", luaopen_pb},
+#endif
+#if CC_USE_SPROTO
+    {"lpeg", luaopen_lpeg},
+    {"sproto.core", luaopen_sproto_core},
 #endif
     {NULL, NULL}
 };
@@ -51,9 +63,6 @@ void luaopen_lua_extensions_more(lua_State *L)
         lua_pushcfunction(L, lib->func);
         lua_setfield(L, -2, lib->name);
     }
-	
-	//register protobuf
-	luaopen_pb(L);
 	
     lua_pop(L, 2);
 }
