@@ -162,10 +162,28 @@ void StartupCall::startup()
     env.append("\"");
     engine->executeString(env.c_str());
     
-    CCLOG("------------------------------------------------");
-    CCLOG("LOAD LUA FILE: %s", path.c_str());
-    CCLOG("------------------------------------------------");
-    engine->executeScriptFile(path.c_str());
+#if 0
+	// use luajit bytecode package
+	stack->setXXTEAKeyAndSign("password", "XXTEA");
+
+#ifdef CC_TARGET_OS_IPHONE
+	if (sizeof(long) == 4) {
+		stack->loadChunksFromZIP("res/game.zip");
+	}
+	else {
+		stack->loadChunksFromZIP("res/game64.zip");
+	}
+#else
+	// android, mac, win32, etc
+	stack->loadChunksFromZIP("res/game.zip");
+#endif
+	stack->executeString("require 'main'");
+#else
+	CCLOG("------------------------------------------------");
+	CCLOG("LOAD LUA FILE: %s", path.c_str());
+	CCLOG("------------------------------------------------");
+	engine->executeScriptFile(path.c_str());
+#endif
     
     // track start event
     trackLaunchEvent();
