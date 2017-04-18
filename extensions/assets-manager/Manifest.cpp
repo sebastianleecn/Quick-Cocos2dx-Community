@@ -41,6 +41,7 @@
 
 #define KEY_PATH                "path"
 #define KEY_MD5                 "md5"
+#define KEY_SIZE                "size"
 #define KEY_GROUP               "group"
 #define KEY_COMPRESSED          "compressed"
 #define KEY_COMPRESSED_FILE     "compressedFile"
@@ -311,8 +312,9 @@ void Manifest::setAssetDownloadState(const std::string &key, const Manifest::Dow
                 {
                     for (rapidjson::Value::MemberIterator itr = assets.MemberBegin(); itr != assets.MemberEnd(); ++itr)
                     {
-                        std::string jkey = itr->name.GetString();
-                        if (jkey == key) {
+                        //std::string jkey = itr->name.GetString();						
+                        //if (jkey == key) {
+						if (key.compare(itr->name.GetString()) == 0) {
                             rapidjson::Value &entry = itr->value;
                             if (entry.HasMember(KEY_DOWNLOAD_STATE))
                             {
@@ -365,6 +367,12 @@ Manifest::Asset Manifest::parseAsset(const std::string &path, const rapidjson::V
         asset.md5 = json[KEY_MD5].GetString();
     }
     else asset.md5 = "";
+
+	if (json.HasMember(KEY_SIZE) && json[KEY_SIZE].IsInt())
+	{
+		asset.size = json[KEY_SIZE].GetInt();
+	}
+	else asset.size = 0;
     
     if ( json.HasMember(KEY_PATH) && json[KEY_PATH].IsString() )
     {

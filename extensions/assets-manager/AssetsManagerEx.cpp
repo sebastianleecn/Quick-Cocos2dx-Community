@@ -478,10 +478,10 @@ void AssetsManagerEx::parseVersion()
         else
         {
             _updateState = State::NEED_UPDATE;
-            dispatchUpdateEvent(EventAssetsManagerEx::EventCode::NEW_VERSION_FOUND);
+            //dispatchUpdateEvent(EventAssetsManagerEx::EventCode::NEW_VERSION_FOUND);
 
             // Wait to update so continue the process
-            if (_waitToUpdate)
+            //if (_waitToUpdate)
             {
                 _updateState = State::PREDOWNLOAD_MANIFEST;
                 downloadManifest();
@@ -533,8 +533,28 @@ void AssetsManagerEx::parseManifest()
         }
         else
         {
+			int nSize = 0;
+			std::unordered_map<std::string, Manifest::AssetDiff> diff_map = _localManifest->genDiff(_remoteManifest);
+			if (diff_map.size() == 0)
+			{
+			}
+			else
+			{
+				for (auto it = diff_map.begin(); it != diff_map.end(); ++it)
+				{
+					Manifest::AssetDiff diff = it->second;
+					if (diff.type == Manifest::DiffType::DELETED)
+					{
+					}
+					else
+					{
+						nSize += diff.asset.size;
+					}
+				}
+			}
             _updateState = State::NEED_UPDATE;
-            dispatchUpdateEvent(EventAssetsManagerEx::EventCode::NEW_VERSION_FOUND);
+            dispatchUpdateEvent(EventAssetsManagerEx::EventCode::NEW_VERSION_FOUND, "countsize",
+				StringUtils::format("%d,%d", diff_map.size(), nSize));
 
             if (_waitToUpdate)
             {
@@ -865,7 +885,8 @@ void AssetsManagerEx::onProgress(double total, double downloaded, const std::str
             if ((int)currentPercent != (int)_percent) {
                 _percent = currentPercent;
                 // Notify progression event
-                dispatchUpdateEvent(EventAssetsManagerEx::EventCode::UPDATE_PROGRESSION, "");
+                dispatchUpdateEvent(EventAssetsManagerEx::EventCode::UPDATE_PROGRESSION, "countcollected",
+					StringUtils::format("%d", _sizeCollected));
             }
         }
     }
@@ -924,7 +945,8 @@ void AssetsManagerEx::onSuccess(const std::string &srcUrl, const std::string &st
             
             _percentByFile = 100 * (float)(_totalToDownload - _totalWaitToDownload) / _totalToDownload;
             // Notify progression event
-            dispatchUpdateEvent(EventAssetsManagerEx::EventCode::UPDATE_PROGRESSION, "");
+            dispatchUpdateEvent(EventAssetsManagerEx::EventCode::UPDATE_PROGRESSION, "countcollected",
+				StringUtils::format("%d", _sizeCollected));
         }
         // Notify asset updated event
         dispatchUpdateEvent(EventAssetsManagerEx::EventCode::ASSET_UPDATED, customId);

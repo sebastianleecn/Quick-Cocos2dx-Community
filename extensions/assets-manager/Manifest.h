@@ -61,6 +61,7 @@ public:
     struct Asset {
         std::string md5;
         std::string path;
+		int size;
         bool compressed;
         DownloadState downloadState;
     };
