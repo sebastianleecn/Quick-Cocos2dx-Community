@@ -134,6 +134,11 @@ LOCAL_SRC_FILES += \
 endif
 LOCAL_SRC_FILES += ../manual/extension/lua_cocos2dx_extension_manual.cpp \
                    ../auto/lua_cocos2dx_extension_auto.cpp \
+                   ../auto/lua_cocos2dx_TalkingDataGA_auto.cpp \
+				   ../auto/lua_cocos2dx_TDGAAccount_auto.cpp \
+				   ../auto/lua_cocos2dx_TDGAMission_auto.cpp \
+				   ../auto/lua_cocos2dx_TDGAVirtualCurrency_auto.cpp \
+				   ../auto/lua_cocos2dx_TDGAItem_auto.cpp \
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../../../external/lua/tolua \
                     $(LOCAL_PATH)/../../../../external/lua/luajit/include \
@@ -160,6 +165,7 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../../../external/lua/tolua \
                     $(LOCAL_PATH)/../manual/cocosbuilder \
                     $(LOCAL_PATH)/../manual/spine \
                     $(LOCAL_PATH)/../manual/ui \
+                    $(LOCAL_PATH)/../../../../external/TalkingDataGameAnalytics/include \
                     $(LOCAL_PATH)/../../../../external/xxtea \
                     $(LOCAL_PATH)/../../../.. \
                     $(LOCAL_PATH)/../../../../external/lua \

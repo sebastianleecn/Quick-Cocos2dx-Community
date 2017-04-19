@@ -154,7 +154,7 @@ void StartupCall::startup()
     env.append("\"");
     engine->executeString(env.c_str());
     
-#if 0
+#if 1
 	// use luajit bytecode package
 	stack->setXXTEAKeyAndSign("password", "XXTEA");
 
