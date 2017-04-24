@@ -169,6 +169,8 @@ protected:
      * @param state The current download state of the asset
      */
     void setAssetDownloadState(const std::string &key, const DownloadState &state);
+
+	void updateJson();
     
 private:
     

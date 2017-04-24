@@ -303,33 +303,66 @@ void Manifest::setAssetDownloadState(const std::string &key, const Manifest::Dow
         valueIt->second.downloadState = state;
         
         // Update json object
-        if(_json.IsObject())
-        {
-            if ( _json.HasMember(KEY_ASSETS) )
-            {
-                rapidjson::Value &assets = _json[KEY_ASSETS];
-                if (assets.IsObject())
-                {
-                    for (rapidjson::Value::MemberIterator itr = assets.MemberBegin(); itr != assets.MemberEnd(); ++itr)
-                    {
-                        if (key.compare(itr->name.GetString()) == 0) {
-                            rapidjson::Value &entry = itr->value;
-                            if (entry.HasMember(KEY_DOWNLOAD_STATE))
-                            {
-                                rapidjson::Value &value = entry[KEY_DOWNLOAD_STATE];
-                                if (value.IsInt())
-                                {
-                                    value.SetInt((int)state);
-                                }
-                            } else {
-                                entry.AddMember<int>(KEY_DOWNLOAD_STATE, (int)state, _json.GetAllocator());
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        //if(_json.IsObject())
+        //{
+        //    if ( _json.HasMember(KEY_ASSETS) )
+        //    {
+        //        rapidjson::Value &assets = _json[KEY_ASSETS];
+        //        if (assets.IsObject())
+        //        {
+        //            for (rapidjson::Value::MemberIterator itr = assets.MemberBegin(); itr != assets.MemberEnd(); ++itr)
+        //            {
+        //                if (key.compare(itr->name.GetString()) == 0) {
+        //                    rapidjson::Value &entry = itr->value;
+        //                    if (entry.HasMember(KEY_DOWNLOAD_STATE))
+        //                    {
+        //                        rapidjson::Value &value = entry[KEY_DOWNLOAD_STATE];
+        //                        if (value.IsInt())
+        //                        {
+        //                            value.SetInt((int)state);
+        //                        }
+        //                    } else {
+        //                        entry.AddMember<int>(KEY_DOWNLOAD_STATE, (int)state, _json.GetAllocator());
+        //                    }
+        //                }
+        //            }
+        //        }
+        //    }
+        //}
     }
+}
+
+void Manifest::updateJson()
+{
+	if (_json.IsObject() && _json.HasMember(KEY_ASSETS))
+	{
+		rapidjson::Value &assets = _json[KEY_ASSETS];
+		if (assets.IsObject())
+		{
+			for (rapidjson::Value::MemberIterator itr = assets.MemberBegin(); itr != assets.MemberEnd(); ++itr)
+			{
+				for (auto it = _assets.cbegin(); it != _assets.cend(); ++it)
+				{
+					const std::string &key = it->first;
+					if (key.compare(itr->name.GetString()) == 0) {
+						rapidjson::Value &entry = itr->value;
+						if (entry.HasMember(KEY_DOWNLOAD_STATE))
+						{
+							rapidjson::Value &value = entry[KEY_DOWNLOAD_STATE];
+							if (value.IsInt())
+							{
+								value.SetInt((int)it->second.downloadState);
+							}
+						}
+						else {
+							entry.AddMember<int>(KEY_DOWNLOAD_STATE, (int)it->second.downloadState, _json.GetAllocator());
+						}
+						break;
+					}
+				}
+			}
+		}
+	}
 }
 
 void Manifest::clear()
@@ -491,6 +524,8 @@ void Manifest::loadManifest(const rapidjson::Document &json)
 
 void Manifest::saveToFile(const std::string &filepath)
 {
+	updateJson();
+
     rapidjson::StringBuffer buffer;
     rapidjson::PrettyWriter<rapidjson::StringBuffer> writer(buffer);
     _json.Accept(writer);
