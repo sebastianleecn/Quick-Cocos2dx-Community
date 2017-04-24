@@ -50,7 +50,7 @@ public:
         // Error caused by creating a file to store downloaded data
         CREATE_FILE,
         /** Error caused by network
-         -- network unavaivable
+         -- network unavailable
          -- timeout
          -- ...
          */
@@ -74,6 +74,7 @@ public:
      * @param versionFileUrl URL of version file. It should contain version code of new package.
      * @param storagePath The path to store downloaded resources.
      * @js NA
+     * @lua new
      */
     AssetsManager(const char* packageUrl = NULL, const char* versionFileUrl = NULL, const char* storagePath = NULL);
     /**
@@ -133,7 +134,7 @@ public:
     /* @brief Sets storage path.
      *
      * @param storagePath The path to store downloaded resources.
-     * @warm The path should be a valid path.
+     * @warning The path should be a valid path.
      */
     void setStoragePath(const char* storagePath);
     
@@ -153,7 +154,7 @@ public:
      */
     void setConnectionTimeout(unsigned int timeout);
     
-    /** @brief Gets connection time out in secondes
+    /** @brief Gets connection time out in seconds
      */
     unsigned int getConnectionTimeout();
     

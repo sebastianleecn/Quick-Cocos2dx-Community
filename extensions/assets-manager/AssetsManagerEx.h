@@ -62,6 +62,7 @@ public:
         MANIFEST_LOADED,
         NEED_UPDATE,
         UPDATING,
+        UNZIPPING,
         UP_TO_DATE,
         FAIL_TO_UPDATE
     };
@@ -72,7 +73,7 @@ public:
     
     /** @brief Create function for creating a new AssetsManagerEx
      @param manifestUrl   The url for the local manifest file
-     @param storagePath   The storage path for downloaded assetes
+     @param storagePath   The storage path for downloaded assets
      @warning   The cached manifest in your storage path have higher priority and will be searched first,
                 only if it doesn't exist, AssetsManagerEx will use the given manifestUrl.
      */
@@ -100,11 +101,11 @@ public:
      */
     const std::string& getStoragePath() const;
     
-    /** @brief Function for retrieve the local manifest object
+    /** @brief Function for retrieving the local manifest object
      */
     const Manifest* getLocalManifest() const;
     
-    /** @brief Function for retrieve the remote manifest object
+    /** @brief Function for retrieving the remote manifest object
      */
     const Manifest* getRemoteManifest() const;
     
@@ -203,7 +204,7 @@ private:
     //! The reference to the local assets
     const std::unordered_map<std::string, Manifest::Asset> *_assets;
     
-    //! The path to store downloaded resources.
+    //! The path to store successfully downloaded version.
     std::string _storagePath;
     
     //! The local path of cached version file

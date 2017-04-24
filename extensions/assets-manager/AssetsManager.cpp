@@ -85,10 +85,10 @@ struct ProgressMessage
 // Implementation of AssetsManager
 
 AssetsManager::AssetsManager(const char* packageUrl/* =nullptr */, const char* versionFileUrl/* =nullptr */, const char* storagePath/* =nullptr */)
-:  _storagePath(storagePath)
+:  _storagePath(storagePath ? storagePath : "")
 , _version("")
-, _packageUrl(packageUrl)
-, _versionFileUrl(versionFileUrl)
+, _packageUrl(packageUrl ? packageUrl : "")
+, _versionFileUrl(versionFileUrl ? versionFileUrl : "")
 , _downloadedVersion("")
 , _curl(nullptr)
 , _connectionTimeout(0)

@@ -41,13 +41,34 @@
 
 #define KEY_PATH                "path"
 #define KEY_MD5                 "md5"
-#define KEY_SIZE                "size"
 #define KEY_GROUP               "group"
 #define KEY_COMPRESSED          "compressed"
+#define KEY_SIZE                "size"
 #define KEY_COMPRESSED_FILE     "compressedFile"
 #define KEY_DOWNLOAD_STATE      "downloadState"
 
 NS_CC_EXT_BEGIN
+
+static int cmpVersion(const std::string& v1, const std::string& v2)
+{
+    int i;
+    int oct_v1[4] = {0}, oct_v2[4] = {0};
+    int filled1 = std::sscanf(v1.c_str(), "%d.%d.%d.%d", &oct_v1[0], &oct_v1[1], &oct_v1[2], &oct_v1[3]);
+    int filled2 = std::sscanf(v2.c_str(), "%d.%d.%d.%d", &oct_v2[0], &oct_v2[1], &oct_v2[2], &oct_v2[3]);
+    
+    if (filled1 == 0 || filled2 == 0)
+    {
+        return strcmp(v1.c_str(), v2.c_str());
+    }
+    for (i = 0; i < 4; i++)
+    {
+        if (oct_v1[i] > oct_v2[i])
+            return 1;
+        else if (oct_v1[i] < oct_v2[i])
+            return -1;
+    }
+    return 0;
+}
 
 Manifest::Manifest(const std::string& manifestUrl/* = ""*/)
 : _versionLoaded(false)
@@ -107,7 +128,7 @@ void Manifest::parse(const std::string& manifestUrl)
 {
     loadJson(manifestUrl);
 	
-    if (_json.IsObject())
+    if (!_json.HasParseError() && _json.IsObject())
     {
         // Register the local manifest root
         size_t found = manifestUrl.find_last_of("/\\");
@@ -145,7 +166,7 @@ bool Manifest::versionEquals(const Manifest *b) const
             return false;
         
         // Check groups version
-        for (int i = 0; i < _groups.size(); ++i) {
+        for (unsigned int i = 0; i < _groups.size(); ++i) {
             std::string gid =_groups[i];
             // Check group name
             if (gid != bGroups[i])
@@ -158,14 +179,31 @@ bool Manifest::versionEquals(const Manifest *b) const
     return true;
 }
 
+bool Manifest::versionGreater(const Manifest *b, const std::function<int(const std::string& versionA, const std::string& versionB)>& handle) const
+{
+    std::string localVersion = getVersion();
+    std::string bVersion = b->getVersion();
+    bool greater;
+    if (handle)
+    {
+        greater = handle(localVersion, bVersion) >= 0;
+    }
+    else
+    {
+        greater = cmpVersion(localVersion, bVersion) >= 0;
+    }
+    return greater;
+}
+
 std::unordered_map<std::string, Manifest::AssetDiff> Manifest::genDiff(const Manifest *b) const
 {
     std::unordered_map<std::string, AssetDiff> diff_map;
-    std::unordered_map<std::string, Asset> bAssets = b->getAssets();
+    const std::unordered_map<std::string, Asset> &bAssets = b->getAssets();
     
     std::string key;
     Asset valueA;
     Asset valueB;
+    
     std::unordered_map<std::string, Asset>::const_iterator valueIt, it;
     for (it = _assets.begin(); it != _assets.end(); ++it)
     {
@@ -235,12 +273,16 @@ void Manifest::genResumeAssetsList(Downloader::DownloadUnits *units) const
     }
 }
 
-
 void Manifest::prependSearchPaths()
 {
     std::vector<std::string> searchPaths = FileUtils::getInstance()->getSearchPaths();
     std::vector<std::string>::iterator iter = searchPaths.begin();
-    searchPaths.insert(iter, _manifestRoot);
+    bool needChangeSearchPaths = false;
+    if (std::find(searchPaths.begin(), searchPaths.end(), _manifestRoot) == searchPaths.end())
+    {
+        searchPaths.insert(iter, _manifestRoot);
+        needChangeSearchPaths = true;
+    }
     
     for (int i = (int)_searchPaths.size()-1; i >= 0; i--)
     {
@@ -250,8 +292,12 @@ void Manifest::prependSearchPaths()
         path = _manifestRoot + path;
         iter = searchPaths.begin();
         searchPaths.insert(iter, path);
+        needChangeSearchPaths = true;
     }
-    FileUtils::getInstance()->setSearchPaths(searchPaths);
+    if (needChangeSearchPaths)
+    {
+        FileUtils::getInstance()->setSearchPaths(searchPaths);
+    }
 }
 
 
@@ -303,66 +349,29 @@ void Manifest::setAssetDownloadState(const std::string &key, const Manifest::Dow
         valueIt->second.downloadState = state;
         
         // Update json object
-        //if(_json.IsObject())
-        //{
-        //    if ( _json.HasMember(KEY_ASSETS) )
-        //    {
-        //        rapidjson::Value &assets = _json[KEY_ASSETS];
-        //        if (assets.IsObject())
-        //        {
-        //            for (rapidjson::Value::MemberIterator itr = assets.MemberBegin(); itr != assets.MemberEnd(); ++itr)
-        //            {
-        //                if (key.compare(itr->name.GetString()) == 0) {
-        //                    rapidjson::Value &entry = itr->value;
-        //                    if (entry.HasMember(KEY_DOWNLOAD_STATE))
-        //                    {
-        //                        rapidjson::Value &value = entry[KEY_DOWNLOAD_STATE];
-        //                        if (value.IsInt())
-        //                        {
-        //                            value.SetInt((int)state);
-        //                        }
-        //                    } else {
-        //                        entry.AddMember<int>(KEY_DOWNLOAD_STATE, (int)state, _json.GetAllocator());
-        //                    }
-        //                }
-        //            }
-        //        }
-        //    }
-        //}
+        if(_json.IsObject())
+        {
+            if ( _json.HasMember(KEY_ASSETS) )
+            {
+                rapidjson::Value &assets = _json[KEY_ASSETS];
+                if (assets.IsObject())
+                {
+                    if (assets.HasMember(key.c_str()))
+                    {
+                        rapidjson::Value &entry = assets[key.c_str()];
+                        if (entry.HasMember(KEY_DOWNLOAD_STATE) && entry[KEY_DOWNLOAD_STATE].IsInt())
+                        {
+                            entry[KEY_DOWNLOAD_STATE].SetInt((int) state);
+                        }
+                        else
+                        {
+                            entry.AddMember<int>(KEY_DOWNLOAD_STATE, (int)state, _json.GetAllocator());
+                        }
+                    }
+                }
+            }
+        }
     }
-}
-
-void Manifest::updateJson()
-{
-	if (_json.IsObject() && _json.HasMember(KEY_ASSETS))
-	{
-		rapidjson::Value &assets = _json[KEY_ASSETS];
-		if (assets.IsObject())
-		{
-			for (rapidjson::Value::MemberIterator itr = assets.MemberBegin(); itr != assets.MemberEnd(); ++itr)
-			{
-				for (auto it = _assets.cbegin(); it != _assets.cend(); ++it)
-				{
-					const std::string &key = it->first;
-					if (key.compare(itr->name.GetString()) == 0) {
-						rapidjson::Value &entry = itr->value;
-						if (entry.HasMember(KEY_DOWNLOAD_STATE))
-						{
-							rapidjson::Value &value = entry[KEY_DOWNLOAD_STATE];
-							if (value.IsInt())
-							{
-								value.SetInt((int)it->second.downloadState);
-							}
-						}
-						else {
-							entry.AddMember<int>(KEY_DOWNLOAD_STATE, (int)it->second.downloadState, _json.GetAllocator());
-						}
-						break;
-					}
-				}
-			}
-		}
-	}
 }
 
 void Manifest::clear()
@@ -398,12 +407,6 @@ Manifest::Asset Manifest::parseAsset(const std::string &path, const rapidjson::V
         asset.md5 = json[KEY_MD5].GetString();
     }
     else asset.md5 = "";
-
-	if (json.HasMember(KEY_SIZE) && json[KEY_SIZE].IsInt())
-	{
-		asset.size = json[KEY_SIZE].GetInt();
-	}
-	else asset.size = 0;
     
     if ( json.HasMember(KEY_PATH) && json[KEY_PATH].IsString() )
     {
@@ -415,6 +418,12 @@ Manifest::Asset Manifest::parseAsset(const std::string &path, const rapidjson::V
         asset.compressed = json[KEY_COMPRESSED].GetBool();
     }
     else asset.compressed = false;
+    
+    if ( json.HasMember(KEY_SIZE) && json[KEY_SIZE].IsInt() )
+    {
+        asset.size = json[KEY_SIZE].GetInt();
+    }
+    else asset.size = 0;
     
     if ( json.HasMember(KEY_DOWNLOAD_STATE) && json[KEY_DOWNLOAD_STATE].IsInt() )
     {
@@ -524,8 +533,6 @@ void Manifest::loadManifest(const rapidjson::Document &json)
 
 void Manifest::saveToFile(const std::string &filepath)
 {
-	updateJson();
-
     rapidjson::StringBuffer buffer;
     rapidjson::PrettyWriter<rapidjson::StringBuffer> writer(buffer);
     _json.Accept(writer);
