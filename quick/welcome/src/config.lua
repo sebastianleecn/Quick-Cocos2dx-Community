@@ -9,7 +9,14 @@ DEBUG_FPS = false
 DEBUG_MEM = false
 
 -- screen orientation
-CONFIG_SCREEN_ORIENTATION = "landscape"
+CONFIG_SCREEN_ORIENTATION = "portrait"
+
+-- design resolution
+CONFIG_SCREEN_WIDTH  = 720
+CONFIG_SCREEN_HEIGHT = 1280 
+
+-- scale
+CONFIG_VIEW_SCALE = "75"
 
 -- auto scale mode
 CONFIG_SCREEN_AUTOSCALE = "FILL_ALL"

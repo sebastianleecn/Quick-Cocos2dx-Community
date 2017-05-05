@@ -154,6 +154,7 @@ function player:buildUI()
     local viewSize = {{title = "iPhone 3Gs",w=320,h=480},
                       {title = "iPhone 4",  w=640,h=960},
                       {title = "iPhone 5",  w=640,h=1136},
+                      {title = "iPhone 6",  w=750,h=1134},
                       {title = "iPad",      w=768,h=1024},
                       {title = "iPad Retina", w=1536,h=2048},
                       {title = "Android",   w=480,h=800},
@@ -193,7 +194,7 @@ function player:buildUI()
     -- scale
     menuBar:addItem("VIEW_SCALE_MENU_SEP", "-", "VIEW_MENU")
     local viewScale = {{title="Actual (100%)",st="super+0",scale=100},
-                       {title="Zoom Out (75%)",st="super+6",scale=70},
+                       {title="Zoom Out (75%)",st="super+6",scale=75},
                        {title="Zoom Out (50%)",st="super+5",scale=50},
                        {title="Zoom Out (25%)",st="super+4",scale=25},
                    }
@@ -337,8 +338,8 @@ function player:init()
         PLAYER_COCOACHINA_USER = "USER_NAME",
         PLAYER_WINDOW_X = 0,
         PLAYER_WINDOW_Y = 0,
-        PLAYER_WINDOW_WIDTH = 960,
-        PLAYER_WINDOW_HEIGHT = 640,
+        PLAYER_WINDOW_WIDTH = 720,
+        PLAYER_WINDOW_HEIGHT = 1280,
         PLAYER_OPEN_LAST_PROJECT = true,
         PLAYER_OPEN_RECENTS ={
         },
