@@ -41,6 +41,7 @@ using namespace std;
 
 NS_CC_EXT_BEGIN
 
+#define TEMP_PACKAGE_SUFFIX     "_temp"
 #define VERSION_FILENAME        "version.manifest"
 #define TEMP_MANIFEST_FILENAME  "project.manifest.temp"
 #define MANIFEST_FILENAME       "project.manifest"
@@ -48,7 +49,7 @@ NS_CC_EXT_BEGIN
 #define BUFFER_SIZE    8192
 #define MAX_FILENAME   512
 
-#define DEFAULT_CONNECTION_TIMEOUT 8
+#define DEFAULT_CONNECTION_TIMEOUT 45
 
 const std::string AssetsManagerEx::VERSION_ID = "@version";
 const std::string AssetsManagerEx::MANIFEST_ID = "@manifest";
@@ -139,8 +140,17 @@ void AssetsManagerEx::initManifests(const std::string& manifestUrl)
         if (_tempManifest)
         {
             _tempManifest->parse(_tempManifestPath);
-            if (!_tempManifest->isLoaded())
+            // Previous update is interrupted
+            if (_fileUtils->isFileExist(_tempManifestPath))
+            {
+                // Manifest parse failed, remove all temp files
+                if (!_tempManifest->isLoaded())
+                {
                 _fileUtils->removeFile(_tempManifestPath);
+                    CC_SAFE_RELEASE(_tempManifest);
+                    _tempManifest = nullptr;
+                }
+            }
         }
         else
         {
@@ -351,6 +361,16 @@ bool AssetsManagerEx::decompress(const std::string &zip)
         }
         else
         {
+            // Create all directories in advance to avoid issue
+            std::string dir = basename(fullPath);
+            if (!_fileUtils->isDirectoryExist(dir)) {
+                if (!_fileUtils->createDirectory(dir)) {
+                    // Failed to create directory
+                    CCLOG("AssetsManagerEx : can not create directory %s\n", fullPath.c_str());
+                    unzClose(zipfile);
+                    return false;
+                }
+            }
             // Entry is a file, so extract it.
             // Open current file.
             if (unzOpenCurrentFile(zipfile) != UNZ_OK)
@@ -498,7 +518,13 @@ void AssetsManagerEx::downloadManifest()
     if (_updateState != State::PREDOWNLOAD_MANIFEST)
         return;
 
-    std::string manifestUrl = _localManifest->getManifestFileUrl();
+    std::string manifestUrl;
+    if (_remoteManifest->isVersionLoaded()) {
+        manifestUrl = _remoteManifest->getManifestFileUrl();
+    } else {
+        manifestUrl = _localManifest->getManifestFileUrl();
+    }
+
     if (manifestUrl.size() > 0)
     {
         _updateState = State::DOWNLOADING_MANIFEST;
@@ -523,7 +549,7 @@ void AssetsManagerEx::parseManifest()
 
     if (!_remoteManifest->isLoaded())
     {
-        CCLOG("AssetsManagerEx : Error parsing manifest file\n");
+        CCLOG("AssetsManagerEx : Error parsing manifest file, %s", _tempManifestPath.c_str());
         dispatchUpdateEvent(EventAssetsManagerEx::EventCode::ERROR_PARSE_MANIFEST);
         _updateState = State::UNCHECKED;
     }
@@ -601,6 +627,7 @@ void AssetsManagerEx::startUpdate()
         _tempManifest->release();
         _tempManifest = _remoteManifest;
         
+        // Check difference between local manifest and remote manifest
         std::unordered_map<std::string, Manifest::AssetDiff> diff_map = _localManifest->genDiff(_remoteManifest);
         if (diff_map.size() == 0)
         {
@@ -645,9 +672,9 @@ void AssetsManagerEx::updateSucceed()
     // 1. rename temporary manifest to valid manifest
     _fileUtils->renameFile(_storagePath, TEMP_MANIFEST_FILENAME, MANIFEST_FILENAME);
     // 2. swap the localManifest
-    if (_localManifest != nullptr)
-        _localManifest->release();
+    CC_SAFE_RELEASE(_localManifest);
     _localManifest = _remoteManifest;
+    _localManifest->setManifestRoot(_storagePath);
     _remoteManifest = nullptr;
     // 3. make local manifest take effect
     prepareLocalManifest();
@@ -794,7 +821,7 @@ const Downloader::DownloadUnits& AssetsManagerEx::getFailedAssets() const
 
 void AssetsManagerEx::downloadFailedAssets()
 {
-    CCLOG("AssetsManagerEx : Start update %lu failed assets.\n", _failedUnits.size());
+    CCLOG("AssetsManagerEx : Start update %lu failed assets.\n", static_cast<unsigned long>(_failedUnits.size()));
     updateAssets(_failedUnits);
 }
 
@@ -811,6 +838,7 @@ void AssetsManagerEx::onError(const Downloader::Error &error)
     else if (error.customId == MANIFEST_ID)
     {
         dispatchUpdateEvent(EventAssetsManagerEx::EventCode::ERROR_DOWNLOAD_MANIFEST, error.customId, error.message, error.curle_code, error.curlm_code);
+        _updateState = State::FAIL_TO_UPDATE;
     }
     else
     {

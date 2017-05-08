@@ -52,9 +52,9 @@ using namespace std;
 
 NS_CC_EXT_BEGIN;
 
-#define KEY_OF_VERSION   "current-version-code"
-#define KEY_OF_DOWNLOADED_VERSION    "downloaded-version-code"
-#define TEMP_PACKAGE_FILE_NAME    "cocos2dx-update-temp-package.zip"
+#define KEY_OF_VERSION                  "current-version-code"
+#define KEY_OF_DOWNLOADED_VERSION       "downloaded-version-code"
+#define TEMP_PACKAGE_FILE_NAME          "cocos2dx-update-temp-package.zip"
 #define BUFFER_SIZE    8192
 #define MAX_FILENAME   512
 
@@ -145,7 +145,7 @@ static size_t getVersionCode(void *ptr, size_t size, size_t nmemb, void *userdat
 
 bool AssetsManager::checkUpdate()
 {
-    if (_versionFileUrl.size() == 0) return false;
+    if (_versionFileUrl.size() == 0 || _isDownloading) return false;
     
     _curl = curl_easy_init();
     if (! _curl)
@@ -335,8 +335,8 @@ bool AssetsManager::uncompress()
         const size_t filenameLength = strlen(fileName);
         if (fileName[filenameLength-1] == '/')
         {
-            // Entry is a direcotry, so create it.
-            // If the directory exists, it will failed scilently.
+            // Entry is a directory, so create it.
+            // If the directory exists, it will failed silently.
             if (!createDirectory(fullPath.c_str()))
             {
                 CCLOG("can not create directory %s", fullPath.c_str());
@@ -384,9 +384,7 @@ bool AssetsManager::uncompress()
                 index=fileNameStr.find("/",startIndex);
                 
             }
-            
-            
-            
+
             // Entry is a file, so extract it.
             
             // Open current file.
@@ -617,7 +615,7 @@ AssetsManager* AssetsManager::create(const char* packageUrl, const char* version
     class DelegateProtocolImpl : public AssetsManagerDelegateProtocol 
     {
     public :
-        DelegateProtocolImpl(ErrorCallback aErrorCallback, ProgressCallback aProgressCallback, SuccessCallback aSuccessCallback)
+        DelegateProtocolImpl(ErrorCallback& aErrorCallback, ProgressCallback& aProgressCallback, SuccessCallback& aSuccessCallback)
         : errorCallback(aErrorCallback), progressCallback(aProgressCallback), successCallback(aSuccessCallback)
         {}
 

@@ -97,6 +97,10 @@ public:
      */
     const std::string& getVersion() const;
     
+    /** @brief Get the search paths list related to the Manifest.
+     */
+    std::vector<std::string> getSearchPaths() const;
+    
 protected:
     
     /** @brief Constructor for Manifest class
@@ -180,6 +184,8 @@ protected:
      * @param state The current download state of the asset
      */
     void setAssetDownloadState(const std::string &key, const DownloadState &state);
+    
+    void setManifestRoot(const std::string &root) {_manifestRoot = root;};
     
 private:
     

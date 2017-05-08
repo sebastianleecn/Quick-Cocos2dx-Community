@@ -28,6 +28,7 @@
 #include "json/stringbuffer.h"
 
 #include <fstream>
+#include <stdio.h>
 
 #define KEY_VERSION             "version"
 #define KEY_PACKAGE_URL         "packageUrl"
@@ -254,7 +255,7 @@ void Manifest::genResumeAssetsList(Downloader::DownloadUnits *units) const
     {
         Asset asset = it->second;
         
-        if (asset.downloadState != DownloadState::SUCCESSED)
+        if (asset.downloadState != DownloadState::SUCCESSED && asset.downloadState != DownloadState::UNMARKED)
         {
             Downloader::DownloadUnit unit;
             unit.customId = it->first;
@@ -271,6 +272,22 @@ void Manifest::genResumeAssetsList(Downloader::DownloadUnits *units) const
             units->emplace(unit.customId, unit);
         }
     }
+}
+
+std::vector<std::string> Manifest::getSearchPaths() const
+{
+    std::vector<std::string> searchPaths;
+    searchPaths.push_back(_manifestRoot);
+    
+    for (int i = (int)_searchPaths.size()-1; i >= 0; i--)
+    {
+        std::string path = _searchPaths[i];
+        if (path.size() > 0 && path[path.size() - 1] != '/')
+            path.append("/");
+        path = _manifestRoot + path;
+        searchPaths.push_back(path);
+    }
+    return searchPaths;
 }
 
 void Manifest::prependSearchPaths()
@@ -429,7 +446,7 @@ Manifest::Asset Manifest::parseAsset(const std::string &path, const rapidjson::V
     {
         asset.downloadState = (DownloadState)(json[KEY_DOWNLOAD_STATE].GetInt());
     }
-    else asset.downloadState = DownloadState::UNSTARTED;
+    else asset.downloadState = DownloadState::UNMARKED;
     
     return asset;
 }

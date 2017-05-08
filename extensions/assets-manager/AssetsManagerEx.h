@@ -25,6 +25,10 @@
 #ifndef __AssetsManagerEx__
 #define __AssetsManagerEx__
 
+#include <string>
+#include <unordered_map>
+#include <vector>
+
 #include "base/CCEventDispatcher.h"
 #include "platform/CCFileUtils.h"
 #include "CCEventAssetsManagerEx.h"
@@ -34,9 +38,6 @@
 #include "extensions/ExtensionExport.h"
 #include "json/document.h"
 
-#include <string>
-#include <unordered_map>
-#include <vector>
 
 NS_CC_EXT_BEGIN
 
@@ -150,7 +151,7 @@ protected:
      */
     const Downloader::DownloadUnits& getFailedAssets() const;
     
-    /** @brief Function for destorying the downloaded version file and manifest file
+    /** @brief Function for destroying the downloaded version file and manifest file
      */
     void destroyDownloadedVersion();
     
