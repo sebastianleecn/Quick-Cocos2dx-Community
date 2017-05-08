@@ -217,6 +217,9 @@ function OpenProjectUI:createYesOrNoButton()
             projectConfig:changeFrameOrientationToLandscape()
         end
 
+        projectConfig:setFrameSize(720, 1280)
+        projectConfig:setFrameScale(0.75)
+
         -- PlayerProtocol:getInstance():openNewPlayerWithProjectConfig(projectConfig)
         PlayerProtocol:getInstance():openProjectWithProjectConfig(projectConfig)
     end)

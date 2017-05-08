@@ -253,6 +253,31 @@
 		DA1769F81A1B1351006F5EA8 /* lua_cocos2dx_csloader_auto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA1769F51A1B1351006F5EA8 /* lua_cocos2dx_csloader_auto.cpp */; };
 		DA1769F91A1B1351006F5EA8 /* lua_cocos2dx_csloader_auto.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DA1769F61A1B1351006F5EA8 /* lua_cocos2dx_csloader_auto.hpp */; };
 		DA1769FA1A1B1351006F5EA8 /* lua_cocos2dx_csloader_auto.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DA1769F61A1B1351006F5EA8 /* lua_cocos2dx_csloader_auto.hpp */; };
+		E96089521EBB125C0024F59B /* TalkingData.h in Headers */ = {isa = PBXBuildFile; fileRef = E960893B1EBB125C0024F59B /* TalkingData.h */; };
+		E96089531EBB125C0024F59B /* TDCCAccount.h in Headers */ = {isa = PBXBuildFile; fileRef = E960893C1EBB125C0024F59B /* TDCCAccount.h */; };
+		E96089541EBB125C0024F59B /* TDCCItem.h in Headers */ = {isa = PBXBuildFile; fileRef = E960893D1EBB125C0024F59B /* TDCCItem.h */; };
+		E96089551EBB125C0024F59B /* TDCCMission.h in Headers */ = {isa = PBXBuildFile; fileRef = E960893E1EBB125C0024F59B /* TDCCMission.h */; };
+		E96089561EBB125C0024F59B /* TDCCTalkingDataGA.h in Headers */ = {isa = PBXBuildFile; fileRef = E960893F1EBB125C0024F59B /* TDCCTalkingDataGA.h */; };
+		E96089571EBB125C0024F59B /* TDCCVirtualCurrency.h in Headers */ = {isa = PBXBuildFile; fileRef = E96089401EBB125C0024F59B /* TDCCVirtualCurrency.h */; };
+		E96089581EBB125C0024F59B /* libTalkingDataGA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E96089421EBB125C0024F59B /* libTalkingDataGA.a */; };
+		E96089591EBB125C0024F59B /* TalkingDataGA.h in Headers */ = {isa = PBXBuildFile; fileRef = E96089431EBB125C0024F59B /* TalkingDataGA.h */; };
+		E960895A1EBB125C0024F59B /* TDCCAccount.mm in Sources */ = {isa = PBXBuildFile; fileRef = E96089441EBB125C0024F59B /* TDCCAccount.mm */; };
+		E960895B1EBB125C0024F59B /* TDCCItem.mm in Sources */ = {isa = PBXBuildFile; fileRef = E96089451EBB125C0024F59B /* TDCCItem.mm */; };
+		E960895C1EBB125C0024F59B /* TDCCMission.mm in Sources */ = {isa = PBXBuildFile; fileRef = E96089461EBB125C0024F59B /* TDCCMission.mm */; };
+		E960895D1EBB125C0024F59B /* TDCCTalkingDataGA.mm in Sources */ = {isa = PBXBuildFile; fileRef = E96089471EBB125C0024F59B /* TDCCTalkingDataGA.mm */; };
+		E960895E1EBB125C0024F59B /* TDCCVirtualCurrency.mm in Sources */ = {isa = PBXBuildFile; fileRef = E96089481EBB125C0024F59B /* TDCCVirtualCurrency.mm */; };
+		E9608B491EBB1B8F0024F59B /* lua_cocos2dx_controller_auto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9608B3D1EBB1B8E0024F59B /* lua_cocos2dx_controller_auto.cpp */; };
+		E9608B4A1EBB1B8F0024F59B /* lua_cocos2dx_controller_auto.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E9608B3E1EBB1B8E0024F59B /* lua_cocos2dx_controller_auto.hpp */; };
+		E9608B4B1EBB1B8F0024F59B /* lua_cocos2dx_TalkingDataGA_auto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9608B3F1EBB1B8E0024F59B /* lua_cocos2dx_TalkingDataGA_auto.cpp */; };
+		E9608B4C1EBB1B8F0024F59B /* lua_cocos2dx_TalkingDataGA_auto.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E9608B401EBB1B8E0024F59B /* lua_cocos2dx_TalkingDataGA_auto.hpp */; };
+		E9608B4D1EBB1B8F0024F59B /* lua_cocos2dx_TDGAAccount_auto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9608B411EBB1B8E0024F59B /* lua_cocos2dx_TDGAAccount_auto.cpp */; };
+		E9608B4E1EBB1B8F0024F59B /* lua_cocos2dx_TDGAAccount_auto.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E9608B421EBB1B8E0024F59B /* lua_cocos2dx_TDGAAccount_auto.hpp */; };
+		E9608B4F1EBB1B8F0024F59B /* lua_cocos2dx_TDGAItem_auto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9608B431EBB1B8E0024F59B /* lua_cocos2dx_TDGAItem_auto.cpp */; };
+		E9608B501EBB1B8F0024F59B /* lua_cocos2dx_TDGAItem_auto.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E9608B441EBB1B8E0024F59B /* lua_cocos2dx_TDGAItem_auto.hpp */; };
+		E9608B511EBB1B8F0024F59B /* lua_cocos2dx_TDGAMission_auto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9608B451EBB1B8E0024F59B /* lua_cocos2dx_TDGAMission_auto.cpp */; };
+		E9608B521EBB1B8F0024F59B /* lua_cocos2dx_TDGAMission_auto.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E9608B461EBB1B8E0024F59B /* lua_cocos2dx_TDGAMission_auto.hpp */; };
+		E9608B531EBB1B8F0024F59B /* lua_cocos2dx_TDGAVirtualCurrency_auto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9608B471EBB1B8E0024F59B /* lua_cocos2dx_TDGAVirtualCurrency_auto.cpp */; };
+		E9608B541EBB1B8F0024F59B /* lua_cocos2dx_TDGAVirtualCurrency_auto.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E9608B481EBB1B8E0024F59B /* lua_cocos2dx_TDGAVirtualCurrency_auto.hpp */; };
 		F4FE0D5719ECD00100B8B12B /* luasocket_scripts.c in Sources */ = {isa = PBXBuildFile; fileRef = F4FE0D5519ECD00100B8B12B /* luasocket_scripts.c */; };
 		F4FE0D5819ECD00100B8B12B /* luasocket_scripts.c in Sources */ = {isa = PBXBuildFile; fileRef = F4FE0D5519ECD00100B8B12B /* luasocket_scripts.c */; };
 		F4FE0D5919ECD00100B8B12B /* luasocket_scripts.h in Headers */ = {isa = PBXBuildFile; fileRef = F4FE0D5619ECD00100B8B12B /* luasocket_scripts.h */; };
@@ -413,6 +438,443 @@
 		DA1769F01A1A0D12006F5EA8 /* lua_cocos2dx_assetsmanager_auto.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua_cocos2dx_assetsmanager_auto.hpp; sourceTree = "<group>"; };
 		DA1769F51A1B1351006F5EA8 /* lua_cocos2dx_csloader_auto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_cocos2dx_csloader_auto.cpp; sourceTree = "<group>"; };
 		DA1769F61A1B1351006F5EA8 /* lua_cocos2dx_csloader_auto.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua_cocos2dx_csloader_auto.hpp; sourceTree = "<group>"; };
+		E96088461EBB03530024F59B /* libTalkingDataGA.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTalkingDataGA.a; path = ../../../../external/TalkingDataGameAnalytics/ios/libTalkingDataGA.a; sourceTree = "<group>"; };
+		E960893B1EBB125C0024F59B /* TalkingData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkingData.h; sourceTree = "<group>"; };
+		E960893C1EBB125C0024F59B /* TDCCAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDCCAccount.h; sourceTree = "<group>"; };
+		E960893D1EBB125C0024F59B /* TDCCItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDCCItem.h; sourceTree = "<group>"; };
+		E960893E1EBB125C0024F59B /* TDCCMission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDCCMission.h; sourceTree = "<group>"; };
+		E960893F1EBB125C0024F59B /* TDCCTalkingDataGA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDCCTalkingDataGA.h; sourceTree = "<group>"; };
+		E96089401EBB125C0024F59B /* TDCCVirtualCurrency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDCCVirtualCurrency.h; sourceTree = "<group>"; };
+		E96089421EBB125C0024F59B /* libTalkingDataGA.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTalkingDataGA.a; sourceTree = "<group>"; };
+		E96089431EBB125C0024F59B /* TalkingDataGA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkingDataGA.h; sourceTree = "<group>"; };
+		E96089441EBB125C0024F59B /* TDCCAccount.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TDCCAccount.mm; sourceTree = "<group>"; };
+		E96089451EBB125C0024F59B /* TDCCItem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TDCCItem.mm; sourceTree = "<group>"; };
+		E96089461EBB125C0024F59B /* TDCCMission.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TDCCMission.mm; sourceTree = "<group>"; };
+		E96089471EBB125C0024F59B /* TDCCTalkingDataGA.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TDCCTalkingDataGA.mm; sourceTree = "<group>"; };
+		E96089481EBB125C0024F59B /* TDCCVirtualCurrency.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TDCCVirtualCurrency.mm; sourceTree = "<group>"; };
+		E96089A21EBB1B8D0024F59B /* Action.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Action.lua; sourceTree = "<group>"; };
+		E96089A31EBB1B8D0024F59B /* ActionCamera.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ActionCamera.lua; sourceTree = "<group>"; };
+		E96089A41EBB1B8D0024F59B /* ActionEase.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ActionEase.lua; sourceTree = "<group>"; };
+		E96089A51EBB1B8D0024F59B /* ActionFadeFrame.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ActionFadeFrame.lua; sourceTree = "<group>"; };
+		E96089A61EBB1B8D0024F59B /* ActionFrame.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ActionFrame.lua; sourceTree = "<group>"; };
+		E96089A71EBB1B8D0024F59B /* ActionInstant.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ActionInstant.lua; sourceTree = "<group>"; };
+		E96089A81EBB1B8D0024F59B /* ActionInterval.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ActionInterval.lua; sourceTree = "<group>"; };
+		E96089A91EBB1B8D0024F59B /* ActionManager.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ActionManager.lua; sourceTree = "<group>"; };
+		E96089AA1EBB1B8D0024F59B /* ActionManagerEx.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ActionManagerEx.lua; sourceTree = "<group>"; };
+		E96089AB1EBB1B8D0024F59B /* ActionMoveFrame.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ActionMoveFrame.lua; sourceTree = "<group>"; };
+		E96089AC1EBB1B8D0024F59B /* ActionObject.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ActionObject.lua; sourceTree = "<group>"; };
+		E96089AD1EBB1B8D0024F59B /* ActionRotationFrame.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ActionRotationFrame.lua; sourceTree = "<group>"; };
+		E96089AE1EBB1B8D0024F59B /* ActionScaleFrame.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ActionScaleFrame.lua; sourceTree = "<group>"; };
+		E96089AF1EBB1B8D0024F59B /* ActionTimeline.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ActionTimeline.lua; sourceTree = "<group>"; };
+		E96089B01EBB1B8D0024F59B /* ActionTimelineCache.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ActionTimelineCache.lua; sourceTree = "<group>"; };
+		E96089B11EBB1B8D0024F59B /* ActionTimelineData.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ActionTimelineData.lua; sourceTree = "<group>"; };
+		E96089B21EBB1B8D0024F59B /* ActionTintFrame.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ActionTintFrame.lua; sourceTree = "<group>"; };
+		E96089B31EBB1B8D0024F59B /* ActionTween.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ActionTween.lua; sourceTree = "<group>"; };
+		E96089B41EBB1B8D0024F59B /* AmbientLight.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AmbientLight.lua; sourceTree = "<group>"; };
+		E96089B51EBB1B8D0024F59B /* AnchorPointFrame.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AnchorPointFrame.lua; sourceTree = "<group>"; };
+		E96089B61EBB1B8D0024F59B /* Animate.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Animate.lua; sourceTree = "<group>"; };
+		E96089B71EBB1B8D0024F59B /* Animate3D.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Animate3D.lua; sourceTree = "<group>"; };
+		E96089B81EBB1B8D0024F59B /* Animation.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Animation.lua; sourceTree = "<group>"; };
+		E96089B91EBB1B8D0024F59B /* Animation3D.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Animation3D.lua; sourceTree = "<group>"; };
+		E96089BA1EBB1B8D0024F59B /* AnimationCache.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AnimationCache.lua; sourceTree = "<group>"; };
+		E96089BB1EBB1B8D0024F59B /* AnimationData.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AnimationData.lua; sourceTree = "<group>"; };
+		E96089BC1EBB1B8D0024F59B /* AnimationFrame.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AnimationFrame.lua; sourceTree = "<group>"; };
+		E96089BD1EBB1B8D0024F59B /* Application.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Application.lua; sourceTree = "<group>"; };
+		E96089BE1EBB1B8D0024F59B /* Armature.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Armature.lua; sourceTree = "<group>"; };
+		E96089BF1EBB1B8D0024F59B /* ArmatureAnimation.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ArmatureAnimation.lua; sourceTree = "<group>"; };
+		E96089C01EBB1B8D0024F59B /* ArmatureData.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ArmatureData.lua; sourceTree = "<group>"; };
+		E96089C11EBB1B8D0024F59B /* ArmatureDataManager.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ArmatureDataManager.lua; sourceTree = "<group>"; };
+		E96089C21EBB1B8D0024F59B /* ArmatureDisplayData.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ArmatureDisplayData.lua; sourceTree = "<group>"; };
+		E96089C31EBB1B8D0024F59B /* AssetsManager.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AssetsManager.lua; sourceTree = "<group>"; };
+		E96089C41EBB1B8D0024F59B /* AssetsManagerEx.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AssetsManagerEx.lua; sourceTree = "<group>"; };
+		E96089C51EBB1B8D0024F59B /* AtlasNode.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AtlasNode.lua; sourceTree = "<group>"; };
+		E96089C61EBB1B8D0024F59B /* AttachNode.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AttachNode.lua; sourceTree = "<group>"; };
+		E96089C71EBB1B8D0024F59B /* AudioEngine.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AudioEngine.lua; sourceTree = "<group>"; };
+		E96089C81EBB1B8D0024F59B /* AudioProfile.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AudioProfile.lua; sourceTree = "<group>"; };
+		E96089C91EBB1B8D0024F59B /* BaseData.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BaseData.lua; sourceTree = "<group>"; };
+		E96089CA1EBB1B8D0024F59B /* BaseLight.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BaseLight.lua; sourceTree = "<group>"; };
+		E96089CB1EBB1B8D0024F59B /* BatchNode.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BatchNode.lua; sourceTree = "<group>"; };
+		E96089CC1EBB1B8D0024F59B /* BezierBy.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BezierBy.lua; sourceTree = "<group>"; };
+		E96089CD1EBB1B8D0024F59B /* BezierTo.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BezierTo.lua; sourceTree = "<group>"; };
+		E96089CE1EBB1B8D0024F59B /* BillBoard.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BillBoard.lua; sourceTree = "<group>"; };
+		E96089CF1EBB1B8D0024F59B /* Blink.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Blink.lua; sourceTree = "<group>"; };
+		E96089D01EBB1B8D0024F59B /* Bone.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Bone.lua; sourceTree = "<group>"; };
+		E96089D11EBB1B8D0024F59B /* BoneData.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BoneData.lua; sourceTree = "<group>"; };
+		E96089D21EBB1B8D0024F59B /* Button.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Button.lua; sourceTree = "<group>"; };
+		E96089D31EBB1B8D0024F59B /* CallFunc.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CallFunc.lua; sourceTree = "<group>"; };
+		E96089D41EBB1B8D0024F59B /* Camera.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Camera.lua; sourceTree = "<group>"; };
+		E96089D51EBB1B8D0024F59B /* CardinalSplineBy.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CardinalSplineBy.lua; sourceTree = "<group>"; };
+		E96089D61EBB1B8D0024F59B /* CardinalSplineTo.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CardinalSplineTo.lua; sourceTree = "<group>"; };
+		E96089D71EBB1B8D0024F59B /* CatmullRomBy.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CatmullRomBy.lua; sourceTree = "<group>"; };
+		E96089D81EBB1B8D0024F59B /* CatmullRomTo.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CatmullRomTo.lua; sourceTree = "<group>"; };
+		E96089D91EBB1B8D0024F59B /* CCBAnimationManager.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CCBAnimationManager.lua; sourceTree = "<group>"; };
+		E96089DA1EBB1B8D0024F59B /* CCBReader.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CCBReader.lua; sourceTree = "<group>"; };
+		E96089DB1EBB1B8D0024F59B /* CheckBox.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CheckBox.lua; sourceTree = "<group>"; };
+		E96089DC1EBB1B8D0024F59B /* ClippingNode.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ClippingNode.lua; sourceTree = "<group>"; };
+		E96089DD1EBB1B8D0024F59B /* ClippingRectangleNode.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ClippingRectangleNode.lua; sourceTree = "<group>"; };
+		E96089DE1EBB1B8D0024F59B /* ColorFrame.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ColorFrame.lua; sourceTree = "<group>"; };
+		E96089DF1EBB1B8D0024F59B /* ComAttribute.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ComAttribute.lua; sourceTree = "<group>"; };
+		E96089E01EBB1B8D0024F59B /* ComAudio.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ComAudio.lua; sourceTree = "<group>"; };
+		E96089E11EBB1B8D0024F59B /* ComController.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ComController.lua; sourceTree = "<group>"; };
+		E96089E21EBB1B8D0024F59B /* Component.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Component.lua; sourceTree = "<group>"; };
+		E96089E31EBB1B8D0024F59B /* ComRender.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ComRender.lua; sourceTree = "<group>"; };
+		E96089E41EBB1B8D0024F59B /* Console.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Console.lua; sourceTree = "<group>"; };
+		E96089E51EBB1B8D0024F59B /* ContourData.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ContourData.lua; sourceTree = "<group>"; };
+		E96089E61EBB1B8D0024F59B /* Control.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Control.lua; sourceTree = "<group>"; };
+		E96089E71EBB1B8D0024F59B /* ControlButton.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ControlButton.lua; sourceTree = "<group>"; };
+		E96089E81EBB1B8D0024F59B /* ControlColourPicker.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ControlColourPicker.lua; sourceTree = "<group>"; };
+		E96089E91EBB1B8D0024F59B /* ControlHuePicker.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ControlHuePicker.lua; sourceTree = "<group>"; };
+		E96089EA1EBB1B8D0024F59B /* Controller.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Controller.lua; sourceTree = "<group>"; };
+		E96089EB1EBB1B8D0024F59B /* ControlPotentiometer.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ControlPotentiometer.lua; sourceTree = "<group>"; };
+		E96089EC1EBB1B8D0024F59B /* ControlSaturationBrightnessPicker.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ControlSaturationBrightnessPicker.lua; sourceTree = "<group>"; };
+		E96089ED1EBB1B8D0024F59B /* ControlSlider.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ControlSlider.lua; sourceTree = "<group>"; };
+		E96089EE1EBB1B8D0024F59B /* ControlStepper.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ControlStepper.lua; sourceTree = "<group>"; };
+		E96089EF1EBB1B8D0024F59B /* ControlSwitch.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ControlSwitch.lua; sourceTree = "<group>"; };
+		E96089F01EBB1B8D0024F59B /* CSLoader.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CSLoader.lua; sourceTree = "<group>"; };
+		E96089F11EBB1B8D0024F59B /* DelayTime.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DelayTime.lua; sourceTree = "<group>"; };
+		E96089F21EBB1B8D0024F59B /* Device.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Device.lua; sourceTree = "<group>"; };
+		E96089F31EBB1B8D0024F59B /* DirectionLight.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DirectionLight.lua; sourceTree = "<group>"; };
+		E96089F41EBB1B8D0024F59B /* Director.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Director.lua; sourceTree = "<group>"; };
+		E96089F51EBB1B8D0024F59B /* DisplayData.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DisplayData.lua; sourceTree = "<group>"; };
+		E96089F61EBB1B8D0024F59B /* DisplayManager.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DisplayManager.lua; sourceTree = "<group>"; };
+		E96089F71EBB1B8D0024F59B /* DrawNode.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DrawNode.lua; sourceTree = "<group>"; };
+		E96089F81EBB1B8D0024F59B /* EaseBackIn.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseBackIn.lua; sourceTree = "<group>"; };
+		E96089F91EBB1B8D0024F59B /* EaseBackInOut.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseBackInOut.lua; sourceTree = "<group>"; };
+		E96089FA1EBB1B8D0024F59B /* EaseBackOut.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseBackOut.lua; sourceTree = "<group>"; };
+		E96089FB1EBB1B8D0024F59B /* EaseBezierAction.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseBezierAction.lua; sourceTree = "<group>"; };
+		E96089FC1EBB1B8D0024F59B /* EaseBounce.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseBounce.lua; sourceTree = "<group>"; };
+		E96089FD1EBB1B8D0024F59B /* EaseBounceIn.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseBounceIn.lua; sourceTree = "<group>"; };
+		E96089FE1EBB1B8D0024F59B /* EaseBounceInOut.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseBounceInOut.lua; sourceTree = "<group>"; };
+		E96089FF1EBB1B8D0024F59B /* EaseBounceOut.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseBounceOut.lua; sourceTree = "<group>"; };
+		E9608A001EBB1B8D0024F59B /* EaseCircleActionIn.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseCircleActionIn.lua; sourceTree = "<group>"; };
+		E9608A011EBB1B8D0024F59B /* EaseCircleActionInOut.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseCircleActionInOut.lua; sourceTree = "<group>"; };
+		E9608A021EBB1B8D0024F59B /* EaseCircleActionOut.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseCircleActionOut.lua; sourceTree = "<group>"; };
+		E9608A031EBB1B8D0024F59B /* EaseCubicActionIn.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseCubicActionIn.lua; sourceTree = "<group>"; };
+		E9608A041EBB1B8D0024F59B /* EaseCubicActionInOut.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseCubicActionInOut.lua; sourceTree = "<group>"; };
+		E9608A051EBB1B8D0024F59B /* EaseCubicActionOut.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseCubicActionOut.lua; sourceTree = "<group>"; };
+		E9608A061EBB1B8D0024F59B /* EaseElastic.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseElastic.lua; sourceTree = "<group>"; };
+		E9608A071EBB1B8D0024F59B /* EaseElasticIn.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseElasticIn.lua; sourceTree = "<group>"; };
+		E9608A081EBB1B8D0024F59B /* EaseElasticInOut.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseElasticInOut.lua; sourceTree = "<group>"; };
+		E9608A091EBB1B8D0024F59B /* EaseElasticOut.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseElasticOut.lua; sourceTree = "<group>"; };
+		E9608A0A1EBB1B8D0024F59B /* EaseExponentialIn.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseExponentialIn.lua; sourceTree = "<group>"; };
+		E9608A0B1EBB1B8D0024F59B /* EaseExponentialInOut.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseExponentialInOut.lua; sourceTree = "<group>"; };
+		E9608A0C1EBB1B8D0024F59B /* EaseExponentialOut.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseExponentialOut.lua; sourceTree = "<group>"; };
+		E9608A0D1EBB1B8D0024F59B /* EaseIn.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseIn.lua; sourceTree = "<group>"; };
+		E9608A0E1EBB1B8D0024F59B /* EaseInOut.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseInOut.lua; sourceTree = "<group>"; };
+		E9608A0F1EBB1B8D0024F59B /* EaseOut.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseOut.lua; sourceTree = "<group>"; };
+		E9608A101EBB1B8D0024F59B /* EaseQuadraticActionIn.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseQuadraticActionIn.lua; sourceTree = "<group>"; };
+		E9608A111EBB1B8D0024F59B /* EaseQuadraticActionInOut.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseQuadraticActionInOut.lua; sourceTree = "<group>"; };
+		E9608A121EBB1B8D0024F59B /* EaseQuadraticActionOut.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseQuadraticActionOut.lua; sourceTree = "<group>"; };
+		E9608A131EBB1B8D0024F59B /* EaseQuarticActionIn.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseQuarticActionIn.lua; sourceTree = "<group>"; };
+		E9608A141EBB1B8D0024F59B /* EaseQuarticActionInOut.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseQuarticActionInOut.lua; sourceTree = "<group>"; };
+		E9608A151EBB1B8D0024F59B /* EaseQuarticActionOut.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseQuarticActionOut.lua; sourceTree = "<group>"; };
+		E9608A161EBB1B8D0024F59B /* EaseQuinticActionIn.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseQuinticActionIn.lua; sourceTree = "<group>"; };
+		E9608A171EBB1B8D0024F59B /* EaseQuinticActionInOut.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseQuinticActionInOut.lua; sourceTree = "<group>"; };
+		E9608A181EBB1B8D0024F59B /* EaseQuinticActionOut.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseQuinticActionOut.lua; sourceTree = "<group>"; };
+		E9608A191EBB1B8D0024F59B /* EaseRateAction.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseRateAction.lua; sourceTree = "<group>"; };
+		E9608A1A1EBB1B8D0024F59B /* EaseSineIn.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseSineIn.lua; sourceTree = "<group>"; };
+		E9608A1B1EBB1B8D0024F59B /* EaseSineInOut.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseSineInOut.lua; sourceTree = "<group>"; };
+		E9608A1C1EBB1B8D0024F59B /* EaseSineOut.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EaseSineOut.lua; sourceTree = "<group>"; };
+		E9608A1D1EBB1B8D0024F59B /* EditBox.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EditBox.lua; sourceTree = "<group>"; };
+		E9608A1E1EBB1B8D0024F59B /* Event.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Event.lua; sourceTree = "<group>"; };
+		E9608A1F1EBB1B8D0024F59B /* EventAcceleration.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EventAcceleration.lua; sourceTree = "<group>"; };
+		E9608A201EBB1B8D0024F59B /* EventAssetsManagerEx.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EventAssetsManagerEx.lua; sourceTree = "<group>"; };
+		E9608A211EBB1B8D0024F59B /* EventController.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EventController.lua; sourceTree = "<group>"; };
+		E9608A221EBB1B8D0024F59B /* EventCustom.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EventCustom.lua; sourceTree = "<group>"; };
+		E9608A231EBB1B8D0024F59B /* EventDispatcher.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EventDispatcher.lua; sourceTree = "<group>"; };
+		E9608A241EBB1B8D0024F59B /* EventFocus.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EventFocus.lua; sourceTree = "<group>"; };
+		E9608A251EBB1B8D0024F59B /* EventFrame.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EventFrame.lua; sourceTree = "<group>"; };
+		E9608A261EBB1B8D0024F59B /* EventKeyboard.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EventKeyboard.lua; sourceTree = "<group>"; };
+		E9608A271EBB1B8D0024F59B /* EventListener.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EventListener.lua; sourceTree = "<group>"; };
+		E9608A281EBB1B8D0024F59B /* EventListenerAcceleration.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EventListenerAcceleration.lua; sourceTree = "<group>"; };
+		E9608A291EBB1B8D0024F59B /* EventListenerAssetsManagerEx.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EventListenerAssetsManagerEx.lua; sourceTree = "<group>"; };
+		E9608A2A1EBB1B8D0024F59B /* EventListenerController.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EventListenerController.lua; sourceTree = "<group>"; };
+		E9608A2B1EBB1B8D0024F59B /* EventListenerCustom.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EventListenerCustom.lua; sourceTree = "<group>"; };
+		E9608A2C1EBB1B8D0024F59B /* EventListenerFocus.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EventListenerFocus.lua; sourceTree = "<group>"; };
+		E9608A2D1EBB1B8D0024F59B /* EventListenerKeyboard.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EventListenerKeyboard.lua; sourceTree = "<group>"; };
+		E9608A2E1EBB1B8D0024F59B /* EventListenerMouse.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EventListenerMouse.lua; sourceTree = "<group>"; };
+		E9608A2F1EBB1B8D0024F59B /* EventListenerPhysicsContact.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EventListenerPhysicsContact.lua; sourceTree = "<group>"; };
+		E9608A301EBB1B8D0024F59B /* EventListenerPhysicsContactWithBodies.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EventListenerPhysicsContactWithBodies.lua; sourceTree = "<group>"; };
+		E9608A311EBB1B8D0024F59B /* EventListenerPhysicsContactWithGroup.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EventListenerPhysicsContactWithGroup.lua; sourceTree = "<group>"; };
+		E9608A321EBB1B8D0024F59B /* EventListenerPhysicsContactWithShapes.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EventListenerPhysicsContactWithShapes.lua; sourceTree = "<group>"; };
+		E9608A331EBB1B8D0024F59B /* EventListenerTouchAllAtOnce.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EventListenerTouchAllAtOnce.lua; sourceTree = "<group>"; };
+		E9608A341EBB1B8D0024F59B /* EventListenerTouchOneByOne.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EventListenerTouchOneByOne.lua; sourceTree = "<group>"; };
+		E9608A351EBB1B8D0024F59B /* EventMouse.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EventMouse.lua; sourceTree = "<group>"; };
+		E9608A361EBB1B8D0024F59B /* EventTouch.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EventTouch.lua; sourceTree = "<group>"; };
+		E9608A371EBB1B8D0024F59B /* FadeIn.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FadeIn.lua; sourceTree = "<group>"; };
+		E9608A381EBB1B8D0024F59B /* FadeOut.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FadeOut.lua; sourceTree = "<group>"; };
+		E9608A391EBB1B8D0024F59B /* FadeOutBLTiles.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FadeOutBLTiles.lua; sourceTree = "<group>"; };
+		E9608A3A1EBB1B8D0024F59B /* FadeOutDownTiles.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FadeOutDownTiles.lua; sourceTree = "<group>"; };
+		E9608A3B1EBB1B8D0024F59B /* FadeOutTRTiles.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FadeOutTRTiles.lua; sourceTree = "<group>"; };
+		E9608A3C1EBB1B8D0024F59B /* FadeOutUpTiles.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FadeOutUpTiles.lua; sourceTree = "<group>"; };
+		E9608A3D1EBB1B8D0024F59B /* FadeTo.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FadeTo.lua; sourceTree = "<group>"; };
+		E9608A3E1EBB1B8D0024F59B /* FileUtils.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FileUtils.lua; sourceTree = "<group>"; };
+		E9608A3F1EBB1B8D0024F59B /* FiniteTimeAction.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FiniteTimeAction.lua; sourceTree = "<group>"; };
+		E9608A401EBB1B8D0024F59B /* FlipX.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FlipX.lua; sourceTree = "<group>"; };
+		E9608A411EBB1B8D0024F59B /* FlipX3D.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FlipX3D.lua; sourceTree = "<group>"; };
+		E9608A421EBB1B8D0024F59B /* FlipY.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FlipY.lua; sourceTree = "<group>"; };
+		E9608A431EBB1B8D0024F59B /* FlipY3D.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FlipY3D.lua; sourceTree = "<group>"; };
+		E9608A441EBB1B8D0024F59B /* Follow.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Follow.lua; sourceTree = "<group>"; };
+		E9608A451EBB1B8D0024F59B /* Frame.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Frame.lua; sourceTree = "<group>"; };
+		E9608A461EBB1B8D0024F59B /* FrameData.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FrameData.lua; sourceTree = "<group>"; };
+		E9608A471EBB1B8D0024F59B /* GLProgram.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GLProgram.lua; sourceTree = "<group>"; };
+		E9608A481EBB1B8D0024F59B /* GLProgramCache.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GLProgramCache.lua; sourceTree = "<group>"; };
+		E9608A491EBB1B8D0024F59B /* GLProgramState.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GLProgramState.lua; sourceTree = "<group>"; };
+		E9608A4A1EBB1B8D0024F59B /* GLView.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GLView.lua; sourceTree = "<group>"; };
+		E9608A4B1EBB1B8D0024F59B /* GLViewImpl.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GLViewImpl.lua; sourceTree = "<group>"; };
+		E9608A4C1EBB1B8D0024F59B /* Grid3D.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Grid3D.lua; sourceTree = "<group>"; };
+		E9608A4D1EBB1B8D0024F59B /* Grid3DAction.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Grid3DAction.lua; sourceTree = "<group>"; };
+		E9608A4E1EBB1B8D0024F59B /* GridAction.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GridAction.lua; sourceTree = "<group>"; };
+		E9608A4F1EBB1B8D0024F59B /* GridBase.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GridBase.lua; sourceTree = "<group>"; };
+		E9608A501EBB1B8D0024F59B /* GUIReader.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GUIReader.lua; sourceTree = "<group>"; };
+		E9608A511EBB1B8D0024F59B /* HBox.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HBox.lua; sourceTree = "<group>"; };
+		E9608A521EBB1B8D0024F59B /* Helper.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Helper.lua; sourceTree = "<group>"; };
+		E9608A531EBB1B8D0024F59B /* Hide.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Hide.lua; sourceTree = "<group>"; };
+		E9608A541EBB1B8D0024F59B /* Image.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Image.lua; sourceTree = "<group>"; };
+		E9608A551EBB1B8D0024F59B /* ImageView.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ImageView.lua; sourceTree = "<group>"; };
+		E9608A561EBB1B8D0024F59B /* InnerActionFrame.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = InnerActionFrame.lua; sourceTree = "<group>"; };
+		E9608A571EBB1B8D0024F59B /* JumpBy.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JumpBy.lua; sourceTree = "<group>"; };
+		E9608A581EBB1B8D0024F59B /* JumpTiles3D.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JumpTiles3D.lua; sourceTree = "<group>"; };
+		E9608A591EBB1B8D0024F59B /* JumpTo.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JumpTo.lua; sourceTree = "<group>"; };
+		E9608A5A1EBB1B8D0024F59B /* Label.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Label.lua; sourceTree = "<group>"; };
+		E9608A5B1EBB1B8D0024F59B /* LabelAtlas.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LabelAtlas.lua; sourceTree = "<group>"; };
+		E9608A5C1EBB1B8D0024F59B /* Layer.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Layer.lua; sourceTree = "<group>"; };
+		E9608A5D1EBB1B8D0024F59B /* LayerColor.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LayerColor.lua; sourceTree = "<group>"; };
+		E9608A5E1EBB1B8D0024F59B /* LayerGradient.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LayerGradient.lua; sourceTree = "<group>"; };
+		E9608A5F1EBB1B8D0024F59B /* LayerMultiplex.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LayerMultiplex.lua; sourceTree = "<group>"; };
+		E9608A601EBB1B8D0024F59B /* Layout.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Layout.lua; sourceTree = "<group>"; };
+		E9608A611EBB1B8D0024F59B /* LayoutParameter.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LayoutParameter.lua; sourceTree = "<group>"; };
+		E9608A621EBB1B8D0024F59B /* Lens3D.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Lens3D.lua; sourceTree = "<group>"; };
+		E9608A631EBB1B8D0024F59B /* LinearLayoutParameter.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LinearLayoutParameter.lua; sourceTree = "<group>"; };
+		E9608A641EBB1B8D0024F59B /* Liquid.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Liquid.lua; sourceTree = "<group>"; };
+		E9608A651EBB1B8D0024F59B /* ListView.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ListView.lua; sourceTree = "<group>"; };
+		E9608A661EBB1B8D0024F59B /* LoadingBar.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LoadingBar.lua; sourceTree = "<group>"; };
+		E9608A671EBB1B8D0024F59B /* lua_cocos2dx_3d_auto_api.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lua_cocos2dx_3d_auto_api.lua; sourceTree = "<group>"; };
+		E9608A681EBB1B8D0024F59B /* lua_cocos2dx_assetsmanager_auto_api.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lua_cocos2dx_assetsmanager_auto_api.lua; sourceTree = "<group>"; };
+		E9608A691EBB1B8D0024F59B /* lua_cocos2dx_audioengine_auto_api.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lua_cocos2dx_audioengine_auto_api.lua; sourceTree = "<group>"; };
+		E9608A6A1EBB1B8D0024F59B /* lua_cocos2dx_auto_api.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lua_cocos2dx_auto_api.lua; sourceTree = "<group>"; };
+		E9608A6B1EBB1B8D0024F59B /* lua_cocos2dx_cocosbuilder_auto_api.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lua_cocos2dx_cocosbuilder_auto_api.lua; sourceTree = "<group>"; };
+		E9608A6C1EBB1B8D0024F59B /* lua_cocos2dx_cocosdenshion_auto_api.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lua_cocos2dx_cocosdenshion_auto_api.lua; sourceTree = "<group>"; };
+		E9608A6D1EBB1B8D0024F59B /* lua_cocos2dx_controller_auto_api.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lua_cocos2dx_controller_auto_api.lua; sourceTree = "<group>"; };
+		E9608A6E1EBB1B8D0024F59B /* lua_cocos2dx_csloader_auto_api.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lua_cocos2dx_csloader_auto_api.lua; sourceTree = "<group>"; };
+		E9608A6F1EBB1B8D0024F59B /* lua_cocos2dx_experimental_auto_api.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lua_cocos2dx_experimental_auto_api.lua; sourceTree = "<group>"; };
+		E9608A701EBB1B8D0024F59B /* lua_cocos2dx_experimental_video_auto_api.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lua_cocos2dx_experimental_video_auto_api.lua; sourceTree = "<group>"; };
+		E9608A711EBB1B8D0024F59B /* lua_cocos2dx_experimental_webview_auto_api.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lua_cocos2dx_experimental_webview_auto_api.lua; sourceTree = "<group>"; };
+		E9608A721EBB1B8D0024F59B /* lua_cocos2dx_extension_auto_api.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lua_cocos2dx_extension_auto_api.lua; sourceTree = "<group>"; };
+		E9608A731EBB1B8D0024F59B /* lua_cocos2dx_physics_auto_api.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lua_cocos2dx_physics_auto_api.lua; sourceTree = "<group>"; };
+		E9608A741EBB1B8D0024F59B /* lua_cocos2dx_spine_auto_api.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lua_cocos2dx_spine_auto_api.lua; sourceTree = "<group>"; };
+		E9608A751EBB1B8D0024F59B /* lua_cocos2dx_studio_auto_api.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lua_cocos2dx_studio_auto_api.lua; sourceTree = "<group>"; };
+		E9608A761EBB1B8D0024F59B /* lua_cocos2dx_ui_auto_api.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lua_cocos2dx_ui_auto_api.lua; sourceTree = "<group>"; };
+		E9608A771EBB1B8D0024F59B /* Manifest.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Manifest.lua; sourceTree = "<group>"; };
+		E9608A781EBB1B8D0024F59B /* Menu.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Menu.lua; sourceTree = "<group>"; };
+		E9608A791EBB1B8D0024F59B /* MenuItem.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MenuItem.lua; sourceTree = "<group>"; };
+		E9608A7A1EBB1B8D0024F59B /* MenuItemAtlasFont.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MenuItemAtlasFont.lua; sourceTree = "<group>"; };
+		E9608A7B1EBB1B8D0024F59B /* MenuItemFont.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MenuItemFont.lua; sourceTree = "<group>"; };
+		E9608A7C1EBB1B8D0024F59B /* MenuItemImage.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MenuItemImage.lua; sourceTree = "<group>"; };
+		E9608A7D1EBB1B8D0024F59B /* MenuItemLabel.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MenuItemLabel.lua; sourceTree = "<group>"; };
+		E9608A7E1EBB1B8D0024F59B /* MenuItemSprite.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MenuItemSprite.lua; sourceTree = "<group>"; };
+		E9608A7F1EBB1B8D0024F59B /* MenuItemToggle.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MenuItemToggle.lua; sourceTree = "<group>"; };
+		E9608A801EBB1B8D0024F59B /* Mesh.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Mesh.lua; sourceTree = "<group>"; };
+		E9608A811EBB1B8D0024F59B /* MotionStreak.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MotionStreak.lua; sourceTree = "<group>"; };
+		E9608A821EBB1B8D0024F59B /* MoveBy.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MoveBy.lua; sourceTree = "<group>"; };
+		E9608A831EBB1B8D0024F59B /* MovementBoneData.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MovementBoneData.lua; sourceTree = "<group>"; };
+		E9608A841EBB1B8D0024F59B /* MovementData.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MovementData.lua; sourceTree = "<group>"; };
+		E9608A851EBB1B8D0024F59B /* MoveTo.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MoveTo.lua; sourceTree = "<group>"; };
+		E9608A861EBB1B8D0024F59B /* Node.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Node.lua; sourceTree = "<group>"; };
+		E9608A871EBB1B8D0024F59B /* NodeGrid.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NodeGrid.lua; sourceTree = "<group>"; };
+		E9608A881EBB1B8D0024F59B /* OrbitCamera.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OrbitCamera.lua; sourceTree = "<group>"; };
+		E9608A891EBB1B8D0024F59B /* PageTurn3D.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PageTurn3D.lua; sourceTree = "<group>"; };
+		E9608A8A1EBB1B8D0024F59B /* PageView.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PageView.lua; sourceTree = "<group>"; };
+		E9608A8B1EBB1B8D0024F59B /* ParallaxNode.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ParallaxNode.lua; sourceTree = "<group>"; };
+		E9608A8C1EBB1B8D0024F59B /* ParticleBatchNode.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ParticleBatchNode.lua; sourceTree = "<group>"; };
+		E9608A8D1EBB1B8D0024F59B /* ParticleDisplayData.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ParticleDisplayData.lua; sourceTree = "<group>"; };
+		E9608A8E1EBB1B8D0024F59B /* ParticleExplosion.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ParticleExplosion.lua; sourceTree = "<group>"; };
+		E9608A8F1EBB1B8E0024F59B /* ParticleFire.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ParticleFire.lua; sourceTree = "<group>"; };
+		E9608A901EBB1B8E0024F59B /* ParticleFireworks.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ParticleFireworks.lua; sourceTree = "<group>"; };
+		E9608A911EBB1B8E0024F59B /* ParticleFlower.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ParticleFlower.lua; sourceTree = "<group>"; };
+		E9608A921EBB1B8E0024F59B /* ParticleGalaxy.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ParticleGalaxy.lua; sourceTree = "<group>"; };
+		E9608A931EBB1B8E0024F59B /* ParticleMeteor.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ParticleMeteor.lua; sourceTree = "<group>"; };
+		E9608A941EBB1B8E0024F59B /* ParticleRain.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ParticleRain.lua; sourceTree = "<group>"; };
+		E9608A951EBB1B8E0024F59B /* ParticleSmoke.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ParticleSmoke.lua; sourceTree = "<group>"; };
+		E9608A961EBB1B8E0024F59B /* ParticleSnow.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ParticleSnow.lua; sourceTree = "<group>"; };
+		E9608A971EBB1B8E0024F59B /* ParticleSpiral.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ParticleSpiral.lua; sourceTree = "<group>"; };
+		E9608A981EBB1B8E0024F59B /* ParticleSun.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ParticleSun.lua; sourceTree = "<group>"; };
+		E9608A991EBB1B8E0024F59B /* ParticleSystem.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ParticleSystem.lua; sourceTree = "<group>"; };
+		E9608A9A1EBB1B8E0024F59B /* ParticleSystemQuad.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ParticleSystemQuad.lua; sourceTree = "<group>"; };
+		E9608A9B1EBB1B8E0024F59B /* PhysicsBody.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PhysicsBody.lua; sourceTree = "<group>"; };
+		E9608A9C1EBB1B8E0024F59B /* PhysicsContact.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PhysicsContact.lua; sourceTree = "<group>"; };
+		E9608A9D1EBB1B8E0024F59B /* PhysicsContactPostSolve.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PhysicsContactPostSolve.lua; sourceTree = "<group>"; };
+		E9608A9E1EBB1B8E0024F59B /* PhysicsContactPreSolve.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PhysicsContactPreSolve.lua; sourceTree = "<group>"; };
+		E9608A9F1EBB1B8E0024F59B /* PhysicsDebugDraw.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PhysicsDebugDraw.lua; sourceTree = "<group>"; };
+		E9608AA01EBB1B8E0024F59B /* PhysicsJoint.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PhysicsJoint.lua; sourceTree = "<group>"; };
+		E9608AA11EBB1B8E0024F59B /* PhysicsJointDistance.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PhysicsJointDistance.lua; sourceTree = "<group>"; };
+		E9608AA21EBB1B8E0024F59B /* PhysicsJointFixed.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PhysicsJointFixed.lua; sourceTree = "<group>"; };
+		E9608AA31EBB1B8E0024F59B /* PhysicsJointGear.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PhysicsJointGear.lua; sourceTree = "<group>"; };
+		E9608AA41EBB1B8E0024F59B /* PhysicsJointGroove.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PhysicsJointGroove.lua; sourceTree = "<group>"; };
+		E9608AA51EBB1B8E0024F59B /* PhysicsJointLimit.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PhysicsJointLimit.lua; sourceTree = "<group>"; };
+		E9608AA61EBB1B8E0024F59B /* PhysicsJointMotor.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PhysicsJointMotor.lua; sourceTree = "<group>"; };
+		E9608AA71EBB1B8E0024F59B /* PhysicsJointPin.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PhysicsJointPin.lua; sourceTree = "<group>"; };
+		E9608AA81EBB1B8E0024F59B /* PhysicsJointRatchet.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PhysicsJointRatchet.lua; sourceTree = "<group>"; };
+		E9608AA91EBB1B8E0024F59B /* PhysicsJointRotaryLimit.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PhysicsJointRotaryLimit.lua; sourceTree = "<group>"; };
+		E9608AAA1EBB1B8E0024F59B /* PhysicsJointRotarySpring.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PhysicsJointRotarySpring.lua; sourceTree = "<group>"; };
+		E9608AAB1EBB1B8E0024F59B /* PhysicsJointSpring.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PhysicsJointSpring.lua; sourceTree = "<group>"; };
+		E9608AAC1EBB1B8E0024F59B /* PhysicsShape.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PhysicsShape.lua; sourceTree = "<group>"; };
+		E9608AAD1EBB1B8E0024F59B /* PhysicsShapeBox.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PhysicsShapeBox.lua; sourceTree = "<group>"; };
+		E9608AAE1EBB1B8E0024F59B /* PhysicsShapeCircle.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PhysicsShapeCircle.lua; sourceTree = "<group>"; };
+		E9608AAF1EBB1B8E0024F59B /* PhysicsShapeEdgeBox.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PhysicsShapeEdgeBox.lua; sourceTree = "<group>"; };
+		E9608AB01EBB1B8E0024F59B /* PhysicsShapeEdgeChain.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PhysicsShapeEdgeChain.lua; sourceTree = "<group>"; };
+		E9608AB11EBB1B8E0024F59B /* PhysicsShapeEdgePolygon.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PhysicsShapeEdgePolygon.lua; sourceTree = "<group>"; };
+		E9608AB21EBB1B8E0024F59B /* PhysicsShapeEdgeSegment.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PhysicsShapeEdgeSegment.lua; sourceTree = "<group>"; };
+		E9608AB31EBB1B8E0024F59B /* PhysicsShapePolygon.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PhysicsShapePolygon.lua; sourceTree = "<group>"; };
+		E9608AB41EBB1B8E0024F59B /* PhysicsWorld.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PhysicsWorld.lua; sourceTree = "<group>"; };
+		E9608AB51EBB1B8E0024F59B /* Place.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Place.lua; sourceTree = "<group>"; };
+		E9608AB61EBB1B8E0024F59B /* PointLight.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PointLight.lua; sourceTree = "<group>"; };
+		E9608AB71EBB1B8E0024F59B /* PositionFrame.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PositionFrame.lua; sourceTree = "<group>"; };
+		E9608AB81EBB1B8E0024F59B /* ProgressFromTo.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ProgressFromTo.lua; sourceTree = "<group>"; };
+		E9608AB91EBB1B8E0024F59B /* ProgressTimer.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ProgressTimer.lua; sourceTree = "<group>"; };
+		E9608ABA1EBB1B8E0024F59B /* ProgressTo.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ProgressTo.lua; sourceTree = "<group>"; };
+		E9608ABB1EBB1B8E0024F59B /* ProtectedNode.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ProtectedNode.lua; sourceTree = "<group>"; };
+		E9608ABC1EBB1B8E0024F59B /* Ref.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Ref.lua; sourceTree = "<group>"; };
+		E9608ABD1EBB1B8E0024F59B /* RelativeBox.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RelativeBox.lua; sourceTree = "<group>"; };
+		E9608ABE1EBB1B8E0024F59B /* RelativeLayoutParameter.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RelativeLayoutParameter.lua; sourceTree = "<group>"; };
+		E9608ABF1EBB1B8E0024F59B /* RemoveSelf.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RemoveSelf.lua; sourceTree = "<group>"; };
+		E9608AC01EBB1B8E0024F59B /* RenderTexture.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RenderTexture.lua; sourceTree = "<group>"; };
+		E9608AC11EBB1B8E0024F59B /* Repeat.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Repeat.lua; sourceTree = "<group>"; };
+		E9608AC21EBB1B8E0024F59B /* RepeatForever.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RepeatForever.lua; sourceTree = "<group>"; };
+		E9608AC31EBB1B8E0024F59B /* ReuseGrid.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReuseGrid.lua; sourceTree = "<group>"; };
+		E9608AC41EBB1B8E0024F59B /* RichElement.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RichElement.lua; sourceTree = "<group>"; };
+		E9608AC51EBB1B8E0024F59B /* RichElementCustomNode.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RichElementCustomNode.lua; sourceTree = "<group>"; };
+		E9608AC61EBB1B8E0024F59B /* RichElementImage.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RichElementImage.lua; sourceTree = "<group>"; };
+		E9608AC71EBB1B8E0024F59B /* RichElementText.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RichElementText.lua; sourceTree = "<group>"; };
+		E9608AC81EBB1B8E0024F59B /* RichText.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RichText.lua; sourceTree = "<group>"; };
+		E9608AC91EBB1B8E0024F59B /* Ripple3D.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Ripple3D.lua; sourceTree = "<group>"; };
+		E9608ACA1EBB1B8E0024F59B /* RotateBy.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RotateBy.lua; sourceTree = "<group>"; };
+		E9608ACB1EBB1B8E0024F59B /* RotateTo.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RotateTo.lua; sourceTree = "<group>"; };
+		E9608ACC1EBB1B8E0024F59B /* RotationFrame.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RotationFrame.lua; sourceTree = "<group>"; };
+		E9608ACD1EBB1B8E0024F59B /* RotationSkewFrame.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RotationSkewFrame.lua; sourceTree = "<group>"; };
+		E9608ACE1EBB1B8E0024F59B /* Scale9Sprite.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Scale9Sprite.lua; sourceTree = "<group>"; };
+		E9608ACF1EBB1B8E0024F59B /* ScaleBy.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ScaleBy.lua; sourceTree = "<group>"; };
+		E9608AD01EBB1B8E0024F59B /* ScaleFrame.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ScaleFrame.lua; sourceTree = "<group>"; };
+		E9608AD11EBB1B8E0024F59B /* ScaleTo.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ScaleTo.lua; sourceTree = "<group>"; };
+		E9608AD21EBB1B8E0024F59B /* Scene.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Scene.lua; sourceTree = "<group>"; };
+		E9608AD31EBB1B8E0024F59B /* SceneReader.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SceneReader.lua; sourceTree = "<group>"; };
+		E9608AD41EBB1B8E0024F59B /* Scheduler.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Scheduler.lua; sourceTree = "<group>"; };
+		E9608AD51EBB1B8E0024F59B /* ScrollView.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ScrollView.lua; sourceTree = "<group>"; };
+		E9608AD61EBB1B8E0024F59B /* Sequence.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Sequence.lua; sourceTree = "<group>"; };
+		E9608AD71EBB1B8E0024F59B /* Shaky3D.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Shaky3D.lua; sourceTree = "<group>"; };
+		E9608AD81EBB1B8E0024F59B /* ShakyTiles3D.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ShakyTiles3D.lua; sourceTree = "<group>"; };
+		E9608AD91EBB1B8E0024F59B /* ShatteredTiles3D.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ShatteredTiles3D.lua; sourceTree = "<group>"; };
+		E9608ADA1EBB1B8E0024F59B /* Show.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Show.lua; sourceTree = "<group>"; };
+		E9608ADB1EBB1B8E0024F59B /* ShuffleTiles.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ShuffleTiles.lua; sourceTree = "<group>"; };
+		E9608ADC1EBB1B8E0024F59B /* SimpleAudioEngine.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SimpleAudioEngine.lua; sourceTree = "<group>"; };
+		E9608ADD1EBB1B8E0024F59B /* Skeleton3D.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Skeleton3D.lua; sourceTree = "<group>"; };
+		E9608ADE1EBB1B8E0024F59B /* SkeletonAnimation.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SkeletonAnimation.lua; sourceTree = "<group>"; };
+		E9608ADF1EBB1B8E0024F59B /* SkeletonRenderer.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SkeletonRenderer.lua; sourceTree = "<group>"; };
+		E9608AE01EBB1B8E0024F59B /* SkewBy.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SkewBy.lua; sourceTree = "<group>"; };
+		E9608AE11EBB1B8E0024F59B /* SkewFrame.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SkewFrame.lua; sourceTree = "<group>"; };
+		E9608AE21EBB1B8E0024F59B /* SkewTo.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SkewTo.lua; sourceTree = "<group>"; };
+		E9608AE31EBB1B8E0024F59B /* Skin.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Skin.lua; sourceTree = "<group>"; };
+		E9608AE41EBB1B8E0024F59B /* Slider.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Slider.lua; sourceTree = "<group>"; };
+		E9608AE51EBB1B8E0024F59B /* Spawn.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Spawn.lua; sourceTree = "<group>"; };
+		E9608AE61EBB1B8E0024F59B /* Speed.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Speed.lua; sourceTree = "<group>"; };
+		E9608AE71EBB1B8E0024F59B /* SplitCols.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SplitCols.lua; sourceTree = "<group>"; };
+		E9608AE81EBB1B8E0024F59B /* SplitRows.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SplitRows.lua; sourceTree = "<group>"; };
+		E9608AE91EBB1B8E0024F59B /* SpotLight.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpotLight.lua; sourceTree = "<group>"; };
+		E9608AEA1EBB1B8E0024F59B /* Sprite.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Sprite.lua; sourceTree = "<group>"; };
+		E9608AEB1EBB1B8E0024F59B /* Sprite3D.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Sprite3D.lua; sourceTree = "<group>"; };
+		E9608AEC1EBB1B8E0024F59B /* SpriteBatchNode.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpriteBatchNode.lua; sourceTree = "<group>"; };
+		E9608AED1EBB1B8E0024F59B /* SpriteDisplayData.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpriteDisplayData.lua; sourceTree = "<group>"; };
+		E9608AEE1EBB1B8E0024F59B /* SpriteFrame.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpriteFrame.lua; sourceTree = "<group>"; };
+		E9608AEF1EBB1B8E0024F59B /* SpriteFrameCache.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SpriteFrameCache.lua; sourceTree = "<group>"; };
+		E9608AF01EBB1B8E0024F59B /* StopGrid.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StopGrid.lua; sourceTree = "<group>"; };
+		E9608AF11EBB1B8E0024F59B /* TableView.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TableView.lua; sourceTree = "<group>"; };
+		E9608AF21EBB1B8E0024F59B /* TableViewCell.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TableViewCell.lua; sourceTree = "<group>"; };
+		E9608AF31EBB1B8E0024F59B /* TargetedAction.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TargetedAction.lua; sourceTree = "<group>"; };
+		E9608AF41EBB1B8E0024F59B /* Text.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Text.lua; sourceTree = "<group>"; };
+		E9608AF51EBB1B8E0024F59B /* TextAtlas.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TextAtlas.lua; sourceTree = "<group>"; };
+		E9608AF61EBB1B8E0024F59B /* TextBMFont.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TextBMFont.lua; sourceTree = "<group>"; };
+		E9608AF71EBB1B8E0024F59B /* TextField.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TextField.lua; sourceTree = "<group>"; };
+		E9608AF81EBB1B8E0024F59B /* Texture2D.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Texture2D.lua; sourceTree = "<group>"; };
+		E9608AF91EBB1B8E0024F59B /* TextureCache.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TextureCache.lua; sourceTree = "<group>"; };
+		E9608AFA1EBB1B8E0024F59B /* TextureData.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TextureData.lua; sourceTree = "<group>"; };
+		E9608AFB1EBB1B8E0024F59B /* TextureFrame.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TextureFrame.lua; sourceTree = "<group>"; };
+		E9608AFC1EBB1B8E0024F59B /* TiledGrid3D.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TiledGrid3D.lua; sourceTree = "<group>"; };
+		E9608AFD1EBB1B8E0024F59B /* TiledGrid3DAction.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TiledGrid3DAction.lua; sourceTree = "<group>"; };
+		E9608AFE1EBB1B8E0024F59B /* TileMapAtlas.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TileMapAtlas.lua; sourceTree = "<group>"; };
+		E9608AFF1EBB1B8E0024F59B /* Timeline.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Timeline.lua; sourceTree = "<group>"; };
+		E9608B001EBB1B8E0024F59B /* Timer.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Timer.lua; sourceTree = "<group>"; };
+		E9608B011EBB1B8E0024F59B /* TintBy.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TintBy.lua; sourceTree = "<group>"; };
+		E9608B021EBB1B8E0024F59B /* TintTo.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TintTo.lua; sourceTree = "<group>"; };
+		E9608B031EBB1B8E0024F59B /* TMXLayer.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TMXLayer.lua; sourceTree = "<group>"; };
+		E9608B041EBB1B8E0024F59B /* TMXLayerInfo.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TMXLayerInfo.lua; sourceTree = "<group>"; };
+		E9608B051EBB1B8E0024F59B /* TMXMapInfo.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TMXMapInfo.lua; sourceTree = "<group>"; };
+		E9608B061EBB1B8E0024F59B /* TMXObjectGroup.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TMXObjectGroup.lua; sourceTree = "<group>"; };
+		E9608B071EBB1B8E0024F59B /* TMXTiledMap.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TMXTiledMap.lua; sourceTree = "<group>"; };
+		E9608B081EBB1B8E0024F59B /* TMXTilesetInfo.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TMXTilesetInfo.lua; sourceTree = "<group>"; };
+		E9608B091EBB1B8E0024F59B /* ToggleVisibility.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ToggleVisibility.lua; sourceTree = "<group>"; };
+		E9608B0A1EBB1B8E0024F59B /* Touch.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Touch.lua; sourceTree = "<group>"; };
+		E9608B0B1EBB1B8E0024F59B /* TransitionCrossFade.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionCrossFade.lua; sourceTree = "<group>"; };
+		E9608B0C1EBB1B8E0024F59B /* TransitionEaseScene.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionEaseScene.lua; sourceTree = "<group>"; };
+		E9608B0D1EBB1B8E0024F59B /* TransitionFade.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionFade.lua; sourceTree = "<group>"; };
+		E9608B0E1EBB1B8E0024F59B /* TransitionFadeBL.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionFadeBL.lua; sourceTree = "<group>"; };
+		E9608B0F1EBB1B8E0024F59B /* TransitionFadeDown.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionFadeDown.lua; sourceTree = "<group>"; };
+		E9608B101EBB1B8E0024F59B /* TransitionFadeTR.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionFadeTR.lua; sourceTree = "<group>"; };
+		E9608B111EBB1B8E0024F59B /* TransitionFadeUp.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionFadeUp.lua; sourceTree = "<group>"; };
+		E9608B121EBB1B8E0024F59B /* TransitionFlipAngular.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionFlipAngular.lua; sourceTree = "<group>"; };
+		E9608B131EBB1B8E0024F59B /* TransitionFlipX.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionFlipX.lua; sourceTree = "<group>"; };
+		E9608B141EBB1B8E0024F59B /* TransitionFlipY.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionFlipY.lua; sourceTree = "<group>"; };
+		E9608B151EBB1B8E0024F59B /* TransitionJumpZoom.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionJumpZoom.lua; sourceTree = "<group>"; };
+		E9608B161EBB1B8E0024F59B /* TransitionMoveInB.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionMoveInB.lua; sourceTree = "<group>"; };
+		E9608B171EBB1B8E0024F59B /* TransitionMoveInL.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionMoveInL.lua; sourceTree = "<group>"; };
+		E9608B181EBB1B8E0024F59B /* TransitionMoveInR.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionMoveInR.lua; sourceTree = "<group>"; };
+		E9608B191EBB1B8E0024F59B /* TransitionMoveInT.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionMoveInT.lua; sourceTree = "<group>"; };
+		E9608B1A1EBB1B8E0024F59B /* TransitionPageTurn.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionPageTurn.lua; sourceTree = "<group>"; };
+		E9608B1B1EBB1B8E0024F59B /* TransitionProgress.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionProgress.lua; sourceTree = "<group>"; };
+		E9608B1C1EBB1B8E0024F59B /* TransitionProgressHorizontal.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionProgressHorizontal.lua; sourceTree = "<group>"; };
+		E9608B1D1EBB1B8E0024F59B /* TransitionProgressInOut.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionProgressInOut.lua; sourceTree = "<group>"; };
+		E9608B1E1EBB1B8E0024F59B /* TransitionProgressOutIn.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionProgressOutIn.lua; sourceTree = "<group>"; };
+		E9608B1F1EBB1B8E0024F59B /* TransitionProgressRadialCCW.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionProgressRadialCCW.lua; sourceTree = "<group>"; };
+		E9608B201EBB1B8E0024F59B /* TransitionProgressRadialCW.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionProgressRadialCW.lua; sourceTree = "<group>"; };
+		E9608B211EBB1B8E0024F59B /* TransitionProgressVertical.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionProgressVertical.lua; sourceTree = "<group>"; };
+		E9608B221EBB1B8E0024F59B /* TransitionRotoZoom.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionRotoZoom.lua; sourceTree = "<group>"; };
+		E9608B231EBB1B8E0024F59B /* TransitionScene.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionScene.lua; sourceTree = "<group>"; };
+		E9608B241EBB1B8E0024F59B /* TransitionSceneOriented.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionSceneOriented.lua; sourceTree = "<group>"; };
+		E9608B251EBB1B8E0024F59B /* TransitionShrinkGrow.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionShrinkGrow.lua; sourceTree = "<group>"; };
+		E9608B261EBB1B8E0024F59B /* TransitionSlideInB.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionSlideInB.lua; sourceTree = "<group>"; };
+		E9608B271EBB1B8E0024F59B /* TransitionSlideInL.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionSlideInL.lua; sourceTree = "<group>"; };
+		E9608B281EBB1B8E0024F59B /* TransitionSlideInR.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionSlideInR.lua; sourceTree = "<group>"; };
+		E9608B291EBB1B8E0024F59B /* TransitionSlideInT.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionSlideInT.lua; sourceTree = "<group>"; };
+		E9608B2A1EBB1B8E0024F59B /* TransitionSplitCols.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionSplitCols.lua; sourceTree = "<group>"; };
+		E9608B2B1EBB1B8E0024F59B /* TransitionSplitRows.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionSplitRows.lua; sourceTree = "<group>"; };
+		E9608B2C1EBB1B8E0024F59B /* TransitionTurnOffTiles.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionTurnOffTiles.lua; sourceTree = "<group>"; };
+		E9608B2D1EBB1B8E0024F59B /* TransitionZoomFlipAngular.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionZoomFlipAngular.lua; sourceTree = "<group>"; };
+		E9608B2E1EBB1B8E0024F59B /* TransitionZoomFlipX.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionZoomFlipX.lua; sourceTree = "<group>"; };
+		E9608B2F1EBB1B8E0024F59B /* TransitionZoomFlipY.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TransitionZoomFlipY.lua; sourceTree = "<group>"; };
+		E9608B301EBB1B8E0024F59B /* TurnOffTiles.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TurnOffTiles.lua; sourceTree = "<group>"; };
+		E9608B311EBB1B8E0024F59B /* Tween.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tween.lua; sourceTree = "<group>"; };
+		E9608B321EBB1B8E0024F59B /* Twirl.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Twirl.lua; sourceTree = "<group>"; };
+		E9608B331EBB1B8E0024F59B /* UserDefault.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UserDefault.lua; sourceTree = "<group>"; };
+		E9608B341EBB1B8E0024F59B /* VBox.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VBox.lua; sourceTree = "<group>"; };
+		E9608B351EBB1B8E0024F59B /* VideoPlayer.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VideoPlayer.lua; sourceTree = "<group>"; };
+		E9608B361EBB1B8E0024F59B /* VisibleFrame.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VisibleFrame.lua; sourceTree = "<group>"; };
+		E9608B371EBB1B8E0024F59B /* Waves.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Waves.lua; sourceTree = "<group>"; };
+		E9608B381EBB1B8E0024F59B /* Waves3D.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Waves3D.lua; sourceTree = "<group>"; };
+		E9608B391EBB1B8E0024F59B /* WavesTiles3D.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WavesTiles3D.lua; sourceTree = "<group>"; };
+		E9608B3A1EBB1B8E0024F59B /* WebView.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WebView.lua; sourceTree = "<group>"; };
+		E9608B3B1EBB1B8E0024F59B /* Widget.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Widget.lua; sourceTree = "<group>"; };
+		E9608B3C1EBB1B8E0024F59B /* ZOrderFrame.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ZOrderFrame.lua; sourceTree = "<group>"; };
+		E9608B3D1EBB1B8E0024F59B /* lua_cocos2dx_controller_auto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_cocos2dx_controller_auto.cpp; sourceTree = "<group>"; };
+		E9608B3E1EBB1B8E0024F59B /* lua_cocos2dx_controller_auto.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua_cocos2dx_controller_auto.hpp; sourceTree = "<group>"; };
+		E9608B3F1EBB1B8E0024F59B /* lua_cocos2dx_TalkingDataGA_auto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_cocos2dx_TalkingDataGA_auto.cpp; sourceTree = "<group>"; };
+		E9608B401EBB1B8E0024F59B /* lua_cocos2dx_TalkingDataGA_auto.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua_cocos2dx_TalkingDataGA_auto.hpp; sourceTree = "<group>"; };
+		E9608B411EBB1B8E0024F59B /* lua_cocos2dx_TDGAAccount_auto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_cocos2dx_TDGAAccount_auto.cpp; sourceTree = "<group>"; };
+		E9608B421EBB1B8E0024F59B /* lua_cocos2dx_TDGAAccount_auto.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua_cocos2dx_TDGAAccount_auto.hpp; sourceTree = "<group>"; };
+		E9608B431EBB1B8E0024F59B /* lua_cocos2dx_TDGAItem_auto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_cocos2dx_TDGAItem_auto.cpp; sourceTree = "<group>"; };
+		E9608B441EBB1B8E0024F59B /* lua_cocos2dx_TDGAItem_auto.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua_cocos2dx_TDGAItem_auto.hpp; sourceTree = "<group>"; };
+		E9608B451EBB1B8E0024F59B /* lua_cocos2dx_TDGAMission_auto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_cocos2dx_TDGAMission_auto.cpp; sourceTree = "<group>"; };
+		E9608B461EBB1B8E0024F59B /* lua_cocos2dx_TDGAMission_auto.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua_cocos2dx_TDGAMission_auto.hpp; sourceTree = "<group>"; };
+		E9608B471EBB1B8E0024F59B /* lua_cocos2dx_TDGAVirtualCurrency_auto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_cocos2dx_TDGAVirtualCurrency_auto.cpp; sourceTree = "<group>"; };
+		E9608B481EBB1B8E0024F59B /* lua_cocos2dx_TDGAVirtualCurrency_auto.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lua_cocos2dx_TDGAVirtualCurrency_auto.hpp; sourceTree = "<group>"; };
 		F4FE0D5519ECD00100B8B12B /* luasocket_scripts.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = luasocket_scripts.c; sourceTree = "<group>"; };
 		F4FE0D5619ECD00100B8B12B /* luasocket_scripts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = luasocket_scripts.h; sourceTree = "<group>"; };
 		F4FE0D5C19ECD02400B8B12B /* lua_cocos2dx_quick_manual.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_cocos2dx_quick_manual.cpp; sourceTree = "<group>"; };
@@ -440,6 +902,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E96089581EBB125C0024F59B /* libTalkingDataGA.a in Frameworks */,
 				0A54F1231BBFBFFC0018E100 /* libluajit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,6 +939,7 @@
 				1AACE75B18BC45C200215002 /* manual */,
 				15C1C2CC198748D200A46ACC /* libluacocos2d Mac.a */,
 				15EFA616198B2DAA000C57D3 /* libluacocos2d iOS.a */,
+				E96088451EBB03510024F59B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -584,6 +1048,19 @@
 		1AACE74818BC45C200215002 /* auto */ = {
 			isa = PBXGroup;
 			children = (
+				E96089A11EBB1B8D0024F59B /* api */,
+				E9608B3D1EBB1B8E0024F59B /* lua_cocos2dx_controller_auto.cpp */,
+				E9608B3E1EBB1B8E0024F59B /* lua_cocos2dx_controller_auto.hpp */,
+				E9608B3F1EBB1B8E0024F59B /* lua_cocos2dx_TalkingDataGA_auto.cpp */,
+				E9608B401EBB1B8E0024F59B /* lua_cocos2dx_TalkingDataGA_auto.hpp */,
+				E9608B411EBB1B8E0024F59B /* lua_cocos2dx_TDGAAccount_auto.cpp */,
+				E9608B421EBB1B8E0024F59B /* lua_cocos2dx_TDGAAccount_auto.hpp */,
+				E9608B431EBB1B8E0024F59B /* lua_cocos2dx_TDGAItem_auto.cpp */,
+				E9608B441EBB1B8E0024F59B /* lua_cocos2dx_TDGAItem_auto.hpp */,
+				E9608B451EBB1B8E0024F59B /* lua_cocos2dx_TDGAMission_auto.cpp */,
+				E9608B461EBB1B8E0024F59B /* lua_cocos2dx_TDGAMission_auto.hpp */,
+				E9608B471EBB1B8E0024F59B /* lua_cocos2dx_TDGAVirtualCurrency_auto.cpp */,
+				E9608B481EBB1B8E0024F59B /* lua_cocos2dx_TDGAVirtualCurrency_auto.hpp */,
 				DA1769F51A1B1351006F5EA8 /* lua_cocos2dx_csloader_auto.cpp */,
 				DA1769F61A1B1351006F5EA8 /* lua_cocos2dx_csloader_auto.hpp */,
 				DA1769EF1A1A0D12006F5EA8 /* lua_cocos2dx_assetsmanager_auto.cpp */,
@@ -667,6 +1144,7 @@
 		1ABCA1E218CD8F230087CE3A /* external */ = {
 			isa = PBXGroup;
 			children = (
+				E960892E1EBB125C0024F59B /* TalkingDataGameAnalytics */,
 				1ABCA20E18CD8F7D0087CE3A /* luasocket */,
 				F4FE0D5B19ECD02400B8B12B /* quick */,
 				1ABCA1E418CD8F330087CE3A /* tolua */,
@@ -727,6 +1205,469 @@
 			);
 			name = luasocket;
 			path = ../../../../external/lua/luasocket;
+			sourceTree = "<group>";
+		};
+		E96088451EBB03510024F59B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E96088461EBB03530024F59B /* libTalkingDataGA.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E960892E1EBB125C0024F59B /* TalkingDataGameAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				E960893A1EBB125C0024F59B /* include */,
+				E96089411EBB125C0024F59B /* ios */,
+			);
+			name = TalkingDataGameAnalytics;
+			path = ../../../../external/TalkingDataGameAnalytics;
+			sourceTree = "<group>";
+		};
+		E960893A1EBB125C0024F59B /* include */ = {
+			isa = PBXGroup;
+			children = (
+				E960893B1EBB125C0024F59B /* TalkingData.h */,
+				E960893C1EBB125C0024F59B /* TDCCAccount.h */,
+				E960893D1EBB125C0024F59B /* TDCCItem.h */,
+				E960893E1EBB125C0024F59B /* TDCCMission.h */,
+				E960893F1EBB125C0024F59B /* TDCCTalkingDataGA.h */,
+				E96089401EBB125C0024F59B /* TDCCVirtualCurrency.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		E96089411EBB125C0024F59B /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				E96089421EBB125C0024F59B /* libTalkingDataGA.a */,
+				E96089431EBB125C0024F59B /* TalkingDataGA.h */,
+				E96089441EBB125C0024F59B /* TDCCAccount.mm */,
+				E96089451EBB125C0024F59B /* TDCCItem.mm */,
+				E96089461EBB125C0024F59B /* TDCCMission.mm */,
+				E96089471EBB125C0024F59B /* TDCCTalkingDataGA.mm */,
+				E96089481EBB125C0024F59B /* TDCCVirtualCurrency.mm */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		E96089A11EBB1B8D0024F59B /* api */ = {
+			isa = PBXGroup;
+			children = (
+				E96089A21EBB1B8D0024F59B /* Action.lua */,
+				E96089A31EBB1B8D0024F59B /* ActionCamera.lua */,
+				E96089A41EBB1B8D0024F59B /* ActionEase.lua */,
+				E96089A51EBB1B8D0024F59B /* ActionFadeFrame.lua */,
+				E96089A61EBB1B8D0024F59B /* ActionFrame.lua */,
+				E96089A71EBB1B8D0024F59B /* ActionInstant.lua */,
+				E96089A81EBB1B8D0024F59B /* ActionInterval.lua */,
+				E96089A91EBB1B8D0024F59B /* ActionManager.lua */,
+				E96089AA1EBB1B8D0024F59B /* ActionManagerEx.lua */,
+				E96089AB1EBB1B8D0024F59B /* ActionMoveFrame.lua */,
+				E96089AC1EBB1B8D0024F59B /* ActionObject.lua */,
+				E96089AD1EBB1B8D0024F59B /* ActionRotationFrame.lua */,
+				E96089AE1EBB1B8D0024F59B /* ActionScaleFrame.lua */,
+				E96089AF1EBB1B8D0024F59B /* ActionTimeline.lua */,
+				E96089B01EBB1B8D0024F59B /* ActionTimelineCache.lua */,
+				E96089B11EBB1B8D0024F59B /* ActionTimelineData.lua */,
+				E96089B21EBB1B8D0024F59B /* ActionTintFrame.lua */,
+				E96089B31EBB1B8D0024F59B /* ActionTween.lua */,
+				E96089B41EBB1B8D0024F59B /* AmbientLight.lua */,
+				E96089B51EBB1B8D0024F59B /* AnchorPointFrame.lua */,
+				E96089B61EBB1B8D0024F59B /* Animate.lua */,
+				E96089B71EBB1B8D0024F59B /* Animate3D.lua */,
+				E96089B81EBB1B8D0024F59B /* Animation.lua */,
+				E96089B91EBB1B8D0024F59B /* Animation3D.lua */,
+				E96089BA1EBB1B8D0024F59B /* AnimationCache.lua */,
+				E96089BB1EBB1B8D0024F59B /* AnimationData.lua */,
+				E96089BC1EBB1B8D0024F59B /* AnimationFrame.lua */,
+				E96089BD1EBB1B8D0024F59B /* Application.lua */,
+				E96089BE1EBB1B8D0024F59B /* Armature.lua */,
+				E96089BF1EBB1B8D0024F59B /* ArmatureAnimation.lua */,
+				E96089C01EBB1B8D0024F59B /* ArmatureData.lua */,
+				E96089C11EBB1B8D0024F59B /* ArmatureDataManager.lua */,
+				E96089C21EBB1B8D0024F59B /* ArmatureDisplayData.lua */,
+				E96089C31EBB1B8D0024F59B /* AssetsManager.lua */,
+				E96089C41EBB1B8D0024F59B /* AssetsManagerEx.lua */,
+				E96089C51EBB1B8D0024F59B /* AtlasNode.lua */,
+				E96089C61EBB1B8D0024F59B /* AttachNode.lua */,
+				E96089C71EBB1B8D0024F59B /* AudioEngine.lua */,
+				E96089C81EBB1B8D0024F59B /* AudioProfile.lua */,
+				E96089C91EBB1B8D0024F59B /* BaseData.lua */,
+				E96089CA1EBB1B8D0024F59B /* BaseLight.lua */,
+				E96089CB1EBB1B8D0024F59B /* BatchNode.lua */,
+				E96089CC1EBB1B8D0024F59B /* BezierBy.lua */,
+				E96089CD1EBB1B8D0024F59B /* BezierTo.lua */,
+				E96089CE1EBB1B8D0024F59B /* BillBoard.lua */,
+				E96089CF1EBB1B8D0024F59B /* Blink.lua */,
+				E96089D01EBB1B8D0024F59B /* Bone.lua */,
+				E96089D11EBB1B8D0024F59B /* BoneData.lua */,
+				E96089D21EBB1B8D0024F59B /* Button.lua */,
+				E96089D31EBB1B8D0024F59B /* CallFunc.lua */,
+				E96089D41EBB1B8D0024F59B /* Camera.lua */,
+				E96089D51EBB1B8D0024F59B /* CardinalSplineBy.lua */,
+				E96089D61EBB1B8D0024F59B /* CardinalSplineTo.lua */,
+				E96089D71EBB1B8D0024F59B /* CatmullRomBy.lua */,
+				E96089D81EBB1B8D0024F59B /* CatmullRomTo.lua */,
+				E96089D91EBB1B8D0024F59B /* CCBAnimationManager.lua */,
+				E96089DA1EBB1B8D0024F59B /* CCBReader.lua */,
+				E96089DB1EBB1B8D0024F59B /* CheckBox.lua */,
+				E96089DC1EBB1B8D0024F59B /* ClippingNode.lua */,
+				E96089DD1EBB1B8D0024F59B /* ClippingRectangleNode.lua */,
+				E96089DE1EBB1B8D0024F59B /* ColorFrame.lua */,
+				E96089DF1EBB1B8D0024F59B /* ComAttribute.lua */,
+				E96089E01EBB1B8D0024F59B /* ComAudio.lua */,
+				E96089E11EBB1B8D0024F59B /* ComController.lua */,
+				E96089E21EBB1B8D0024F59B /* Component.lua */,
+				E96089E31EBB1B8D0024F59B /* ComRender.lua */,
+				E96089E41EBB1B8D0024F59B /* Console.lua */,
+				E96089E51EBB1B8D0024F59B /* ContourData.lua */,
+				E96089E61EBB1B8D0024F59B /* Control.lua */,
+				E96089E71EBB1B8D0024F59B /* ControlButton.lua */,
+				E96089E81EBB1B8D0024F59B /* ControlColourPicker.lua */,
+				E96089E91EBB1B8D0024F59B /* ControlHuePicker.lua */,
+				E96089EA1EBB1B8D0024F59B /* Controller.lua */,
+				E96089EB1EBB1B8D0024F59B /* ControlPotentiometer.lua */,
+				E96089EC1EBB1B8D0024F59B /* ControlSaturationBrightnessPicker.lua */,
+				E96089ED1EBB1B8D0024F59B /* ControlSlider.lua */,
+				E96089EE1EBB1B8D0024F59B /* ControlStepper.lua */,
+				E96089EF1EBB1B8D0024F59B /* ControlSwitch.lua */,
+				E96089F01EBB1B8D0024F59B /* CSLoader.lua */,
+				E96089F11EBB1B8D0024F59B /* DelayTime.lua */,
+				E96089F21EBB1B8D0024F59B /* Device.lua */,
+				E96089F31EBB1B8D0024F59B /* DirectionLight.lua */,
+				E96089F41EBB1B8D0024F59B /* Director.lua */,
+				E96089F51EBB1B8D0024F59B /* DisplayData.lua */,
+				E96089F61EBB1B8D0024F59B /* DisplayManager.lua */,
+				E96089F71EBB1B8D0024F59B /* DrawNode.lua */,
+				E96089F81EBB1B8D0024F59B /* EaseBackIn.lua */,
+				E96089F91EBB1B8D0024F59B /* EaseBackInOut.lua */,
+				E96089FA1EBB1B8D0024F59B /* EaseBackOut.lua */,
+				E96089FB1EBB1B8D0024F59B /* EaseBezierAction.lua */,
+				E96089FC1EBB1B8D0024F59B /* EaseBounce.lua */,
+				E96089FD1EBB1B8D0024F59B /* EaseBounceIn.lua */,
+				E96089FE1EBB1B8D0024F59B /* EaseBounceInOut.lua */,
+				E96089FF1EBB1B8D0024F59B /* EaseBounceOut.lua */,
+				E9608A001EBB1B8D0024F59B /* EaseCircleActionIn.lua */,
+				E9608A011EBB1B8D0024F59B /* EaseCircleActionInOut.lua */,
+				E9608A021EBB1B8D0024F59B /* EaseCircleActionOut.lua */,
+				E9608A031EBB1B8D0024F59B /* EaseCubicActionIn.lua */,
+				E9608A041EBB1B8D0024F59B /* EaseCubicActionInOut.lua */,
+				E9608A051EBB1B8D0024F59B /* EaseCubicActionOut.lua */,
+				E9608A061EBB1B8D0024F59B /* EaseElastic.lua */,
+				E9608A071EBB1B8D0024F59B /* EaseElasticIn.lua */,
+				E9608A081EBB1B8D0024F59B /* EaseElasticInOut.lua */,
+				E9608A091EBB1B8D0024F59B /* EaseElasticOut.lua */,
+				E9608A0A1EBB1B8D0024F59B /* EaseExponentialIn.lua */,
+				E9608A0B1EBB1B8D0024F59B /* EaseExponentialInOut.lua */,
+				E9608A0C1EBB1B8D0024F59B /* EaseExponentialOut.lua */,
+				E9608A0D1EBB1B8D0024F59B /* EaseIn.lua */,
+				E9608A0E1EBB1B8D0024F59B /* EaseInOut.lua */,
+				E9608A0F1EBB1B8D0024F59B /* EaseOut.lua */,
+				E9608A101EBB1B8D0024F59B /* EaseQuadraticActionIn.lua */,
+				E9608A111EBB1B8D0024F59B /* EaseQuadraticActionInOut.lua */,
+				E9608A121EBB1B8D0024F59B /* EaseQuadraticActionOut.lua */,
+				E9608A131EBB1B8D0024F59B /* EaseQuarticActionIn.lua */,
+				E9608A141EBB1B8D0024F59B /* EaseQuarticActionInOut.lua */,
+				E9608A151EBB1B8D0024F59B /* EaseQuarticActionOut.lua */,
+				E9608A161EBB1B8D0024F59B /* EaseQuinticActionIn.lua */,
+				E9608A171EBB1B8D0024F59B /* EaseQuinticActionInOut.lua */,
+				E9608A181EBB1B8D0024F59B /* EaseQuinticActionOut.lua */,
+				E9608A191EBB1B8D0024F59B /* EaseRateAction.lua */,
+				E9608A1A1EBB1B8D0024F59B /* EaseSineIn.lua */,
+				E9608A1B1EBB1B8D0024F59B /* EaseSineInOut.lua */,
+				E9608A1C1EBB1B8D0024F59B /* EaseSineOut.lua */,
+				E9608A1D1EBB1B8D0024F59B /* EditBox.lua */,
+				E9608A1E1EBB1B8D0024F59B /* Event.lua */,
+				E9608A1F1EBB1B8D0024F59B /* EventAcceleration.lua */,
+				E9608A201EBB1B8D0024F59B /* EventAssetsManagerEx.lua */,
+				E9608A211EBB1B8D0024F59B /* EventController.lua */,
+				E9608A221EBB1B8D0024F59B /* EventCustom.lua */,
+				E9608A231EBB1B8D0024F59B /* EventDispatcher.lua */,
+				E9608A241EBB1B8D0024F59B /* EventFocus.lua */,
+				E9608A251EBB1B8D0024F59B /* EventFrame.lua */,
+				E9608A261EBB1B8D0024F59B /* EventKeyboard.lua */,
+				E9608A271EBB1B8D0024F59B /* EventListener.lua */,
+				E9608A281EBB1B8D0024F59B /* EventListenerAcceleration.lua */,
+				E9608A291EBB1B8D0024F59B /* EventListenerAssetsManagerEx.lua */,
+				E9608A2A1EBB1B8D0024F59B /* EventListenerController.lua */,
+				E9608A2B1EBB1B8D0024F59B /* EventListenerCustom.lua */,
+				E9608A2C1EBB1B8D0024F59B /* EventListenerFocus.lua */,
+				E9608A2D1EBB1B8D0024F59B /* EventListenerKeyboard.lua */,
+				E9608A2E1EBB1B8D0024F59B /* EventListenerMouse.lua */,
+				E9608A2F1EBB1B8D0024F59B /* EventListenerPhysicsContact.lua */,
+				E9608A301EBB1B8D0024F59B /* EventListenerPhysicsContactWithBodies.lua */,
+				E9608A311EBB1B8D0024F59B /* EventListenerPhysicsContactWithGroup.lua */,
+				E9608A321EBB1B8D0024F59B /* EventListenerPhysicsContactWithShapes.lua */,
+				E9608A331EBB1B8D0024F59B /* EventListenerTouchAllAtOnce.lua */,
+				E9608A341EBB1B8D0024F59B /* EventListenerTouchOneByOne.lua */,
+				E9608A351EBB1B8D0024F59B /* EventMouse.lua */,
+				E9608A361EBB1B8D0024F59B /* EventTouch.lua */,
+				E9608A371EBB1B8D0024F59B /* FadeIn.lua */,
+				E9608A381EBB1B8D0024F59B /* FadeOut.lua */,
+				E9608A391EBB1B8D0024F59B /* FadeOutBLTiles.lua */,
+				E9608A3A1EBB1B8D0024F59B /* FadeOutDownTiles.lua */,
+				E9608A3B1EBB1B8D0024F59B /* FadeOutTRTiles.lua */,
+				E9608A3C1EBB1B8D0024F59B /* FadeOutUpTiles.lua */,
+				E9608A3D1EBB1B8D0024F59B /* FadeTo.lua */,
+				E9608A3E1EBB1B8D0024F59B /* FileUtils.lua */,
+				E9608A3F1EBB1B8D0024F59B /* FiniteTimeAction.lua */,
+				E9608A401EBB1B8D0024F59B /* FlipX.lua */,
+				E9608A411EBB1B8D0024F59B /* FlipX3D.lua */,
+				E9608A421EBB1B8D0024F59B /* FlipY.lua */,
+				E9608A431EBB1B8D0024F59B /* FlipY3D.lua */,
+				E9608A441EBB1B8D0024F59B /* Follow.lua */,
+				E9608A451EBB1B8D0024F59B /* Frame.lua */,
+				E9608A461EBB1B8D0024F59B /* FrameData.lua */,
+				E9608A471EBB1B8D0024F59B /* GLProgram.lua */,
+				E9608A481EBB1B8D0024F59B /* GLProgramCache.lua */,
+				E9608A491EBB1B8D0024F59B /* GLProgramState.lua */,
+				E9608A4A1EBB1B8D0024F59B /* GLView.lua */,
+				E9608A4B1EBB1B8D0024F59B /* GLViewImpl.lua */,
+				E9608A4C1EBB1B8D0024F59B /* Grid3D.lua */,
+				E9608A4D1EBB1B8D0024F59B /* Grid3DAction.lua */,
+				E9608A4E1EBB1B8D0024F59B /* GridAction.lua */,
+				E9608A4F1EBB1B8D0024F59B /* GridBase.lua */,
+				E9608A501EBB1B8D0024F59B /* GUIReader.lua */,
+				E9608A511EBB1B8D0024F59B /* HBox.lua */,
+				E9608A521EBB1B8D0024F59B /* Helper.lua */,
+				E9608A531EBB1B8D0024F59B /* Hide.lua */,
+				E9608A541EBB1B8D0024F59B /* Image.lua */,
+				E9608A551EBB1B8D0024F59B /* ImageView.lua */,
+				E9608A561EBB1B8D0024F59B /* InnerActionFrame.lua */,
+				E9608A571EBB1B8D0024F59B /* JumpBy.lua */,
+				E9608A581EBB1B8D0024F59B /* JumpTiles3D.lua */,
+				E9608A591EBB1B8D0024F59B /* JumpTo.lua */,
+				E9608A5A1EBB1B8D0024F59B /* Label.lua */,
+				E9608A5B1EBB1B8D0024F59B /* LabelAtlas.lua */,
+				E9608A5C1EBB1B8D0024F59B /* Layer.lua */,
+				E9608A5D1EBB1B8D0024F59B /* LayerColor.lua */,
+				E9608A5E1EBB1B8D0024F59B /* LayerGradient.lua */,
+				E9608A5F1EBB1B8D0024F59B /* LayerMultiplex.lua */,
+				E9608A601EBB1B8D0024F59B /* Layout.lua */,
+				E9608A611EBB1B8D0024F59B /* LayoutParameter.lua */,
+				E9608A621EBB1B8D0024F59B /* Lens3D.lua */,
+				E9608A631EBB1B8D0024F59B /* LinearLayoutParameter.lua */,
+				E9608A641EBB1B8D0024F59B /* Liquid.lua */,
+				E9608A651EBB1B8D0024F59B /* ListView.lua */,
+				E9608A661EBB1B8D0024F59B /* LoadingBar.lua */,
+				E9608A671EBB1B8D0024F59B /* lua_cocos2dx_3d_auto_api.lua */,
+				E9608A681EBB1B8D0024F59B /* lua_cocos2dx_assetsmanager_auto_api.lua */,
+				E9608A691EBB1B8D0024F59B /* lua_cocos2dx_audioengine_auto_api.lua */,
+				E9608A6A1EBB1B8D0024F59B /* lua_cocos2dx_auto_api.lua */,
+				E9608A6B1EBB1B8D0024F59B /* lua_cocos2dx_cocosbuilder_auto_api.lua */,
+				E9608A6C1EBB1B8D0024F59B /* lua_cocos2dx_cocosdenshion_auto_api.lua */,
+				E9608A6D1EBB1B8D0024F59B /* lua_cocos2dx_controller_auto_api.lua */,
+				E9608A6E1EBB1B8D0024F59B /* lua_cocos2dx_csloader_auto_api.lua */,
+				E9608A6F1EBB1B8D0024F59B /* lua_cocos2dx_experimental_auto_api.lua */,
+				E9608A701EBB1B8D0024F59B /* lua_cocos2dx_experimental_video_auto_api.lua */,
+				E9608A711EBB1B8D0024F59B /* lua_cocos2dx_experimental_webview_auto_api.lua */,
+				E9608A721EBB1B8D0024F59B /* lua_cocos2dx_extension_auto_api.lua */,
+				E9608A731EBB1B8D0024F59B /* lua_cocos2dx_physics_auto_api.lua */,
+				E9608A741EBB1B8D0024F59B /* lua_cocos2dx_spine_auto_api.lua */,
+				E9608A751EBB1B8D0024F59B /* lua_cocos2dx_studio_auto_api.lua */,
+				E9608A761EBB1B8D0024F59B /* lua_cocos2dx_ui_auto_api.lua */,
+				E9608A771EBB1B8D0024F59B /* Manifest.lua */,
+				E9608A781EBB1B8D0024F59B /* Menu.lua */,
+				E9608A791EBB1B8D0024F59B /* MenuItem.lua */,
+				E9608A7A1EBB1B8D0024F59B /* MenuItemAtlasFont.lua */,
+				E9608A7B1EBB1B8D0024F59B /* MenuItemFont.lua */,
+				E9608A7C1EBB1B8D0024F59B /* MenuItemImage.lua */,
+				E9608A7D1EBB1B8D0024F59B /* MenuItemLabel.lua */,
+				E9608A7E1EBB1B8D0024F59B /* MenuItemSprite.lua */,
+				E9608A7F1EBB1B8D0024F59B /* MenuItemToggle.lua */,
+				E9608A801EBB1B8D0024F59B /* Mesh.lua */,
+				E9608A811EBB1B8D0024F59B /* MotionStreak.lua */,
+				E9608A821EBB1B8D0024F59B /* MoveBy.lua */,
+				E9608A831EBB1B8D0024F59B /* MovementBoneData.lua */,
+				E9608A841EBB1B8D0024F59B /* MovementData.lua */,
+				E9608A851EBB1B8D0024F59B /* MoveTo.lua */,
+				E9608A861EBB1B8D0024F59B /* Node.lua */,
+				E9608A871EBB1B8D0024F59B /* NodeGrid.lua */,
+				E9608A881EBB1B8D0024F59B /* OrbitCamera.lua */,
+				E9608A891EBB1B8D0024F59B /* PageTurn3D.lua */,
+				E9608A8A1EBB1B8D0024F59B /* PageView.lua */,
+				E9608A8B1EBB1B8D0024F59B /* ParallaxNode.lua */,
+				E9608A8C1EBB1B8D0024F59B /* ParticleBatchNode.lua */,
+				E9608A8D1EBB1B8D0024F59B /* ParticleDisplayData.lua */,
+				E9608A8E1EBB1B8D0024F59B /* ParticleExplosion.lua */,
+				E9608A8F1EBB1B8E0024F59B /* ParticleFire.lua */,
+				E9608A901EBB1B8E0024F59B /* ParticleFireworks.lua */,
+				E9608A911EBB1B8E0024F59B /* ParticleFlower.lua */,
+				E9608A921EBB1B8E0024F59B /* ParticleGalaxy.lua */,
+				E9608A931EBB1B8E0024F59B /* ParticleMeteor.lua */,
+				E9608A941EBB1B8E0024F59B /* ParticleRain.lua */,
+				E9608A951EBB1B8E0024F59B /* ParticleSmoke.lua */,
+				E9608A961EBB1B8E0024F59B /* ParticleSnow.lua */,
+				E9608A971EBB1B8E0024F59B /* ParticleSpiral.lua */,
+				E9608A981EBB1B8E0024F59B /* ParticleSun.lua */,
+				E9608A991EBB1B8E0024F59B /* ParticleSystem.lua */,
+				E9608A9A1EBB1B8E0024F59B /* ParticleSystemQuad.lua */,
+				E9608A9B1EBB1B8E0024F59B /* PhysicsBody.lua */,
+				E9608A9C1EBB1B8E0024F59B /* PhysicsContact.lua */,
+				E9608A9D1EBB1B8E0024F59B /* PhysicsContactPostSolve.lua */,
+				E9608A9E1EBB1B8E0024F59B /* PhysicsContactPreSolve.lua */,
+				E9608A9F1EBB1B8E0024F59B /* PhysicsDebugDraw.lua */,
+				E9608AA01EBB1B8E0024F59B /* PhysicsJoint.lua */,
+				E9608AA11EBB1B8E0024F59B /* PhysicsJointDistance.lua */,
+				E9608AA21EBB1B8E0024F59B /* PhysicsJointFixed.lua */,
+				E9608AA31EBB1B8E0024F59B /* PhysicsJointGear.lua */,
+				E9608AA41EBB1B8E0024F59B /* PhysicsJointGroove.lua */,
+				E9608AA51EBB1B8E0024F59B /* PhysicsJointLimit.lua */,
+				E9608AA61EBB1B8E0024F59B /* PhysicsJointMotor.lua */,
+				E9608AA71EBB1B8E0024F59B /* PhysicsJointPin.lua */,
+				E9608AA81EBB1B8E0024F59B /* PhysicsJointRatchet.lua */,
+				E9608AA91EBB1B8E0024F59B /* PhysicsJointRotaryLimit.lua */,
+				E9608AAA1EBB1B8E0024F59B /* PhysicsJointRotarySpring.lua */,
+				E9608AAB1EBB1B8E0024F59B /* PhysicsJointSpring.lua */,
+				E9608AAC1EBB1B8E0024F59B /* PhysicsShape.lua */,
+				E9608AAD1EBB1B8E0024F59B /* PhysicsShapeBox.lua */,
+				E9608AAE1EBB1B8E0024F59B /* PhysicsShapeCircle.lua */,
+				E9608AAF1EBB1B8E0024F59B /* PhysicsShapeEdgeBox.lua */,
+				E9608AB01EBB1B8E0024F59B /* PhysicsShapeEdgeChain.lua */,
+				E9608AB11EBB1B8E0024F59B /* PhysicsShapeEdgePolygon.lua */,
+				E9608AB21EBB1B8E0024F59B /* PhysicsShapeEdgeSegment.lua */,
+				E9608AB31EBB1B8E0024F59B /* PhysicsShapePolygon.lua */,
+				E9608AB41EBB1B8E0024F59B /* PhysicsWorld.lua */,
+				E9608AB51EBB1B8E0024F59B /* Place.lua */,
+				E9608AB61EBB1B8E0024F59B /* PointLight.lua */,
+				E9608AB71EBB1B8E0024F59B /* PositionFrame.lua */,
+				E9608AB81EBB1B8E0024F59B /* ProgressFromTo.lua */,
+				E9608AB91EBB1B8E0024F59B /* ProgressTimer.lua */,
+				E9608ABA1EBB1B8E0024F59B /* ProgressTo.lua */,
+				E9608ABB1EBB1B8E0024F59B /* ProtectedNode.lua */,
+				E9608ABC1EBB1B8E0024F59B /* Ref.lua */,
+				E9608ABD1EBB1B8E0024F59B /* RelativeBox.lua */,
+				E9608ABE1EBB1B8E0024F59B /* RelativeLayoutParameter.lua */,
+				E9608ABF1EBB1B8E0024F59B /* RemoveSelf.lua */,
+				E9608AC01EBB1B8E0024F59B /* RenderTexture.lua */,
+				E9608AC11EBB1B8E0024F59B /* Repeat.lua */,
+				E9608AC21EBB1B8E0024F59B /* RepeatForever.lua */,
+				E9608AC31EBB1B8E0024F59B /* ReuseGrid.lua */,
+				E9608AC41EBB1B8E0024F59B /* RichElement.lua */,
+				E9608AC51EBB1B8E0024F59B /* RichElementCustomNode.lua */,
+				E9608AC61EBB1B8E0024F59B /* RichElementImage.lua */,
+				E9608AC71EBB1B8E0024F59B /* RichElementText.lua */,
+				E9608AC81EBB1B8E0024F59B /* RichText.lua */,
+				E9608AC91EBB1B8E0024F59B /* Ripple3D.lua */,
+				E9608ACA1EBB1B8E0024F59B /* RotateBy.lua */,
+				E9608ACB1EBB1B8E0024F59B /* RotateTo.lua */,
+				E9608ACC1EBB1B8E0024F59B /* RotationFrame.lua */,
+				E9608ACD1EBB1B8E0024F59B /* RotationSkewFrame.lua */,
+				E9608ACE1EBB1B8E0024F59B /* Scale9Sprite.lua */,
+				E9608ACF1EBB1B8E0024F59B /* ScaleBy.lua */,
+				E9608AD01EBB1B8E0024F59B /* ScaleFrame.lua */,
+				E9608AD11EBB1B8E0024F59B /* ScaleTo.lua */,
+				E9608AD21EBB1B8E0024F59B /* Scene.lua */,
+				E9608AD31EBB1B8E0024F59B /* SceneReader.lua */,
+				E9608AD41EBB1B8E0024F59B /* Scheduler.lua */,
+				E9608AD51EBB1B8E0024F59B /* ScrollView.lua */,
+				E9608AD61EBB1B8E0024F59B /* Sequence.lua */,
+				E9608AD71EBB1B8E0024F59B /* Shaky3D.lua */,
+				E9608AD81EBB1B8E0024F59B /* ShakyTiles3D.lua */,
+				E9608AD91EBB1B8E0024F59B /* ShatteredTiles3D.lua */,
+				E9608ADA1EBB1B8E0024F59B /* Show.lua */,
+				E9608ADB1EBB1B8E0024F59B /* ShuffleTiles.lua */,
+				E9608ADC1EBB1B8E0024F59B /* SimpleAudioEngine.lua */,
+				E9608ADD1EBB1B8E0024F59B /* Skeleton3D.lua */,
+				E9608ADE1EBB1B8E0024F59B /* SkeletonAnimation.lua */,
+				E9608ADF1EBB1B8E0024F59B /* SkeletonRenderer.lua */,
+				E9608AE01EBB1B8E0024F59B /* SkewBy.lua */,
+				E9608AE11EBB1B8E0024F59B /* SkewFrame.lua */,
+				E9608AE21EBB1B8E0024F59B /* SkewTo.lua */,
+				E9608AE31EBB1B8E0024F59B /* Skin.lua */,
+				E9608AE41EBB1B8E0024F59B /* Slider.lua */,
+				E9608AE51EBB1B8E0024F59B /* Spawn.lua */,
+				E9608AE61EBB1B8E0024F59B /* Speed.lua */,
+				E9608AE71EBB1B8E0024F59B /* SplitCols.lua */,
+				E9608AE81EBB1B8E0024F59B /* SplitRows.lua */,
+				E9608AE91EBB1B8E0024F59B /* SpotLight.lua */,
+				E9608AEA1EBB1B8E0024F59B /* Sprite.lua */,
+				E9608AEB1EBB1B8E0024F59B /* Sprite3D.lua */,
+				E9608AEC1EBB1B8E0024F59B /* SpriteBatchNode.lua */,
+				E9608AED1EBB1B8E0024F59B /* SpriteDisplayData.lua */,
+				E9608AEE1EBB1B8E0024F59B /* SpriteFrame.lua */,
+				E9608AEF1EBB1B8E0024F59B /* SpriteFrameCache.lua */,
+				E9608AF01EBB1B8E0024F59B /* StopGrid.lua */,
+				E9608AF11EBB1B8E0024F59B /* TableView.lua */,
+				E9608AF21EBB1B8E0024F59B /* TableViewCell.lua */,
+				E9608AF31EBB1B8E0024F59B /* TargetedAction.lua */,
+				E9608AF41EBB1B8E0024F59B /* Text.lua */,
+				E9608AF51EBB1B8E0024F59B /* TextAtlas.lua */,
+				E9608AF61EBB1B8E0024F59B /* TextBMFont.lua */,
+				E9608AF71EBB1B8E0024F59B /* TextField.lua */,
+				E9608AF81EBB1B8E0024F59B /* Texture2D.lua */,
+				E9608AF91EBB1B8E0024F59B /* TextureCache.lua */,
+				E9608AFA1EBB1B8E0024F59B /* TextureData.lua */,
+				E9608AFB1EBB1B8E0024F59B /* TextureFrame.lua */,
+				E9608AFC1EBB1B8E0024F59B /* TiledGrid3D.lua */,
+				E9608AFD1EBB1B8E0024F59B /* TiledGrid3DAction.lua */,
+				E9608AFE1EBB1B8E0024F59B /* TileMapAtlas.lua */,
+				E9608AFF1EBB1B8E0024F59B /* Timeline.lua */,
+				E9608B001EBB1B8E0024F59B /* Timer.lua */,
+				E9608B011EBB1B8E0024F59B /* TintBy.lua */,
+				E9608B021EBB1B8E0024F59B /* TintTo.lua */,
+				E9608B031EBB1B8E0024F59B /* TMXLayer.lua */,
+				E9608B041EBB1B8E0024F59B /* TMXLayerInfo.lua */,
+				E9608B051EBB1B8E0024F59B /* TMXMapInfo.lua */,
+				E9608B061EBB1B8E0024F59B /* TMXObjectGroup.lua */,
+				E9608B071EBB1B8E0024F59B /* TMXTiledMap.lua */,
+				E9608B081EBB1B8E0024F59B /* TMXTilesetInfo.lua */,
+				E9608B091EBB1B8E0024F59B /* ToggleVisibility.lua */,
+				E9608B0A1EBB1B8E0024F59B /* Touch.lua */,
+				E9608B0B1EBB1B8E0024F59B /* TransitionCrossFade.lua */,
+				E9608B0C1EBB1B8E0024F59B /* TransitionEaseScene.lua */,
+				E9608B0D1EBB1B8E0024F59B /* TransitionFade.lua */,
+				E9608B0E1EBB1B8E0024F59B /* TransitionFadeBL.lua */,
+				E9608B0F1EBB1B8E0024F59B /* TransitionFadeDown.lua */,
+				E9608B101EBB1B8E0024F59B /* TransitionFadeTR.lua */,
+				E9608B111EBB1B8E0024F59B /* TransitionFadeUp.lua */,
+				E9608B121EBB1B8E0024F59B /* TransitionFlipAngular.lua */,
+				E9608B131EBB1B8E0024F59B /* TransitionFlipX.lua */,
+				E9608B141EBB1B8E0024F59B /* TransitionFlipY.lua */,
+				E9608B151EBB1B8E0024F59B /* TransitionJumpZoom.lua */,
+				E9608B161EBB1B8E0024F59B /* TransitionMoveInB.lua */,
+				E9608B171EBB1B8E0024F59B /* TransitionMoveInL.lua */,
+				E9608B181EBB1B8E0024F59B /* TransitionMoveInR.lua */,
+				E9608B191EBB1B8E0024F59B /* TransitionMoveInT.lua */,
+				E9608B1A1EBB1B8E0024F59B /* TransitionPageTurn.lua */,
+				E9608B1B1EBB1B8E0024F59B /* TransitionProgress.lua */,
+				E9608B1C1EBB1B8E0024F59B /* TransitionProgressHorizontal.lua */,
+				E9608B1D1EBB1B8E0024F59B /* TransitionProgressInOut.lua */,
+				E9608B1E1EBB1B8E0024F59B /* TransitionProgressOutIn.lua */,
+				E9608B1F1EBB1B8E0024F59B /* TransitionProgressRadialCCW.lua */,
+				E9608B201EBB1B8E0024F59B /* TransitionProgressRadialCW.lua */,
+				E9608B211EBB1B8E0024F59B /* TransitionProgressVertical.lua */,
+				E9608B221EBB1B8E0024F59B /* TransitionRotoZoom.lua */,
+				E9608B231EBB1B8E0024F59B /* TransitionScene.lua */,
+				E9608B241EBB1B8E0024F59B /* TransitionSceneOriented.lua */,
+				E9608B251EBB1B8E0024F59B /* TransitionShrinkGrow.lua */,
+				E9608B261EBB1B8E0024F59B /* TransitionSlideInB.lua */,
+				E9608B271EBB1B8E0024F59B /* TransitionSlideInL.lua */,
+				E9608B281EBB1B8E0024F59B /* TransitionSlideInR.lua */,
+				E9608B291EBB1B8E0024F59B /* TransitionSlideInT.lua */,
+				E9608B2A1EBB1B8E0024F59B /* TransitionSplitCols.lua */,
+				E9608B2B1EBB1B8E0024F59B /* TransitionSplitRows.lua */,
+				E9608B2C1EBB1B8E0024F59B /* TransitionTurnOffTiles.lua */,
+				E9608B2D1EBB1B8E0024F59B /* TransitionZoomFlipAngular.lua */,
+				E9608B2E1EBB1B8E0024F59B /* TransitionZoomFlipX.lua */,
+				E9608B2F1EBB1B8E0024F59B /* TransitionZoomFlipY.lua */,
+				E9608B301EBB1B8E0024F59B /* TurnOffTiles.lua */,
+				E9608B311EBB1B8E0024F59B /* Tween.lua */,
+				E9608B321EBB1B8E0024F59B /* Twirl.lua */,
+				E9608B331EBB1B8E0024F59B /* UserDefault.lua */,
+				E9608B341EBB1B8E0024F59B /* VBox.lua */,
+				E9608B351EBB1B8E0024F59B /* VideoPlayer.lua */,
+				E9608B361EBB1B8E0024F59B /* VisibleFrame.lua */,
+				E9608B371EBB1B8E0024F59B /* Waves.lua */,
+				E9608B381EBB1B8E0024F59B /* Waves3D.lua */,
+				E9608B391EBB1B8E0024F59B /* WavesTiles3D.lua */,
+				E9608B3A1EBB1B8E0024F59B /* WebView.lua */,
+				E9608B3B1EBB1B8E0024F59B /* Widget.lua */,
+				E9608B3C1EBB1B8E0024F59B /* ZOrderFrame.lua */,
+			);
+			path = api;
 			sourceTree = "<group>";
 		};
 		F4FE0D5B19ECD02400B8B12B /* quick */ = {
@@ -824,30 +1765,42 @@
 			buildActionMask = 2147483647;
 			files = (
 				15415AA819A71A53004F1E71 /* auxiliar.h in Headers */,
+				E96089571EBB125C0024F59B /* TDCCVirtualCurrency.h in Headers */,
 				155C7E1119A71C9F00F08B25 /* lua_extensions.h in Headers */,
 				15415AC019A71A53004F1E71 /* mime.h in Headers */,
 				3D598E6F1E4436ED008676D4 /* lua_cocos2dx_experimental_webview_auto.hpp in Headers */,
+				E9608B541EBB1B8F0024F59B /* lua_cocos2dx_TDGAVirtualCurrency_auto.hpp in Headers */,
 				15415AD819A71A53004F1E71 /* udp.h in Headers */,
+				E96089521EBB125C0024F59B /* TalkingData.h in Headers */,
 				15415ADC19A71A53004F1E71 /* unix.h in Headers */,
 				155C7DF519A71C3900F08B25 /* lua_cocos2dx_3d_manual.h in Headers */,
 				15415ABC19A71A53004F1E71 /* luasocket.h in Headers */,
 				159552431A25E4B8001E9FC9 /* lua_cocos2dx_csloader_manual.hpp in Headers */,
+				E9608B4E1EBB1B8F0024F59B /* lua_cocos2dx_TDGAAccount_auto.hpp in Headers */,
 				155C7E2519A71CDA00F08B25 /* lua_cocos2dx_experimental_video_manual.hpp in Headers */,
 				3D598E751E44370E008676D4 /* lua_cocos2dx_experimental_webview_manual.hpp in Headers */,
+				E96089561EBB125C0024F59B /* TDCCTalkingDataGA.h in Headers */,
 				15415AD019A71A53004F1E71 /* tcp.h in Headers */,
 				15415AAC19A71A53004F1E71 /* buffer.h in Headers */,
 				155C7E1519A71CAA00F08B25 /* Lua_web_socket.h in Headers */,
+				E96089541EBB125C0024F59B /* TDCCItem.h in Headers */,
 				15EFA64B198B3320000C57D3 /* tolua_event.h in Headers */,
+				E96089591EBB125C0024F59B /* TalkingDataGA.h in Headers */,
+				E96089531EBB125C0024F59B /* TDCCAccount.h in Headers */,
 				15EFA64C198B3320000C57D3 /* tolua++.h in Headers */,
+				E96089551EBB125C0024F59B /* TDCCMission.h in Headers */,
 				F4FE0D7519ECD02400B8B12B /* LuaTouchEventManager.h in Headers */,
 				15415AB019A71A53004F1E71 /* except.h in Headers */,
 				0AFC99371E91F48C00F3D63F /* lua_audio_manual.h in Headers */,
 				0AF0F2941A7F5871008A3021 /* lua_spSkeletonData.hpp in Headers */,
 				155C7E0519A71C6F00F08B25 /* lua_cocos2dx_cocosbuilder_manual.h in Headers */,
+				E9608B4A1EBB1B8F0024F59B /* lua_cocos2dx_controller_auto.hpp in Headers */,
 				15415ACC19A71A53004F1E71 /* socket.h in Headers */,
 				15415AE019A71A53004F1E71 /* usocket.h in Headers */,
 				15415AC419A71A53004F1E71 /* options.h in Headers */,
 				15EFA644198B32D5000C57D3 /* xxtea.h in Headers */,
+				E9608B521EBB1B8F0024F59B /* lua_cocos2dx_TDGAMission_auto.hpp in Headers */,
+				E9608B501EBB1B8F0024F59B /* lua_cocos2dx_TDGAItem_auto.hpp in Headers */,
 				15EFA63B198B32BB000C57D3 /* CCLuaBridge.h in Headers */,
 				15EFA63C198B32BB000C57D3 /* CCLuaEngine.h in Headers */,
 				15EFA63D198B32BB000C57D3 /* CCLuaStack.h in Headers */,
@@ -878,6 +1831,7 @@
 				15EFA630198B3220000C57D3 /* LuaScriptHandlerMgr.h in Headers */,
 				15EFA622198B2E74000C57D3 /* lua_cocos2dx_experimental_auto.hpp in Headers */,
 				15EFA623198B2E74000C57D3 /* lua_cocos2dx_auto.hpp in Headers */,
+				E9608B4C1EBB1B8F0024F59B /* lua_cocos2dx_TalkingDataGA_auto.hpp in Headers */,
 				155C7E0119A71C6300F08B25 /* CCBProxy.h in Headers */,
 				F4FE0D7919ECD02400B8B12B /* LuaTouchTargetNode.h in Headers */,
 				15415AC819A71A53004F1E71 /* select.h in Headers */,
@@ -1043,6 +1997,7 @@
 				15EFA647198B3311000C57D3 /* tolua_is.c in Sources */,
 				0AFC99351E91F48C00F3D63F /* lua_audio_manual.cpp in Sources */,
 				15EFA648198B3311000C57D3 /* tolua_map.c in Sources */,
+				E960895C1EBB125C0024F59B /* TDCCMission.mm in Sources */,
 				15EFA649198B3311000C57D3 /* tolua_push.c in Sources */,
 				15EFA64A198B3311000C57D3 /* tolua_to.c in Sources */,
 				15415AC219A71A53004F1E71 /* options.c in Sources */,
@@ -1050,11 +2005,15 @@
 				15EFA632198B328B000C57D3 /* CCLuaBridge.cpp in Sources */,
 				15EFA633198B328B000C57D3 /* CCLuaEngine.cpp in Sources */,
 				155C7DEE19A71BFC00F08B25 /* lua_cocos2dx_experimental_video_auto.cpp in Sources */,
+				E9608B511EBB1B8F0024F59B /* lua_cocos2dx_TDGAMission_auto.cpp in Sources */,
 				15EFA634198B328B000C57D3 /* CCLuaStack.cpp in Sources */,
 				DA1769F81A1B1351006F5EA8 /* lua_cocos2dx_csloader_auto.cpp in Sources */,
 				15EFA635198B328B000C57D3 /* CCLuaValue.cpp in Sources */,
+				E9608B4F1EBB1B8F0024F59B /* lua_cocos2dx_TDGAItem_auto.cpp in Sources */,
 				15EFA636198B328B000C57D3 /* Cocos2dxLuaLoader.cpp in Sources */,
+				E9608B4B1EBB1B8F0024F59B /* lua_cocos2dx_TalkingDataGA_auto.cpp in Sources */,
 				155C7DEB19A71BE900F08B25 /* lua_cocos2dx_cocosbuilder_auto.cpp in Sources */,
+				E960895D1EBB125C0024F59B /* TDCCTalkingDataGA.mm in Sources */,
 				15EFA637198B328B000C57D3 /* LuaBasicConversions.cpp in Sources */,
 				15EFA638198B328B000C57D3 /* CCLuaObjcBridge.mm in Sources */,
 				155C7E1719A71CAF00F08B25 /* lua_xml_http_request.cpp in Sources */,
@@ -1065,6 +2024,8 @@
 				155C7DFF19A71C5C00F08B25 /* CCBProxy.cpp in Sources */,
 				155C7DF019A71C1E00F08B25 /* lua_cocos2dx_spine_auto.cpp in Sources */,
 				155C7E0719A71C7800F08B25 /* lua_cocos2dx_extension_manual.cpp in Sources */,
+				E960895A1EBB125C0024F59B /* TDCCAccount.mm in Sources */,
+				E960895B1EBB125C0024F59B /* TDCCItem.mm in Sources */,
 				15EFA625198B31FB000C57D3 /* LuaOpengl.cpp in Sources */,
 				15EFA626198B31FB000C57D3 /* lua_cocos2dx_deprecated.cpp in Sources */,
 				15EFA627198B31FB000C57D3 /* lua_cocos2dx_experimental_manual.cpp in Sources */,
@@ -1074,6 +2035,7 @@
 				F4FE0D6F19ECD02400B8B12B /* LuaNodeManager.cpp in Sources */,
 				15415ADA19A71A53004F1E71 /* unix.c in Sources */,
 				DA1769F21A1A0D12006F5EA8 /* lua_cocos2dx_assetsmanager_auto.cpp in Sources */,
+				E9608B531EBB1B8F0024F59B /* lua_cocos2dx_TDGAVirtualCurrency_auto.cpp in Sources */,
 				155C7DF319A71C3400F08B25 /* lua_cocos2dx_3d_manual.cpp in Sources */,
 				15415ADE19A71A53004F1E71 /* usocket.c in Sources */,
 				15EFA628198B31FB000C57D3 /* lua_cocos2dx_manual.cpp in Sources */,
@@ -1088,6 +2050,7 @@
 				F4FE0D7719ECD02400B8B12B /* LuaTouchTargetNode.cpp in Sources */,
 				155C7E0B19A71C8D00F08B25 /* lua_cocos2dx_network_manual.cpp in Sources */,
 				15415AAE19A71A53004F1E71 /* except.c in Sources */,
+				E9608B491EBB1B8F0024F59B /* lua_cocos2dx_controller_auto.cpp in Sources */,
 				15415AAA19A71A53004F1E71 /* buffer.c in Sources */,
 				155C7E2319A71CD500F08B25 /* lua_cocos2dx_experimental_video_manual.cpp in Sources */,
 				155C7DFB19A71C4E00F08B25 /* lua_cocos2dx_coco_studio_manual.cpp in Sources */,
@@ -1098,6 +2061,8 @@
 				15415AB619A71A53004F1E71 /* io.c in Sources */,
 				155C7DEF19A71C0900F08B25 /* lua_cocos2dx_ui_auto.cpp in Sources */,
 				155C7E1B19A71CBE00F08B25 /* lua_cocos2dx_spine_manual.cpp in Sources */,
+				E9608B4D1EBB1B8F0024F59B /* lua_cocos2dx_TDGAAccount_auto.cpp in Sources */,
+				E960895E1EBB125C0024F59B /* TDCCVirtualCurrency.mm in Sources */,
 				15415A7119A71782004F1E71 /* lua_cocos2dx_extension_auto.cpp in Sources */,
 				15EFA629198B31FB000C57D3 /* lua_cocos2dx_physics_manual.cpp in Sources */,
 				15EFA62A198B31FB000C57D3 /* LuaScriptHandlerMgr.cpp in Sources */,
@@ -1143,6 +2108,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1177,6 +2143,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -1255,13 +2222,15 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(SRCROOT)/../../../../external/lua/luajit/prebuilt/ios",
 					"$(SRCROOT)/../../../../external/lua/lua/prebuilt/ios",
+					"$(SRCROOT)/../../../../external/TalkingDataGameAnalytics/ios\"",
 				);
+				OTHER_LDFLAGS = "-llua";
 				"OTHER_LDFLAGS[sdk=iphonesimulator7.1]" = "-llua";
 				"OTHER_LDFLAGS[sdk=iphonesimulator8.0]" = "-llua";
 				PRODUCT_NAME = "libluacocos2d iOS";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../../platform/ios";
+				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../../platform/ios \"$(QUICK_V3_ROOT)/external/TalkingDataGameAnalytics/include\" \"$(QUICK_V3_ROOT)/external/TalkingDataGameAnalytics/ios\"";
 			};
 			name = Debug;
 		};
@@ -1283,13 +2252,15 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(SRCROOT)/../../../../external/lua/luajit/prebuilt/ios",
 					"$(SRCROOT)/../../../../external/lua/lua/prebuilt/ios",
+					"$(SRCROOT)/../../../../external/TalkingDataGameAnalytics/ios\"",
 				);
+				OTHER_LDFLAGS = "-llua";
 				"OTHER_LDFLAGS[sdk=iphonesimulator7.1]" = "-llua";
 				"OTHER_LDFLAGS[sdk=iphonesimulator8.0]" = "-llua";
 				PRODUCT_NAME = "libluacocos2d iOS";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../../platform/ios";
+				USER_HEADER_SEARCH_PATHS = "$(inherited) $(SRCROOT)/../../../platform/ios \"$(QUICK_V3_ROOT)/external/TalkingDataGameAnalytics/include\" \"$(QUICK_V3_ROOT)/external/TalkingDataGameAnalytics/ios\"";
 			};
 			name = Release;
 		};

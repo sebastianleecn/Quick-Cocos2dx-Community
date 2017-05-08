@@ -35,8 +35,8 @@ class ProjectConfig
 public:
     ProjectConfig();
 
-    static const int DEFAULT_WIDTH = 640;
-    static const int DEFAULT_HEIGHT = 960;
+    static const int DEFAULT_WIDTH = 720;
+    static const int DEFAULT_HEIGHT = 1280;
 
     bool isWelcome() const;
     void resetToWelcome();

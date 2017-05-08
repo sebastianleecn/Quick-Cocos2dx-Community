@@ -531,6 +531,12 @@ function WelcomeScene:openProjectWithPath(path)
         else
             projectConfig:changeFrameOrientationToLandscape()
         end
+
+        if config.CONFIG_VIEW_SCALE == "75" then
+            -- cc.player.projectConfig_:setFrameScale(0.75)
+            projectConfig:setFrameScale(0.75)
+        end
+
     end
     PlayerProtocol:getInstance():openNewPlayerWithProjectConfig(projectConfig)
 end
