@@ -143,7 +143,7 @@ using namespace cocos2d::experimental::ui;
     }
     self.moviePlayer.allowsAirPlay = false;
     self.moviePlayer.controlStyle = MPMovieControlStyleNone;// MPMovieControlStyleEmbedded;
-    self.moviePlayer.view.userInteractionEnabled = false;// true;
+    self.moviePlayer.view.userInteractionEnabled = true;
     
     auto clearColor = [UIColor clearColor];
     self.moviePlayer.backgroundView.backgroundColor = clearColor;
