@@ -143,13 +143,13 @@ using namespace cocos2d::experimental::ui;
     }
     self.moviePlayer.allowsAirPlay = false;
     self.moviePlayer.controlStyle = MPMovieControlStyleNone;// MPMovieControlStyleEmbedded;
-    self.moviePlayer.view.userInteractionEnabled = true;
+    self.moviePlayer.view.userInteractionEnabled = false;
     
     auto clearColor = [UIColor clearColor];
     self.moviePlayer.backgroundView.backgroundColor = clearColor;
     self.moviePlayer.view.backgroundColor = clearColor;
     for (UIView * subView in self.moviePlayer.view.subviews) {
-//        subView.backgroundColor = clearColor;
+        subView.backgroundColor = clearColor;
     }
     
     if (_keepRatioEnabled) {
@@ -167,11 +167,11 @@ using namespace cocos2d::experimental::ui;
     
     
     
-    
-    UIView *tapView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 720, 1280)];
+    UIView *tapView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
+    [tapView setTag:101];
     tapView.backgroundColor = [UIColor clearColor];
     
-    UITapGestureRecognizer *tapGesturRecognizer=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction:)];
+    UITapGestureRecognizer *tapGesturRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
     [tapView addGestureRecognizer:tapGesturRecognizer];
     
     [[self mainWindow] addSubview:tapView];
@@ -196,6 +196,8 @@ using namespace cocos2d::experimental::ui;
 {
     NSLog(@"tapView on touch");
     
+    [[[self mainWindow] viewWithTag:101] removeFromSuperview];
+    
     _videoPlayer->onPlayEvent((int)VideoPlayer::EventType::PAUSED);
 }
 
@@ -219,6 +221,7 @@ using namespace cocos2d::experimental::ui;
             break;
         case MPMoviePlaybackStateStopped:
             _videoPlayer->onPlayEvent((int)VideoPlayer::EventType::STOPPED);
+            [[[self mainWindow] viewWithTag:101] removeFromSuperview];
             break;
         case MPMoviePlaybackStatePlaying:
             _videoPlayer->onPlayEvent((int)VideoPlayer::EventType::PLAYING);
