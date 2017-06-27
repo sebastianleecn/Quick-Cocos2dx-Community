@@ -166,9 +166,8 @@ using namespace cocos2d::experimental::ui;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playStateChange) name:MPMoviePlayerPlaybackStateDidChangeNotification object:self.moviePlayer];
     
     
-    
-    
-    UIView *tapView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 720, 1280)];
+    UIView *tapView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
+    [tapView setTag:101];
     tapView.backgroundColor = [UIColor clearColor];
     
     UITapGestureRecognizer *tapGesturRecognizer=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction:)];
@@ -195,6 +194,8 @@ using namespace cocos2d::experimental::ui;
 -(void)tapAction:(id)tap
 {
     NSLog(@"tapView on touch");
+    
+    [[[self mainWindow] viewWithTag:101] removeFromSuperview];
     
     _videoPlayer->onPlayEvent((int)VideoPlayer::EventType::PAUSED);
 }
