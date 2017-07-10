@@ -148,9 +148,9 @@ using namespace cocos2d::experimental::ui;
     auto clearColor = [UIColor clearColor];
     self.moviePlayer.backgroundView.backgroundColor = clearColor;
     self.moviePlayer.view.backgroundColor = clearColor;
-    for (UIView * subView in self.moviePlayer.view.subviews) {
+//    for (UIView * subView in self.moviePlayer.view.subviews) {
 //        subView.backgroundColor = clearColor;
-    }
+//    }
     
     if (_keepRatioEnabled) {
         self.moviePlayer.scalingMode = MPMovieScalingModeAspectFit;
@@ -195,7 +195,7 @@ using namespace cocos2d::experimental::ui;
 {
     NSLog(@"tapView on touch");
     
-    [[[self mainWindow] viewWithTag:101] removeFromSuperview];
+    // [[[self mainWindow] viewWithTag:101] removeFromSuperview];
     
     _videoPlayer->onPlayEvent((int)VideoPlayer::EventType::PAUSED);
 }
@@ -216,9 +216,11 @@ using namespace cocos2d::experimental::ui;
     MPMoviePlaybackState state = [self.moviePlayer playbackState];
     switch (state) {
         case MPMoviePlaybackStatePaused:
+            [[[self mainWindow] viewWithTag:101] removeFromSuperview];
             _videoPlayer->onPlayEvent((int)VideoPlayer::EventType::PAUSED);
             break;
         case MPMoviePlaybackStateStopped:
+            [[[self mainWindow] viewWithTag:101] removeFromSuperview];
             _videoPlayer->onPlayEvent((int)VideoPlayer::EventType::STOPPED);
             break;
         case MPMoviePlaybackStatePlaying:
