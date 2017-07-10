@@ -90,12 +90,16 @@ bool AppDelegate::applicationDidFinishLaunching()
 void AppDelegate::applicationDidEnterBackground()
 {
     Director::getInstance()->stopAnimation();
+
+	Director::getInstance()->getEventDispatcher()->dispatchCustomEvent("APP_ENTER_BACKGROUND_EVENT");
 }
 
 // this function will be called when the app is active again
 void AppDelegate::applicationWillEnterForeground()
 {
     Director::getInstance()->startAnimation();
+
+	Director::getInstance()->getEventDispatcher()->dispatchCustomEvent("APP_ENTER_FOREGROUND_EVENT");
 }
 
 
@@ -119,6 +123,8 @@ void StartupCall::startup()
     auto engine = LuaEngine::getInstance();
     auto stack = engine->getLuaStack();
     
+	FileUtils::getInstance()->setResourceEncryptKeyAndSign("password", "XXTEA_SIGN");
+
     const ProjectConfig &project = _app->_project;
     
     // set search path
