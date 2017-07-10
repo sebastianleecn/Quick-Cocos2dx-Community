@@ -24,7 +24,9 @@
  ****************************************************************************/
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 #import "cocos2d.h"
+#import "audio/RDAudio.h"
 
 #import "AppController.h"
 #import "AppDelegate.h"
@@ -86,9 +88,35 @@ static AppDelegate s_sharedApplication;
     cocos2d::Director::getInstance()->setOpenGLView(glview);
 
     app->run();
+    
+    // audio interruption
+    // benbritten.com/2009/02/02/restarting-openal-after-application-interruption-on-the-iphone/
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    [audioSession setCategory:AVAudioSessionCategoryPlayback withOptions:AVAudioSessionCategoryOptionMixWithOthers error:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(AVAudioSessionInterruptionNotification:) name:AVAudioSessionInterruptionNotification object:audioSession];
     return YES;
 }
 
+- (void)AVAudioSessionInterruptionNotification:(NSNotification *)notification {
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    NSNumber *interruptionType = [[notification userInfo] objectForKey:AVAudioSessionInterruptionTypeKey];
+    switch (interruptionType.unsignedIntegerValue) {
+        case AVAudioSessionInterruptionTypeBegan:{
+            NSLog(@"AVAudioSessionInterruptionTypeBegan");
+            [audioSession setActive:NO error:nil];
+            RDAudio::getInstance()->pause();
+            break;
+        };
+        case AVAudioSessionInterruptionTypeEnded:{
+            NSLog(@"AVAudioSessionInterruptionTypeEnded");
+            // background audio *must* mix with other sessions (or setActive will fail)
+            [audioSession setCategory:AVAudioSessionCategoryPlayback withOptions:AVAudioSessionCategoryOptionMixWithOthers error:nil];
+            [audioSession setActive:YES error:nil];
+            RDAudio::getInstance()->resume();
+            break;
+        };
+    }
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     /*
