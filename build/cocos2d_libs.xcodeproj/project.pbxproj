@@ -3213,7 +3213,6 @@
 		DABC9FA719E7DFA900FA252C /* CCClippingRectangleNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCClippingRectangleNode.cpp; sourceTree = "<group>"; };
 		DABC9FA819E7DFA900FA252C /* CCClippingRectangleNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCClippingRectangleNode.h; sourceTree = "<group>"; };
 		E960884D1EBB045C0024F59B /* libTalkingDataGA.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTalkingDataGA.a; path = ../external/TalkingDataGameAnalytics/ios/libTalkingDataGA.a; sourceTree = "<group>"; };
-		E960884F1EBB04B60024F59B /* NovaClient */ = {isa = PBXFileReference; lastKnownFileType = folder; name = NovaClient; path = ../../NovaClient; sourceTree = "<group>"; };
 		ED9C6A9218599AD8000A5232 /* CCNodeGrid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = CCNodeGrid.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		ED9C6A9318599AD8000A5232 /* CCNodeGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNodeGrid.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -3481,7 +3480,6 @@
 		1551A341158F2AB200E66CFE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E960884F1EBB04B60024F59B /* NovaClient */,
 				E960884D1EBB045C0024F59B /* libTalkingDataGA.a */,
 				0AFCD6131C070F4800A8D0DB /* libcrypto.a */,
 				0AFCD6141C070F4800A8D0DB /* libssl.a */,
