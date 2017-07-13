@@ -1,6 +1,6 @@
 /*
 ** LuaJIT VM tags, values and objects.
-** Copyright (C) 2005-2017 Mike Pall. See Copyright Notice in luajit.h
+** Copyright (C) 2005-2016 Mike Pall. See Copyright Notice in luajit.h
 **
 ** Portions taken verbatim or adapted from the Lua interpreter.
 ** Copyright (C) 1994-2008 Lua.org, PUC-Rio. See Copyright Notice in lua.h
@@ -843,16 +843,12 @@ static LJ_AINLINE void setlightudV(TValue *o, void *p)
 #endif
 
 #if LJ_FR2
-#define contptr(f)		((void *)(f))
-#define setcont(o, f)		((o)->u64 = (uint64_t)(uintptr_t)contptr(f))
+#define setcont(o, f)		((o)->u64 = (uint64_t)(uintptr_t)(void *)(f))
 #elif LJ_64
-#define contptr(f) \
-  ((void *)(uintptr_t)(uint32_t)((intptr_t)(f) - (intptr_t)lj_vm_asm_begin))
 #define setcont(o, f) \
   ((o)->u64 = (uint64_t)(void *)(f) - (uint64_t)lj_vm_asm_begin)
 #else
-#define contptr(f)		((void *)(f))
-#define setcont(o, f)		setlightudV((o), contptr(f))
+#define setcont(o, f)		setlightudV((o), (void *)(f))
 #endif
 
 #define tvchecklive(L, o) \

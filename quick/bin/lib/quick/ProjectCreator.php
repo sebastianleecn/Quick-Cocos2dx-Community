@@ -128,7 +128,6 @@ class ProjectCreator
 			$this->vars['__SCREEN_ORIENTATION_IOS5__'] = 'UIInterfaceOrientationIsLandscape';
 			$this->vars['__SCREEN_ORIENTATION_IOS6__'] = 'UIInterfaceOrientationMaskLandscape';
 			$this->vars['__SCREEN_ORIENTATION_SHOULDAUTOROTATE__'] = 'YES';
-            $this->vars["__SCREEN_ORIENTATION_ANDROID__"] = "sensorLandscape";
         }
         else
         {
@@ -139,7 +138,6 @@ class ProjectCreator
 			$this->vars['__SCREEN_ORIENTATION_IOS5__'] = 'UIInterfaceOrientationIsPortrait';
 			$this->vars['__SCREEN_ORIENTATION_IOS6__'] = 'UIInterfaceOrientationMaskPortraitUpsideDown';
 			$this->vars['__SCREEN_ORIENTATION_SHOULDAUTOROTATE__'] = 'NO';
-            $this->vars["__SCREEN_ORIENTATION_ANDROID__"] = "portrait";
         }
 
         // copy files

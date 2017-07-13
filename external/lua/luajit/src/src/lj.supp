@@ -27,15 +27,15 @@
 {
    Optimized string compare
    Memcheck:Addr4
-   fun:str_fastcmp
+   fun:lj_str_fastcmp
 }
 {
    Optimized string compare
    Memcheck:Addr1
-   fun:str_fastcmp
+   fun:lj_str_fastcmp
 }
 {
    Optimized string compare
    Memcheck:Cond
-   fun:str_fastcmp
+   fun:lj_str_fastcmp
 }
