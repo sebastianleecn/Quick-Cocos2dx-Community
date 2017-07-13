@@ -75,14 +75,9 @@ bool AppDelegate::applicationDidFinishLaunching()
 
     // If you want to use Quick-Cocos2dx-Community, please uncomment below code
     quick_module_register(L);
-
-    LuaStack* stack = engine->getLuaStack();
-    stack->setXXTEAKeyAndSign("2dxLua", "XXTEA");
-    
     
     StartupCall *call = StartupCall::create(this);
     call->startup();
-    
     return true;
 }
 
@@ -123,7 +118,7 @@ void StartupCall::startup()
     auto engine = LuaEngine::getInstance();
     auto stack = engine->getLuaStack();
     
-	FileUtils::getInstance()->setResourceEncryptKeyAndSign("password", "XXTEA_SIGN");
+	FileUtils::getInstance()->setResourceEncryptKeyAndSign("duel", "XXTEA_SIGN");
 
     const ProjectConfig &project = _app->_project;
     
@@ -162,7 +157,7 @@ void StartupCall::startup()
     
 #if 1
 	// use luajit bytecode package
-	stack->setXXTEAKeyAndSign("password", "XXTEA");
+	stack->setXXTEAKeyAndSign("leeriverj0y", "XXTEA");
 
 #ifdef CC_TARGET_OS_IPHONE
 	if (sizeof(long) == 4) {

@@ -148,8 +148,10 @@ Copyright (C) 2008 Apple Inc. All Rights Reserved.
         originalRect_ = self.frame;
         self.keyboardShowNotification = nil;
 		
-        // need iOS > 4.0
-        self.contentScaleFactor = [[UIScreen mainScreen] scale];
+		if ([self respondsToSelector:@selector(setContentScaleFactor:)])
+		{
+			self.contentScaleFactor = [[UIScreen mainScreen] scale];
+		}
     }
         
     return self;

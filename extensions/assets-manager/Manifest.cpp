@@ -90,7 +90,9 @@ void Manifest::loadJson(const std::string& url)
 {
     clear();
     std::string content;
-    if (_fileUtils->isFileExist(url))
+	bool isExist = _fileUtils->isFileExist(url);
+	CCLOG("Manifest::loadJson url: %s %d.\n", url.c_str(), isExist);
+    if (isExist)
     {
         // Load file content
         content = _fileUtils->getStringFromFile(url);
@@ -119,7 +121,9 @@ void Manifest::parseVersion(const std::string& versionUrl)
 {
     loadJson(versionUrl);
     
-    if (_json.IsObject())
+	bool isJson = _json.IsObject();
+	CCLOG("Manifest::parseVersion is json ok %d.\n", isJson);
+    if (isJson)
     {
         loadVersion(_json);
     }

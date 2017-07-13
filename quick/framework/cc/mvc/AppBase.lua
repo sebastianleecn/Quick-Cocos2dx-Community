@@ -12,10 +12,16 @@ function AppBase:ctor(appName, packageRoot)
 
     local eventDispatcher = cc.Director:getInstance():getEventDispatcher()
     local customListenerBg = cc.EventListenerCustom:create(AppBase.APP_ENTER_BACKGROUND_EVENT,
-                                handler(self, self.onEnterBackground))
+        function ( ... )
+            audio.pauseAll()
+            self:onEnterBackground()
+        end)
     eventDispatcher:addEventListenerWithFixedPriority(customListenerBg, 1)
     local customListenerFg = cc.EventListenerCustom:create(AppBase.APP_ENTER_FOREGROUND_EVENT,
-                                handler(self, self.onEnterForeground))
+        function ( ... )
+            audio.resumeAll()
+            self:onEnterForeground()
+        end)
     eventDispatcher:addEventListenerWithFixedPriority(customListenerFg, 1)
 
     self.snapshots_ = {}
@@ -48,12 +54,10 @@ function AppBase:createView(viewName, ...)
 end
 
 function AppBase:onEnterBackground()
-	audio.pauseAll()
     self:dispatchEvent({name = AppBase.APP_ENTER_BACKGROUND_EVENT})
 end
 
 function AppBase:onEnterForeground()
-	audio.resumeAll()
     self:dispatchEvent({name = AppBase.APP_ENTER_FOREGROUND_EVENT})
 end
 

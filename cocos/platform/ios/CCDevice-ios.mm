@@ -149,8 +149,11 @@ int Device::getDPI()
 
     if (dpi == -1)
     {
-        // need iOS > 4.0
-        float scale = [[UIScreen mainScreen] scale];
+        float scale = 1.0f;
+        
+        if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)]) {
+            scale = [[UIScreen mainScreen] scale];
+        }
         
         if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
             dpi = 132 * scale;

@@ -88,13 +88,6 @@ ifeq ($(CC_USE_CURL),1)
 LOCAL_SRC_FILES += ../manual/network/lua_xml_http_request.cpp
 endif
 
-#cocosbuilder
-ifeq ($(CC_USE_CCBUILDER),1)
-LOCAL_SRC_FILES += ../manual/cocosbuilder/lua_cocos2dx_cocosbuilder_manual.cpp \
-                   ../manual/cocosbuilder/CCBProxy.cpp \
-                   ../auto/lua_cocos2dx_cocosbuilder_auto.cpp
-endif
-
 #cocostudio
 ifeq ($(CC_USE_CCSTUDIO),1)
 LOCAL_SRC_FILES += ../manual/cocostudio/lua_cocos2dx_coco_studio_manual.cpp \
@@ -144,11 +137,9 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../../../external/lua/tolua \
                     $(LOCAL_PATH)/../../../../external/lua/luajit/include \
                     $(LOCAL_PATH)/../../../2d \
                     $(LOCAL_PATH)/../../../3d \
+                    $(LOCAL_PATH)/../../../network \
                     $(LOCAL_PATH)/../../../audio \
                     $(LOCAL_PATH)/../../../../external/OpenAL/inc \
-                    $(LOCAL_PATH)/../../../2d \
-                    $(LOCAL_PATH)/../../../network \
-                    $(LOCAL_PATH)/../../../editor-support/cocosbuilder \
                     $(LOCAL_PATH)/../../../editor-support/cocostudio \
                     $(LOCAL_PATH)/../../../editor-support/cocostudio/ActionTimeline \
                     $(LOCAL_PATH)/../../../editor-support/spine \
@@ -162,7 +153,6 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../../../external/lua/tolua \
                     $(LOCAL_PATH)/../manual/network \
                     $(LOCAL_PATH)/../manual/extension \
                     $(LOCAL_PATH)/../manual/cocostudio \
-                    $(LOCAL_PATH)/../manual/cocosbuilder \
                     $(LOCAL_PATH)/../manual/spine \
                     $(LOCAL_PATH)/../manual/ui \
                     $(LOCAL_PATH)/../../../../external/TalkingDataGameAnalytics/include \
@@ -179,7 +169,6 @@ LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/../../../../external/lua/tolua \
                            $(LOCAL_PATH)/../manual/3d \
                            $(LOCAL_PATH)/../manual/audio \
                            $(LOCAL_PATH)/../manual/network \
-                           $(LOCAL_PATH)/../manual/cocosbuilder \
                            $(LOCAL_PATH)/../manual/cocostudio \
                            $(LOCAL_PATH)/../manual/spine \
                            $(LOCAL_PATH)/../manual/extension \
