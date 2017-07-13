@@ -1,6 +1,6 @@
 /*
 ** SPLIT: Split 64 bit IR instructions into 32 bit IR instructions.
-** Copyright (C) 2005-2017 Mike Pall. See Copyright Notice in luajit.h
+** Copyright (C) 2005-2016 Mike Pall. See Copyright Notice in luajit.h
 */
 
 #define lj_opt_split_c
@@ -16,7 +16,6 @@
 #include "lj_jit.h"
 #include "lj_ircall.h"
 #include "lj_iropt.h"
-#include "lj_dispatch.h"
 #include "lj_vm.h"
 
 /* SPLIT pass:
@@ -354,8 +353,6 @@ static void split_ir(jit_State *J)
       ir->prev = ref;  /* Identity substitution for loword. */
       hisubst[ref] = 0;
     }
-    if (irt_is64(ir->t) && ir->o != IR_KNULL)
-      ref++;
   }
 
   /* Process old IR instructions. */
@@ -436,8 +433,7 @@ static void split_ir(jit_State *J)
 	nir->o = IR_CONV;  /* Pass through loword. */
 	nir->op2 = (IRT_INT << 5) | IRT_INT;
 	hi = split_emit(J, IRT(ir->o == IR_NEG ? IR_BXOR : IR_BAND, IRT_SOFTFP),
-	       hisubst[ir->op1],
-	       lj_ir_kint(J, (int32_t)(0x7fffffffu + (ir->o == IR_NEG))));
+			hisubst[ir->op1], hisubst[ir->op2]);
 	break;
       case IR_SLOAD:
 	if ((nir->op2 & IRSLOAD_CONVERT)) {  /* Convert from int to number. */
@@ -451,11 +447,6 @@ static void split_ir(jit_State *J)
       case IR_ALOAD: case IR_HLOAD: case IR_ULOAD: case IR_VLOAD:
       case IR_STRTO:
 	hi = split_emit(J, IRT(IR_HIOP, IRT_SOFTFP), nref, nref);
-	break;
-      case IR_FLOAD:
-	lua_assert(ir->op1 == REF_NIL);
-	hi = lj_ir_kint(J, *(int32_t*)((char*)J2GG(J) + ir->op2 + LJ_LE*4));
-	nir->op2 += LJ_BE*4;
 	break;
       case IR_XLOAD: {
 	IRIns inslo = *nir;  /* Save/undo the emit of the lo XLOAD. */
