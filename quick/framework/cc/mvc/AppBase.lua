@@ -48,12 +48,12 @@ function AppBase:createView(viewName, ...)
 end
 
 function AppBase:onEnterBackground()
-    audio.pauseAll()
+	audio.pauseAll()
     self:dispatchEvent({name = AppBase.APP_ENTER_BACKGROUND_EVENT})
 end
 
 function AppBase:onEnterForeground()
-    audio.resumeAll()
+	audio.resumeAll()
     self:dispatchEvent({name = AppBase.APP_ENTER_FOREGROUND_EVENT})
 end
 

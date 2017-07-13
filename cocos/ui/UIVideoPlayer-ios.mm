@@ -143,14 +143,14 @@ using namespace cocos2d::experimental::ui;
     }
     self.moviePlayer.allowsAirPlay = false;
     self.moviePlayer.controlStyle = MPMovieControlStyleNone;// MPMovieControlStyleEmbedded;
-    self.moviePlayer.view.userInteractionEnabled = true;
+    self.moviePlayer.view.userInteractionEnabled = false;// true;
     
     auto clearColor = [UIColor clearColor];
     self.moviePlayer.backgroundView.backgroundColor = clearColor;
     self.moviePlayer.view.backgroundColor = clearColor;
-//    for (UIView * subView in self.moviePlayer.view.subviews) {
-//        subView.backgroundColor = clearColor;
-//    }
+    for (UIView * subView in self.moviePlayer.view.subviews) {
+        subView.backgroundColor = clearColor;
+    }
     
     if (_keepRatioEnabled) {
         self.moviePlayer.scalingMode = MPMovieScalingModeAspectFit;
@@ -164,40 +164,6 @@ using namespace cocos2d::experimental::ui;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(videoFinished:) name:MPMoviePlayerPlaybackDidFinishNotification object:self.moviePlayer];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playStateChange) name:MPMoviePlayerPlaybackStateDidChangeNotification object:self.moviePlayer];
-    
-    
-    UIView *tapView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height)];
-    [tapView setTag:101];
-    tapView.backgroundColor = [UIColor clearColor];
-    
-    UITapGestureRecognizer *tapGesturRecognizer=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction:)];
-    [tapView addGestureRecognizer:tapGesturRecognizer];
-    
-    [[self mainWindow] addSubview:tapView];
-    
-    
-}
-
-- (UIWindow *)mainWindow
-{
-    UIApplication *app = [UIApplication sharedApplication];
-    if ([app.delegate respondsToSelector:@selector(window)])
-    {
-        return [app.delegate window];
-    }
-    else
-    {
-        return [app keyWindow];
-    }
-}
-
--(void)tapAction:(id)tap
-{
-    NSLog(@"tapView on touch");
-    
-    // [[[self mainWindow] viewWithTag:101] removeFromSuperview];
-    
-    _videoPlayer->onPlayEvent((int)VideoPlayer::EventType::PAUSED);
 }
 
 -(void) videoFinished:(NSNotification *)notification
@@ -216,11 +182,9 @@ using namespace cocos2d::experimental::ui;
     MPMoviePlaybackState state = [self.moviePlayer playbackState];
     switch (state) {
         case MPMoviePlaybackStatePaused:
-            [[[self mainWindow] viewWithTag:101] removeFromSuperview];
             _videoPlayer->onPlayEvent((int)VideoPlayer::EventType::PAUSED);
             break;
         case MPMoviePlaybackStateStopped:
-            [[[self mainWindow] viewWithTag:101] removeFromSuperview];
             _videoPlayer->onPlayEvent((int)VideoPlayer::EventType::STOPPED);
             break;
         case MPMoviePlaybackStatePlaying:

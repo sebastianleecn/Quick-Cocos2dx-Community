@@ -1,13 +1,14 @@
 
 require "cocos.cocos2d.Cocos2d"
 require "cocos.cocos2d.Cocos2dConstants"
-require "cocos.cocos2d.extern"
-require "cocos.cocos2d.bitExtend"
 require "cocos.cocos2d.DrawPrimitives"
 
 -- opengl
 require "cocos.cocos2d.Opengl"
 require "cocos.cocos2d.OpenglConstants"
+
+-- cocosbuilder
+require "cocos.cocosbuilder.CCBReaderLoad"
 
 -- cocosstudio
 require "cocos.cocostudio.CocoStudio"

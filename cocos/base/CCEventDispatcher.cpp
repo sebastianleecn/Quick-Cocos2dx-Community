@@ -1044,7 +1044,6 @@ void EventDispatcher::updateListeners(Event* event)
                 if (!l->isRegistered())
                 {
                     iter = sceneGraphPriorityListeners->erase(iter);
-                    setDirty(l->getListenerID(), DirtyFlag::SCENE_GRAPH_PRIORITY);
                     l->release();
                 }
                 else
@@ -1062,7 +1061,6 @@ void EventDispatcher::updateListeners(Event* event)
                 if (!l->isRegistered())
                 {
                     iter = fixedPriorityListeners->erase(iter);
-                    setDirty(l->getListenerID(), DirtyFlag::FIXED_PRIORITY);
                     l->release();
                 }
                 else

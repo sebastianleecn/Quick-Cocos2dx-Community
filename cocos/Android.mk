@@ -210,8 +210,7 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH) \
                     $(LOCAL_PATH)/../external/edtaa3func \
                     $(LOCAL_PATH)/../external/xxhash \
                     $(LOCAL_PATH)/../external/ConvertUTF \
-                    $(LOCAL_PATH)/../external/nslog \
-		    $(LOCAL_PATH)/../external/OpenAL/inc
+                    $(LOCAL_PATH)/../external/nslog
 
 LOCAL_EXPORT_LDLIBS := -lGLESv2 \
                        -llog \
@@ -248,6 +247,7 @@ LOCAL_MODULE := cocos2dx_static
 LOCAL_MODULE_FILENAME := libcocos2d
 
 LOCAL_STATIC_LIBRARIES := cocostudio_static
+LOCAL_STATIC_LIBRARIES += cocosbuilder_static
 LOCAL_STATIC_LIBRARIES += cocos3d_static
 LOCAL_STATIC_LIBRARIES += spine_static
 LOCAL_STATIC_LIBRARIES += cocos_network_static
@@ -264,6 +264,7 @@ $(call import-module,webp/prebuilt/android)
 $(call import-module,chipmunk/prebuilt/android)
 $(call import-module,3d)
 $(call import-module,audio)
+$(call import-module,editor-support/cocosbuilder)
 $(call import-module,editor-support/cocostudio)
 $(call import-module,editor-support/spine)
 $(call import-module,network)

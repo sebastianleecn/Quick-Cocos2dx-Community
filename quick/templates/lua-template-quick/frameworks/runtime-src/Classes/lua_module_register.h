@@ -3,6 +3,7 @@
 
 #include "audio/lua_audio_manual.h"
 #include "network/lua_cocos2dx_network_manual.h"
+#include "cocosbuilder/lua_cocos2dx_cocosbuilder_manual.h"
 #include "cocostudio/lua_cocos2dx_coco_studio_manual.hpp"
 #include "extension/lua_cocos2dx_extension_manual.h"
 #include "ui/lua_cocos2dx_ui_manual.hpp"
@@ -13,8 +14,11 @@
 int lua_module_register(lua_State* L)
 {
     //Dont' change the module register order unless you know what your are doing
-	register_audio_module(L);
+    register_audio_module(L);
     register_network_module(L);
+#if CC_USE_CCBUILDER
+    register_cocosbuilder_module(L);
+#endif
 #if CC_USE_CCSTUDIO
     register_cocostudio_module(L);
 #endif

@@ -751,12 +751,11 @@ void AssetsManagerEx::update()
             break;
         case State::VERSION_LOADED:
         {
-			CCLOG("AssetsManagerEx::update begin parse version.\n");
             parseVersion();
         }
             break;
         case State::PREDOWNLOAD_MANIFEST:
-        {			
+        {
             downloadManifest();
         }
             break;
@@ -912,7 +911,6 @@ void AssetsManagerEx::onSuccess(const std::string &/*srcUrl*/, const std::string
     if (customId == VERSION_ID)
     {
         _updateState = State::VERSION_LOADED;
-		CCLOG("AssetsManagerEx::onSuccess parse version.\n");
         parseVersion();
     }
     else if (customId == MANIFEST_ID)

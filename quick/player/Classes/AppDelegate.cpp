@@ -85,16 +85,12 @@ bool AppDelegate::applicationDidFinishLaunching()
 void AppDelegate::applicationDidEnterBackground()
 {
     Director::getInstance()->stopAnimation();
-
-	Director::getInstance()->getEventDispatcher()->dispatchCustomEvent("APP_ENTER_BACKGROUND_EVENT");
 }
 
 // this function will be called when the app is active again
 void AppDelegate::applicationWillEnterForeground()
 {
     Director::getInstance()->startAnimation();
-
-	Director::getInstance()->getEventDispatcher()->dispatchCustomEvent("APP_ENTER_FOREGROUND_EVENT");
 }
 
 
@@ -118,8 +114,6 @@ void StartupCall::startup()
     auto engine = LuaEngine::getInstance();
     auto stack = engine->getLuaStack();
     
-	FileUtils::getInstance()->setResourceEncryptKeyAndSign("duel", "XXTEA_SIGN");
-
     const ProjectConfig &project = _app->_project;
     
     // set search path
@@ -157,7 +151,7 @@ void StartupCall::startup()
     
 #if 1
 	// use luajit bytecode package
-	stack->setXXTEAKeyAndSign("leeriverj0y", "XXTEA");
+	stack->setXXTEAKeyAndSign("password", "XXTEA");
 
 #ifdef CC_TARGET_OS_IPHONE
 	if (sizeof(long) == 4) {

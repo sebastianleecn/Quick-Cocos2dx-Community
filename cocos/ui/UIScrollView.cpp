@@ -1573,7 +1573,6 @@ void ScrollView::interceptTouchEvent(Widget::TouchEventType event, Widget *sende
     {
         case TouchEventType::BEGAN:
         {
-            _isTouchMovedCancelHighlight = false;
             _isInterceptTouch = true;
             _touchBeganPosition = touch->getLocation();
             handlePressLogic(touch);
@@ -1583,9 +1582,8 @@ void ScrollView::interceptTouchEvent(Widget::TouchEventType event, Widget *sende
         {
             float offset = (sender->getTouchBeganPosition() - touchPoint).getLength();
             _touchMovePosition = touch->getLocation();
-            if (_isTouchMovedCancelHighlight || offset > _childFocusCancelOffset)
+            if (offset > _childFocusCancelOffset)
             {
-                _isTouchMovedCancelHighlight = true;
                 sender->setHighlighted(false);
                 handleMoveLogic(touch);
             }

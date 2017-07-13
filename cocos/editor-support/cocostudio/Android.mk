@@ -63,6 +63,7 @@ WidgetReader/TextAtlasReader/TextAtlasReader.cpp \
 WidgetReader/TextBMFontReader/TextBMFontReader.cpp \
 WidgetReader/TextFieldReader/TextFieldReader.cpp \
 WidgetReader/TextReader/TextReader.cpp \
+ActionTimeline/CCNodeReader.cpp \
 ActionTimeline/CCActionTimelineCache.cpp \
 ActionTimeline/CCFrame.cpp \
 ActionTimeline/CCTimeLine.cpp \
@@ -74,8 +75,7 @@ endif
 
 LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/..
 
-LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../ \
-                    $(LOCAL_PATH)/../../../external/tinyxml2 \
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/.. \
                     $(LOCAL_PATH)/WidgetReader
 
 LOCAL_CFLAGS += -fexceptions

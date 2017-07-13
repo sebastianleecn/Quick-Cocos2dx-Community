@@ -439,6 +439,7 @@ void DataReaderHelper::addDataFromFileAsync(const std::string& imagePath, const 
         data->configType = CocoStudio_Binary;
     }
 
+
     // add async struct into queue
     std::unique_lock<std::mutex> lock(_asyncStructQueueMutex);
     _asyncStructQueue->push(data);
