@@ -1,6 +1,6 @@
 /*
 ** LuaJIT VM builder: Assembler source code emitter.
-** Copyright (C) 2005-2017 Mike Pall. See Copyright Notice in luajit.h
+** Copyright (C) 2005-2016 Mike Pall. See Copyright Notice in luajit.h
 */
 
 #include "buildvm.h"
@@ -93,14 +93,10 @@ static void emit_asm_words(BuildCtx *ctx, uint8_t *p, int n)
 {
   int i;
   for (i = 0; i < n; i += 4) {
-    uint32_t ins = *(uint32_t *)(p+i);
-#if LJ_TARGET_ARM64 && LJ_BE
-    ins = lj_bswap(ins);  /* ARM64 instructions are always little-endian. */
-#endif
     if ((i & 15) == 0)
-      fprintf(ctx->fp, "\t.long 0x%08x", ins);
+      fprintf(ctx->fp, "\t.long 0x%08x", *(uint32_t *)(p+i));
     else
-      fprintf(ctx->fp, ",0x%08x", ins);
+      fprintf(ctx->fp, ",0x%08x", *(uint32_t *)(p+i));
     if ((i & 15) == 12) putc('\n', ctx->fp);
   }
   if ((n & 15) != 0) putc('\n', ctx->fp);
@@ -218,8 +214,7 @@ static void emit_asm_label(BuildCtx *ctx, const char *name, int size, int isfunc
   case BUILD_machasm:
     fprintf(ctx->fp,
       "\n\t.private_extern %s\n"
-      "\t.no_dead_strip %s\n"
-      "%s:\n", name, name, name);
+      "%s:\n", name, name);
     break;
   default:
     break;
