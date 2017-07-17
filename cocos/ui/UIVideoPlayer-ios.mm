@@ -193,8 +193,6 @@ using namespace cocos2d::experimental::ui;
 {
     NSLog(@"tapView on touch");
     
-    // [[[self mainWindow] viewWithTag:101] removeFromSuperview];
-    
     _videoPlayer->onPlayEvent((int)VideoPlayer::EventType::PAUSED);
 }
 
