@@ -520,10 +520,10 @@ function WelcomeScene:openProjectWithPath(path)
 
         local config = assert(loadstring("local settings = {" .. data .. "} return settings"))()
 
-        local with = tonumber(config.CONFIG_SCREEN_WIDTH)
+        local width = tonumber(config.CONFIG_SCREEN_WIDTH)
         local height = tonumber(config.CONFIG_SCREEN_HEIGHT)
         projectConfig:setProjectDir(cc.player.quickRootPath .. "quick/" .. path)
-        projectConfig:setFrameSize(with, height)
+        projectConfig:setFrameSize(width, height)
 
         -- screen direction
         if config.CONFIG_SCREEN_ORIENTATION == "portrait" then
@@ -531,12 +531,6 @@ function WelcomeScene:openProjectWithPath(path)
         else
             projectConfig:changeFrameOrientationToLandscape()
         end
-
-        if config.CONFIG_VIEW_SCALE == "75" then
-            -- cc.player.projectConfig_:setFrameScale(0.75)
-            projectConfig:setFrameScale(0.75)
-        end
-
     end
     PlayerProtocol:getInstance():openNewPlayerWithProjectConfig(projectConfig)
 end
