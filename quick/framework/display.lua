@@ -703,8 +703,14 @@ function display.newSprite(filename, x, y, params)
         if x and y then sprite:setPosition(x, y) end
         if size then sprite:setContentSize(size) end
     else
-        printError("display.newSprite() - create sprite failure, filename %s", tostring(filename))
-        sprite = spriteClass:create()
+        -- printError("display.newSprite() - create sprite failure, filename %s", tostring(filename))
+        -- sprite = spriteClass:create()
+
+        -- device.showAlert("退出游戏", "发现游戏资源包不正确，请卸载游戏后重新安装！", {"确定"},
+        --     function ( ... )
+        --         app.exit()
+        --     end)
+        -- return
     end
 
     return sprite

@@ -635,7 +635,18 @@ Data FileUtils::getDataFromFile(const std::string& filename)
                                         &len);
             data.clear();
             data.fastSet(buffer, len);
-        }
+		}
+//		else {
+//#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID) || (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+//			std::string ext = filename.substr(filename.length() - 3, 3);
+//			CCLOG("cocos2d: FileUtils::getDataFromFile Error decode resource at %s, %s.",
+//				filename.c_str(), ext.c_str());
+//			if (ext.compare("png") == 0)
+//			{				
+//				return Data::Null;
+//			}
+//#endif
+//		}
     }
     
     return data;
