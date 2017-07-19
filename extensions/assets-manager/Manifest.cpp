@@ -90,7 +90,9 @@ void Manifest::loadJson(const std::string& url)
 {
     clear();
     std::string content;
-    if (_fileUtils->isFileExist(url))
+	bool isExist = _fileUtils->isFileExist(url);
+	CCLOG("Manifest::loadJson url: %s %d.\n", url.c_str(), isExist);
+    if (isExist)
     {
         // Load file content
         content = _fileUtils->getStringFromFile(url);
@@ -119,7 +121,9 @@ void Manifest::parseVersion(const std::string& versionUrl)
 {
     loadJson(versionUrl);
     
-    if (_json.IsObject())
+	bool isJson = _json.IsObject();
+	CCLOG("Manifest::parseVersion is json ok %d.\n", isJson);
+    if (isJson)
     {
         loadVersion(_json);
     }
@@ -255,7 +259,9 @@ void Manifest::genResumeAssetsList(Downloader::DownloadUnits *units) const
     {
         Asset asset = it->second;
         
-        if (asset.downloadState != DownloadState::SUCCESSED && asset.downloadState != DownloadState::UNMARKED)
+		// fix 断点续传（杀进程不断点续传、全部重新下载）
+        //if (asset.downloadState != DownloadState::SUCCESSED && asset.downloadState != DownloadState::UNMARKED)
+		if (asset.downloadState != DownloadState::SUCCESSED)
         {
             Downloader::DownloadUnit unit;
             unit.customId = it->first;
