@@ -611,7 +611,7 @@ void AssetsManagerEx::startUpdate()
     // Temporary manifest exists, resuming previous download
     if (_tempManifest && _tempManifest->isLoaded() && _tempManifest->versionEquals(_remoteManifest))
     {
-        _tempManifest->saveToFile(_tempManifestPath);
+         _tempManifest->saveToFile(_tempManifestPath);
         _tempManifest->genResumeAssetsList(&_downloadUnits);
         _totalWaitToDownload = _totalToDownload = (int)_downloadUnits.size();
         _downloader->batchDownloadAsync(_downloadUnits, BATCH_UPDATE_ID);
@@ -637,13 +637,16 @@ void AssetsManagerEx::startUpdate()
         {
             // Generate download units for all assets that need to be updated or added
             std::string packageUrl = _remoteManifest->getPackageUrl();
-            // Save current download manifest information for resuming
-            _tempManifest->saveToFile(_tempManifestPath);
+            
             // Preprocessing local files in previous version and creating download folders
             for (auto it = diff_map.begin(); it != diff_map.end(); ++it)
             {
                 Manifest::AssetDiff diff = it->second;
-                if (diff.type != Manifest::DiffType::DELETED)
+				if (diff.type == Manifest::DiffType::DELETED)
+				{
+					_fileUtils->removeFile(_storagePath + diff.asset.path);
+				}
+				else
                 {
                     std::string path = diff.asset.path;
                     Downloader::DownloadUnit unit;
@@ -652,9 +655,25 @@ void AssetsManagerEx::startUpdate()
                     unit.storagePath = _storagePath + path;
                     unit.resumeDownload = false;
                     _downloadUnits.emplace(unit.customId, unit);
-                    _tempManifest->setAssetDownloadState(it->first, Manifest::DownloadState::UNSTARTED);
+                    _tempManifest->setAssetDownloadState(it->first, Manifest::DownloadState::DOWNLOADING);
                 }
             }
+
+			// Set other assets' downloadState to SUCCESSED
+			auto assets = _remoteManifest->getAssets();
+			for (auto it = assets.cbegin(); it != assets.cend(); ++it)
+			{
+				const std::string &key = it->first;
+				auto diffIt = diff_map.find(key);
+				if (diffIt == diff_map.end())
+				{
+					_tempManifest->setAssetDownloadState(key, Manifest::DownloadState::SUCCESSED);
+				}
+			}
+
+			// Save current download manifest information for resuming
+			_tempManifest->saveToFile(_tempManifestPath);
+
             _totalWaitToDownload = _totalToDownload = (int)_downloadUnits.size();
             _downloader->batchDownloadAsync(_downloadUnits, BATCH_UPDATE_ID);
             
@@ -851,6 +870,11 @@ void AssetsManagerEx::onError(const Downloader::Error &error)
             _failedUnits.emplace(unit.customId, unit);
         }
         dispatchUpdateEvent(EventAssetsManagerEx::EventCode::ERROR_UPDATING, error.customId, error.message, error.curle_code, error.curlm_code);
+		
+		if (_totalWaitToDownload <= 0)
+		{
+			this->onDownloadUnitsFinished();
+		}
     }
 }
 
@@ -922,21 +946,7 @@ void AssetsManagerEx::onSuccess(const std::string &/*srcUrl*/, const std::string
     }
     else if (customId == BATCH_UPDATE_ID)
     {
-        // Finished with error check
-        if (_failedUnits.size() > 0 || _totalWaitToDownload > 0)
-        {
-            // Save current download manifest information for resuming
-            _tempManifest->saveToFile(_tempManifestPath);
-            
-            decompressDownloadedZip();
-            
-            _updateState = State::FAIL_TO_UPDATE;
-            dispatchUpdateEvent(EventAssetsManagerEx::EventCode::UPDATE_FAILED);
-        }
-        else
-        {
-            updateSucceed();
-        }
+		onDownloadUnitsFinished();
     }
     else
     {
@@ -974,6 +984,11 @@ void AssetsManagerEx::onSuccess(const std::string &/*srcUrl*/, const std::string
             // Remove from failed units list
             _failedUnits.erase(unitIt);
         }
+
+		if (_totalWaitToDownload <= 0)
+		{
+			this->onDownloadUnitsFinished();
+		}
     }
 }
 
@@ -981,6 +996,25 @@ void AssetsManagerEx::destroyDownloadedVersion()
 {
     _fileUtils->removeFile(_cacheVersionPath);
     _fileUtils->removeFile(_cacheManifestPath);
+}
+
+void AssetsManagerEx::onDownloadUnitsFinished()
+{
+	// Finished with error check
+	if (_failedUnits.size() > 0 || _totalWaitToDownload > 0)
+	{
+		// Save current download manifest information for resuming
+		_tempManifest->saveToFile(_tempManifestPath);
+
+		decompressDownloadedZip();
+
+		_updateState = State::FAIL_TO_UPDATE;
+		dispatchUpdateEvent(EventAssetsManagerEx::EventCode::UPDATE_FAILED);
+	}
+	else
+	{
+		updateSucceed();
+	}
 }
 
 NS_CC_EXT_END
