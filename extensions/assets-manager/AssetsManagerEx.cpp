@@ -143,10 +143,11 @@ void AssetsManagerEx::initManifests(const std::string& manifestUrl)
             // Previous update is interrupted
             if (_fileUtils->isFileExist(_tempManifestPath))
             {
+				// 删除下载记录、取消断点续传
                 // Manifest parse failed, remove all temp files
-                if (!_tempManifest->isLoaded())
+                //if (!_tempManifest->isLoaded())
                 {
-                _fileUtils->removeFile(_tempManifestPath);
+					_fileUtils->removeFile(_tempManifestPath);
                     CC_SAFE_RELEASE(_tempManifest);
                     _tempManifest = nullptr;
                 }
@@ -611,7 +612,7 @@ void AssetsManagerEx::startUpdate()
     // Temporary manifest exists, resuming previous download
     if (_tempManifest && _tempManifest->isLoaded() && _tempManifest->versionEquals(_remoteManifest))
     {
-         _tempManifest->saveToFile(_tempManifestPath);
+		_tempManifest->saveToFile(_tempManifestPath);
         _tempManifest->genResumeAssetsList(&_downloadUnits);
         _totalWaitToDownload = _totalToDownload = (int)_downloadUnits.size();
         _downloader->batchDownloadAsync(_downloadUnits, BATCH_UPDATE_ID);
@@ -624,7 +625,10 @@ void AssetsManagerEx::startUpdate()
         // Temporary manifest not exists or out of date,
         // it will be used to register the download states of each asset,
         // in this case, it equals remote manifest.
-        _tempManifest->release();
+		if (_tempManifest)
+		{
+			_tempManifest->release();
+		}        
         _tempManifest = _remoteManifest;
         
         // Check difference between local manifest and remote manifest
