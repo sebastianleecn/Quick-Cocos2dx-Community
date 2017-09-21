@@ -14,7 +14,6 @@
 
 #include <memory.h>
 
-#include "platform/CCFileUtils.h"
 #include "cocos/audio/RDAudio.h"
 #include "cocos/audio/RDAudioOgg.h"
 #include "cocos2d.h"
@@ -131,8 +130,7 @@ void RDAudio::threadLoop()
         // decode
         cocos2d::Data data = cocos2d::FileUtils::getInstance()->getDataFromFile(asyncStruct->filename);
         if (data.getSize() > 0) {
-            int rtn = decodeOgg(data.getBytes(),
-                                data.getSize(),
+            int rtn = decodeOgg(&data,
                                 &asyncStruct->pcmData,
                                 &asyncStruct->channels,
                                 &asyncStruct->rate,

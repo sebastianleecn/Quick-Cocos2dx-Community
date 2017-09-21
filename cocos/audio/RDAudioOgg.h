@@ -15,15 +15,17 @@
 #ifndef __RDAudioOgg_H__
 #define __RDAudioOgg_H__
 
+#include "platform/CCFileUtils.h"
+#include "cocos/audio/RDAudio.h"
+
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-int decodeOgg(unsigned char *oggData,
-              int oggSize,
+int decodeOgg(cocos2d::Data *data,
               unsigned char **pcmData,
-              int *pcmChannels,
-              int *pcmRate,
+              int32_t *pcmChannels,
+              int32_t *pcmRate,
               int *pcmSize);
 
 #ifdef __cplusplus
