@@ -303,9 +303,8 @@ function WelcomeScene:createCopyright(node)
     bg:setContentSize(cc.size(display.width, 48))
     node:addChild(bg)
 
-    local label = cc.ui.UILabel.new({
-		UILabelType = 2,
-        text = "Copyright (c) 2016 cocos2d-lua.org, Powered by Quick-Cocos2dx-Community",
+    local label = display.newTTFLabel({
+        text = "Copyright (c) 2017 cocos2d-lua.org, Powered by Quick-Cocos2dx-Community",
         size = 15,
         color = cc.c3b(128, 128, 128),
         x = 48,

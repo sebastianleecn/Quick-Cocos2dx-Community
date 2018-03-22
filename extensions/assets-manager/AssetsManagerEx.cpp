@@ -57,7 +57,7 @@ const std::string AssetsManagerEx::BATCH_UPDATE_ID = "@batch_update";
 
 // Implementation of AssetsManagerEx
 
-AssetsManagerEx::AssetsManagerEx(const std::string& manifestUrl, const std::string& storagePath)
+AssetsManagerEx::AssetsManagerEx(const std::string& manifestUrl, const std::string& storagePath, const std::string& verNew)
 : _updateState(State::UNCHECKED)
 , _assets(nullptr)
 , _storagePath("")
@@ -65,6 +65,7 @@ AssetsManagerEx::AssetsManagerEx(const std::string& manifestUrl, const std::stri
 , _cacheManifestPath("")
 , _tempManifestPath("")
 , _manifestUrl(manifestUrl)
+, _verNew(verNew)
 , _localManifest(nullptr)
 , _tempManifest(nullptr)
 , _remoteManifest(nullptr)
@@ -112,9 +113,9 @@ AssetsManagerEx::~AssetsManagerEx()
     CC_SAFE_RELEASE(_remoteManifest);
 }
 
-AssetsManagerEx* AssetsManagerEx::create(const std::string& manifestUrl, const std::string& storagePath)
+AssetsManagerEx* AssetsManagerEx::create(const std::string& manifestUrl, const std::string& storagePath, const std::string& verNew)
 {
-    AssetsManagerEx* ret = new (std::nothrow) AssetsManagerEx(manifestUrl, storagePath);
+    AssetsManagerEx* ret = new (std::nothrow) AssetsManagerEx(manifestUrl, storagePath, verNew);
     if (ret)
     {
         ret->autorelease();
@@ -462,8 +463,8 @@ void AssetsManagerEx::downloadVersion()
     if (_updateState > State::PREDOWNLOAD_VERSION)
         return;
 
-    std::string versionUrl = _localManifest->getVersionFileUrl();
-
+    //std::string versionUrl = _localManifest->getVersionFileUrl();
+	std::string versionUrl = _localManifest->getPackageUrl() + "res_" + _verNew + "/version.manifest";
     if (versionUrl.size() > 0)
     {
         _updateState = State::DOWNLOADING_VERSION;
@@ -520,12 +521,12 @@ void AssetsManagerEx::downloadManifest()
         return;
 
     std::string manifestUrl;
-    if (_remoteManifest->isVersionLoaded()) {
-        manifestUrl = _remoteManifest->getManifestFileUrl();
-    } else {
-        manifestUrl = _localManifest->getManifestFileUrl();
-    }
-
+    //if (_remoteManifest->isVersionLoaded()) {
+    //    manifestUrl = _remoteManifest->getManifestFileUrl();
+    //} else {
+    //    manifestUrl = _localManifest->getManifestFileUrl();
+    //}
+	manifestUrl = _localManifest->getPackageUrl() + "res_" + _verNew + "/project.manifest";
     if (manifestUrl.size() > 0)
     {
         _updateState = State::DOWNLOADING_MANIFEST;
@@ -645,18 +646,25 @@ void AssetsManagerEx::startUpdate()
             // Preprocessing local files in previous version and creating download folders
             for (auto it = diff_map.begin(); it != diff_map.end(); ++it)
             {
-                Manifest::AssetDiff diff = it->second;
+				Manifest::AssetDiff diff = it->second;
+                
 				if (diff.type == Manifest::DiffType::DELETED)
 				{
 					_fileUtils->removeFile(_storagePath + diff.asset.path);
 				}
 				else
                 {
-                    std::string path = diff.asset.path;
+					std::string pathDownload = diff.asset.path;
+					const size_t pos1stSlash = diff.asset.path.find_first_of("\\/");
+					if (std::string::npos != pos1stSlash)
+					{
+						pathDownload.insert(pos1stSlash, "_" + _verNew);
+					}
+
                     Downloader::DownloadUnit unit;
                     unit.customId = it->first;
-                    unit.srcUrl = packageUrl + path;
-                    unit.storagePath = _storagePath + path;
+					unit.srcUrl = packageUrl + pathDownload;
+                    unit.storagePath = _storagePath + diff.asset.path;
                     unit.resumeDownload = false;
                     _downloadUnits.emplace(unit.customId, unit);
                     _tempManifest->setAssetDownloadState(it->first, Manifest::DownloadState::DOWNLOADING);

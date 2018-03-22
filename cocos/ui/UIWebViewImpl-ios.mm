@@ -187,10 +187,6 @@ static std::string getFixedBaseUrl(const std::string& baseUrl)
     NSURL *url = [NSURL fileURLWithPath:@(filePath.c_str())];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [self.uiWebView loadRequest:request];
-    
-
-    [self.uiWebView setBackgroundColor:[UIColor clearColor]];
-    [self.uiWebView setOpaque:NO];
 }
 
 - (void)stopLoading {
@@ -243,7 +239,9 @@ static std::string getFixedBaseUrl(const std::string& baseUrl)
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     if (self.didFinishLoading) {
         NSString *url = [[webView.request URL] absoluteString];
-        self.didFinishLoading([url UTF8String]);
+        if (url) {
+            self.didFinishLoading([url UTF8String]);
+        }
     }
 }
 

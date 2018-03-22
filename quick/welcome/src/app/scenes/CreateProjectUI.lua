@@ -78,7 +78,7 @@ function CreateProjectUI:onEnter()
 
     cc.ui.UILabel.new({
         UILabelType = 2,
-        text = "Project package name: (etc: com.mycomp.games.mygame)",
+        text = "Project package name: (etc: com.mycomp.mygame)",
         size = fontSize,
         color = display.COLOR_WHITE,
         })

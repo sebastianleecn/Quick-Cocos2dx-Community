@@ -39,6 +39,7 @@ end)
 UIButton.CLICKED_EVENT = "CLICKED_EVENT"
 UIButton.PRESSED_EVENT = "PRESSED_EVENT"
 UIButton.RELEASE_EVENT = "RELEASE_EVENT"
+UIButton.MOVE_EVENT = "MOVE_EVENT"
 UIButton.STATE_CHANGED_EVENT = "STATE_CHANGED_EVENT"
 
 UIButton.IMAGE_ZORDER = -100
@@ -408,6 +409,15 @@ end
 
 function UIButton:addButtonStateChangedEventListener(callback)
     return self:addEventListener(UIButton.STATE_CHANGED_EVENT, callback)
+end
+
+function UIButton:addButtonMoveEventListener(callback)
+    return self:addEventListener(UIButton.MOVE_EVENT, callback)
+end
+
+function UIButton:onButtonMove(callback)
+    self:addButtonMoveEventListener(callback)
+    return self
 end
 
 -- start --

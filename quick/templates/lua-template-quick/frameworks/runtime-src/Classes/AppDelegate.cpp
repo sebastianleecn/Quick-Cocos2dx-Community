@@ -84,7 +84,6 @@ bool AppDelegate::applicationDidFinishLaunching()
     LuaStack* stack = engine->getLuaStack();
 
     //register custom function
-    //LuaStack* stack = engine->getLuaStack();
     //register_custom_function(stack->getLuaState());
     
     //FileUtils::getInstance()->setResourceEncryptKeyAndSign("test", "XXTEA");

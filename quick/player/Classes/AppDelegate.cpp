@@ -114,7 +114,7 @@ void StartupCall::startup()
     auto engine = LuaEngine::getInstance();
     auto stack = engine->getLuaStack();
     
-	FileUtils::getInstance()->setResourceEncryptKeyAndSign("x is your password", "XXTEA");
+	FileUtils::getInstance()->setResourceEncryptKeyAndSign("lsp@18k", "18s_XXTEA");
 	
     const ProjectConfig &project = _app->_project;
     
@@ -153,7 +153,7 @@ void StartupCall::startup()
     
 #if 1
 	// use luajit bytecode package
-	stack->setXXTEAKeyAndSign("x is your password", "XXTEA");
+	stack->setXXTEAKeyAndSign("li@shu#peng", "XXTEA");
 
 #ifdef CC_TARGET_OS_IPHONE
 	if (sizeof(long) == 4) {

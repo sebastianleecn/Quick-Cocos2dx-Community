@@ -8,7 +8,7 @@ require "cocos.cocos2d.Opengl"
 require "cocos.cocos2d.OpenglConstants"
 
 -- cocosbuilder
-require "cocos.cocosbuilder.CCBReaderLoad"
+-- require "cocos.cocosbuilder.CCBReaderLoad"
 
 -- cocosstudio
 require "cocos.cocostudio.CocoStudio"

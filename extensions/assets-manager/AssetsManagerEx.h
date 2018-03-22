@@ -78,7 +78,7 @@ public:
      @warning   The cached manifest in your storage path have higher priority and will be searched first,
                 only if it doesn't exist, AssetsManagerEx will use the given manifestUrl.
      */
-    static AssetsManagerEx* create(const std::string &manifestUrl, const std::string &storagePath);
+    static AssetsManagerEx* create(const std::string &manifestUrl, const std::string &storagePath, const std::string& verNew);
     
     /** @brief  Check out if there is a new version of manifest.
      *          You may use this method before updating, then let user determine whether
@@ -112,7 +112,7 @@ public:
     
 CC_CONSTRUCTOR_ACCESS:
     
-    AssetsManagerEx(const std::string& manifestUrl, const std::string& storagePath);
+    AssetsManagerEx(const std::string& manifestUrl, const std::string& storagePath, const std::string& verNew);
     
     virtual ~AssetsManagerEx();
     
@@ -221,6 +221,8 @@ private:
     
     //! The path of local manifest file
     std::string _manifestUrl;
+
+	std::string _verNew;
     
     //! Local manifest
     Manifest *_localManifest;

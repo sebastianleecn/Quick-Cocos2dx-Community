@@ -76,16 +76,17 @@ static long tellOgg(void *fh)
     return (of->curPtr - of->filePtr);
 }
 
-int decodeOgg(cocos2d::Data *data,
+int decodeOgg(unsigned char *oggData,
+              int oggSize,
               unsigned char **pcmData,
-              int32_t *pcmChannels,
-              int32_t *pcmRate,
+              int *pcmChannels,
+              int *pcmRate,
               int *pcmSize)
 {
     ov_callbacks callbacks;
     ogg_buffer buffer;
-    buffer.curPtr = buffer.filePtr = data->getBytes();
-    buffer.fileSize = data->getSize();
+    buffer.curPtr = buffer.filePtr = oggData;
+    buffer.fileSize = oggSize;
     
     OggVorbis_File ov;
     memset(&ov, 0, sizeof(OggVorbis_File));
@@ -104,10 +105,10 @@ int decodeOgg(cocos2d::Data *data,
         return -1;
     }
     
-    *pcmSize = ov_pcm_total(&ov, -1) * vi->channels * 2;
+    *pcmSize = (int)(ov_pcm_total(&ov, -1) * vi->channels * 2);
     *pcmData = (unsigned char *)malloc(*pcmSize);
     *pcmChannels = vi->channels;
-    *pcmRate = vi->rate;
+    *pcmRate = (int)(vi->rate);
     
     int size = 0;
     int section = 0;

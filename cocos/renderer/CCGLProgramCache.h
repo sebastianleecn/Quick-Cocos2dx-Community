@@ -71,13 +71,8 @@ public:
     /** @deprecated Use destroyInstance() instead */
     CC_DEPRECATED_ATTRIBUTE static void purgeSharedShaderCache();
 
-    /** loads the default shaders */
-    void loadDefaultGLPrograms();
-    CC_DEPRECATED_ATTRIBUTE void loadDefaultShaders() { loadDefaultGLPrograms(); }
-
-    /** reload the default shaders */
-    void reloadDefaultGLPrograms();
-    CC_DEPRECATED_ATTRIBUTE void reloadDefaultShaders() { reloadDefaultGLPrograms(); }
+    /** special for android reload GL */
+    void reloadAllGLPrograms();
 
     /** returns a GL program for a given key 
      */
@@ -92,6 +87,8 @@ public:
 private:
     bool init();
     void loadDefaultGLProgram(GLProgram *program, int type);
+    void loadDefaultGLPrograms();//for the first time
+    void reloadDefaultGLPrograms();// for the second time
     
     std::string getShaderMacrosForLight() const;
 

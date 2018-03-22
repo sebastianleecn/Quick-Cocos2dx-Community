@@ -108,9 +108,13 @@ function UIPushButton:onTouch_(event)
     local touchInTarget = self:checkTouchInSprite_(self.touchBeganX, self.touchBeganY)
                         and self:checkTouchInSprite_(x, y)
     if name == "moved" then
-        if touchInTarget and self.fsm_:canDoEvent("press") then
-            self.fsm_:doEvent("press")
-            self:dispatchEvent({name = UIButton.PRESSED_EVENT, x = x, y = y, touchInTarget = true})
+        if touchInTarget then
+            if self.fsm_:canDoEvent("press") then
+                self.fsm_:doEvent("press")
+                self:dispatchEvent({name = UIButton.PRESSED_EVENT, x = x, y = y, touchInTarget = true})
+            else
+                self:dispatchEvent({name = UIButton.MOVE_EVENT, x = x, y = y, touchInTarget = true})
+            end
         elseif not touchInTarget and self.fsm_:canDoEvent("release") then
             self.fsm_:doEvent("release")
             self:dispatchEvent({name = UIButton.RELEASE_EVENT, x = x, y = y, touchInTarget = false})

@@ -78,6 +78,9 @@ function player:loadSetting(fileName)
 
     local data = file:read("*all")
     local func = loadstring("local settings = {" .. data .. "} return settings")
+	if not func then
+		return "Error!"
+	end
     self.settings = func()
     self.settings.PLAYER_OPEN_RECENTS = self.settings.PLAYER_OPEN_RECENTS or {}
     file:close()
@@ -154,8 +157,10 @@ function player:buildUI()
     local viewSize = {{title = "iPhone 3Gs",w=320,h=480},
                       {title = "iPhone 4",  w=640,h=960},
                       {title = "iPhone 5",  w=640,h=1136},
-                      {title = "iPhone 6",  w=750,h=1134},
+		              {title = "iPhone 6",  w=750,h=1134},
                       {title = "iPhone 6 Plus",  w=1242,h=2208},
+                      {title = "iPhone 7",  w=750,h=1334},
+		              {title = "iPhone X",  w=1125,h=2436},
                       {title = "iPad",      w=768,h=1024},
                       {title = "iPad Retina", w=1536,h=2048},
                       {title = "Android",   w=480,h=800},
@@ -165,6 +170,8 @@ function player:buildUI()
                       {title = "Android",   w=720,h=1280},
                       {title = "Android",   w=800,h=1280},
                       {title = "Android",   w=1080,h=1920},
+                      {title = "Android",   w=1400,h=2960},
+                      {title = "HD",  w=1280,h=1920},
 	}
     self.screenSizeList = {}
     local s = self.projectConfig_:getFrameSize()
@@ -314,12 +321,9 @@ end
 function player:readSettings()
     self.userHomeDir = __USER_HOME__
     self.configFilePath = player.userHomeDir .. ".quick_player.lua"
-	-- do not use cc.FileUtils:getInstance():isFileExist
-	-- "__USER_HOME__" is ANSI encoding, while cocos engine use UTF8.
-    if not self:isFileExist(player.configFilePath) then
+    if self:loadSetting(player.configFilePath) then
         self:restorDefaultSettings()
     end
-    self:loadSetting(player.configFilePath)
 
     -- get QUICK_V3_ROOT path
     self:setQuickRootPath()
@@ -339,8 +343,8 @@ function player:init()
         PLAYER_COCOACHINA_USER = "USER_NAME",
         PLAYER_WINDOW_X = 0,
         PLAYER_WINDOW_Y = 0,
-        PLAYER_WINDOW_WIDTH = 720,
-        PLAYER_WINDOW_HEIGHT = 1280,
+        PLAYER_WINDOW_WIDTH = 960,
+        PLAYER_WINDOW_HEIGHT = 640,
         PLAYER_OPEN_LAST_PROJECT = true,
         PLAYER_OPEN_RECENTS ={
         },

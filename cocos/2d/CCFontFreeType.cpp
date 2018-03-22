@@ -257,18 +257,8 @@ unsigned char* FontFreeType::getGlyphBitmap(unsigned short theChar, long &outWid
             break;
 
         auto glyphIndex = FT_Get_Char_Index(_fontRef, theChar);
-//      change by zxc -- start
-//        if(!glyphIndex)
-//            break;
         if(!glyphIndex)
-        {
-            // 字符找不到时默认用囗代替(not cocos)
-            static int defIndex = FT_Get_Char_Index(_fontRef, 22231);
-            glyphIndex = defIndex;
-            if (!glyphIndex)
-                break;
-        }
-//      change by zxc -- end
+            break;
 
         if (_distanceFieldEnabled)
         {
@@ -387,15 +377,6 @@ unsigned char * FontFreeType::getGlyphBitmapWithOutline(unsigned short theChar, 
     unsigned char* ret = nullptr;
 
     FT_UInt gindex = FT_Get_Char_Index(_fontRef, theChar);
-//  change by zxc -- start
-    if (!gindex)
-    {
-        // 字符找不到时默认用囗代替(not cocos)
-        static int defIndex = FT_Get_Char_Index(_fontRef, 22231);
-        gindex = defIndex;
-    }
-//  change by zxc -- end
-    
     if (FT_Load_Glyph(_fontRef, gindex, FT_LOAD_NO_BITMAP) == 0)
     {
         if (_fontRef->glyph->format == FT_GLYPH_FORMAT_OUTLINE)

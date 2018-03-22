@@ -1823,22 +1823,24 @@ int lua_cocos2dx_assetsmanager_AssetsManagerEx_create(lua_State* tolua_S)
 
     argc = lua_gettop(tolua_S) - 1;
 
-    if (argc == 2)
+    if (argc == 3)
     {
         std::string arg0;
         std::string arg1;
-        ok &= luaval_to_std_string(tolua_S, 2,&arg0, "cc.AssetsManagerEx:create");
-        ok &= luaval_to_std_string(tolua_S, 3,&arg1, "cc.AssetsManagerEx:create");
+		std::string arg2;
+        ok &= luaval_to_std_string(tolua_S, 2, &arg0, "cc.AssetsManagerEx:create");
+        ok &= luaval_to_std_string(tolua_S, 3, &arg1, "cc.AssetsManagerEx:create");
+		ok &= luaval_to_std_string(tolua_S, 4, &arg2, "cc.AssetsManagerEx:create");
         if(!ok)
         {
             tolua_error(tolua_S,"invalid arguments in function 'lua_cocos2dx_assetsmanager_AssetsManagerEx_create'", nullptr);
             return 0;
         }
-        cocos2d::extension::AssetsManagerEx* ret = cocos2d::extension::AssetsManagerEx::create(arg0, arg1);
+        cocos2d::extension::AssetsManagerEx* ret = cocos2d::extension::AssetsManagerEx::create(arg0, arg1, arg2);
         object_to_luaval<cocos2d::extension::AssetsManagerEx>(tolua_S, "cc.AssetsManagerEx",(cocos2d::extension::AssetsManagerEx*)ret);
         return 1;
     }
-    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d\n ", "cc.AssetsManagerEx:create",argc, 2);
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d\n ", "cc.AssetsManagerEx:create", argc, 3);
     return 0;
 #if COCOS2D_DEBUG >= 1
     tolua_lerror:

@@ -115,11 +115,7 @@ if CONFIG_SCREEN_AUTOSCALE and CONFIG_SCREEN_AUTOSCALE ~="NONE" then
         CONFIG_SCREEN_WIDTH = w
         CONFIG_SCREEN_HEIGHT = h
         scale = 1.0
-        if cc.bPlugin_ then
-            glview:setDesignResolutionSize(CONFIG_SCREEN_WIDTH, CONFIG_SCREEN_HEIGHT, cc.ResolutionPolicy.NO_BORDER)
-        else
-            glview:setDesignResolutionSize(CONFIG_SCREEN_WIDTH, CONFIG_SCREEN_HEIGHT, cc.ResolutionPolicy.SHOW_ALL)
-        end
+	glview:setDesignResolutionSize(CONFIG_SCREEN_WIDTH, CONFIG_SCREEN_HEIGHT, cc.ResolutionPolicy.SHOW_ALL)
     else
         if not scaleX or not scaleY then
             scaleX, scaleY = w / CONFIG_SCREEN_WIDTH, h / CONFIG_SCREEN_HEIGHT
@@ -1160,22 +1156,7 @@ function display.newPolygon(points, params, drawNode)
     end
 
     drawNode = drawNode or cc.DrawNode:create()
-    drawNode:drawPolygon(pts, {
-        fillColor = fillColor,
-        borderWidth = borderWidth,
-        borderColor = borderColor
-    })
-
-    if drawNode then
-        function drawNode:setLineStipple()
-        end
-
-        function drawNode:setLineStippleEnabled()
-        end
-
-        function drawNode:setLineColor(color)
-        end
-    end
+    drawNode:drawPolygon(pts, #pts, fillColor, borderWidth, borderColor)
     return drawNode
 end
 
